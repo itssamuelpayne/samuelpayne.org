@@ -2,9 +2,6 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 
 export function SpeakerPage() {
-  // Company/Event logos - using text-based design for production compatibility
-  const companies = [
-   export function SpeakerPage() {
   // Company/Event logos - uses files from /public/logos/
   const logos = [
     { src: '/logos/ces.png', alt: 'CES' },
@@ -12,7 +9,6 @@ export function SpeakerPage() {
     { src: '/logos/dad.png', alt: 'D&AD' },
     { src: '/logos/yale.png', alt: 'Yale School of Management' },
     { src: '/logos/google.png', alt: 'Google' },
-  ];
   ];
 
   const testimonials = [
@@ -64,17 +60,18 @@ export function SpeakerPage() {
         {/* Logo Ticker Section */}
         <section className="mb-20 pt-3 pb-12 border-b border-gray-100">
           <div className="flex items-center justify-center gap-x-8 flex-wrap">
-            {companies.map((company, index) => (
-              <div 
-                key={index}
-                className="flex-shrink-0 group px-4 py-2"
-              >
-                <span className="text-gray-400 group-hover:text-gray-900 transition-colors duration-300 font-['Playfair_Display',_serif] font-semibold tracking-tight text-sm">
-                  {company.name}
-                </span>
-              </div>
-            ))}
-          </div>
+     {logos.map((logo, index) => (
+  <div 
+    key={index} 
+    className="flex-shrink-0 group px-4 py-2"
+  >
+    <img 
+      src={logo.src} 
+      alt={logo.alt} 
+      className="h-8 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+    />
+  </div>
+))}
         </section>
 
         {/* Testimonials Section */}
