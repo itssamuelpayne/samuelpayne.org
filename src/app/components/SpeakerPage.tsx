@@ -4,11 +4,15 @@ import { Footer } from './Footer';
 export function SpeakerPage() {
   // Company/Event logos - using text-based design for production compatibility
   const companies = [
-    { name: 'CES' },
-    { name: 'Wall Street Journal' },
-    { name: 'Yale School of Management' },
-    { name: 'Google' },
-    { name: 'D&AD' },
+   export function SpeakerPage() {
+  // Company/Event logos - uses files from /public/logos/
+  const logos = [
+    { src: '/logos/ces.png', alt: 'CES' },
+    { src: '/logos/wsj.png', alt: 'Wall Street Journal' },
+    { src: '/logos/dad.png', alt: 'D&AD' },
+    { src: '/logos/yale.png', alt: 'Yale School of Management' },
+    { src: '/logos/google.png', alt: 'Google' },
+  ];
   ];
 
   const testimonials = [
