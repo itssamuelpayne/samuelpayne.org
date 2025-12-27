@@ -58,22 +58,22 @@ export function SpeakerPage() {
         </section>
 
         {/* Logo Ticker Section */}
-        <section className="mb-20 pt-3 pb-12 border-b border-gray-100">
-          <div className="flex items-center justify-center gap-x-8 flex-wrap">
-     {logos.map((logo, index) => (
-  <div 
-    key={index} 
-    className="flex-shrink-0 group px-4 py-2"
-  >
-    <img 
-      src={logo.src} 
-      alt={logo.alt} 
-      className="h-8 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300"
-    />
-  </div>
-))}
-        </section>
-
+      <section className="mb-20 pt-3 pb-12 border-b border-gray-100">
+      <div className="flex items-center justify-center gap-x-8 flex-wrap">
+        {logos.map((logo, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 group px-4 py-2"
+          >
+            <img 
+              src={logo.src} 
+              alt={logo.alt} 
+              className="h-8 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
+        ))}
+      </div>
+    </section>
         {/* Testimonials Section */}
         <section className="mb-20 pb-12 border-b border-gray-100">
           <div className="max-w-3xl mx-auto space-y-12">
