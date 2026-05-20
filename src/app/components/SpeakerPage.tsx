@@ -46,7 +46,7 @@ export function SpeakerPage() {
       <main className="max-w-2xl mx-auto px-16 py-20">
         {/* Intro Section */}
         <section className="mb-12 pb-12 border-b border-gray-100">
-          <h1 className="text-[2.75rem] leading-[0.98] tracking-tight mb-8 font-['Playfair_Display',_serif] text-gray-900" style={{ fontWeight: 600 }}>
+          <h1 className="text-[2.75rem] leading-[1.05] tracking-tight mb-8 font-['Playfair_Display',_serif] text-gray-900" style={{ fontWeight: 600 }}>
             Speaking
           </h1>
           <p className="leading-relaxed font-['Playfair_Display',_serif] text-gray-700 mb-4">

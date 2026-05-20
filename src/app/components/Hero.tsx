@@ -14,7 +14,7 @@ export function Hero({
   
   return (
     <section className="max-w-2xl mx-auto px-16 py-20 pb-8 border-b border-gray-100">
-      <h1 className="text-[2.75rem] leading-[0.98] tracking-tight mb-8 font-['Playfair_Display',_serif] text-gray-900" style={{ fontWeight: 600 }}>
+      <h1 className="text-[2.75rem] leading-[1.05] tracking-tight mb-8 font-['Playfair_Display',_serif] text-gray-900" style={{ fontWeight: 600 }}>
         {intro}
       </h1>
       
