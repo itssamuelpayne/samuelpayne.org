@@ -13,7 +13,7 @@ export function ContactPage() {
           </h1>
           <div className="leading-relaxed font-['Playfair_Display',_serif] text-gray-700 space-y-4">
             <p>
-              The best way to reach me is through <a href="https://www.linkedin.com/in/samuelpayne/" target="_blank" rel="noopener noreferrer" className="text-gray-900 underline hover:opacity-60 transition-opacity">LinkedIn</a> or <a href="https://www.threads.com/@samuelpayeesq" target="_blank" rel="noopener noreferrer" className="text-gray-900 underline hover:opacity-60 transition-opacity">Threads</a>. I typically respond within a few days.
+              The best way to reach me is through <a href="https://www.linkedin.com/in/samuelpayne/" target="_blank" rel="noopener noreferrer" className="text-gray-900 underline hover:opacity-60 transition-opacity">LinkedIn</a> or <a href="https://www.threads.com/@samuelpayneesq" target="_blank" rel="noopener noreferrer" className="text-gray-900 underline hover:opacity-60 transition-opacity">Threads</a>. I typically respond within a few days.
             </p>
             <p>
               For speaking inquiries, please email <a href="mailto:speaking@samuelpayne.org" className="text-gray-900 underline hover:opacity-60 transition-opacity">speaking@samuelpayne.org</a>.
