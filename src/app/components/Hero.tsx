@@ -18,7 +18,7 @@ export function Hero({
         {intro}
       </h1>
       
-      <div className="space-y-2">
+      <div className="space-y-6">
         {bioLines.map((line, index) => (
           <p key={index} className="leading-relaxed tracking-tight font-['Playfair_Display',_serif] text-gray-700">
             {line}
