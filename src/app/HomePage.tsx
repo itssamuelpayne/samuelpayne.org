@@ -14,9 +14,7 @@ export function HomePage({ onArticlesLoad }: HomePageProps) {
       <main>
         <Hero 
           intro="Sam leads high-performing design teams in complex organizations—he helps them do the best work of their lives."
-          bio="His experience spans AI, product design, and innovation strategy, ranging from products serving billions of users to scrappy 0-1 prototypes. He stays close to the work, obsessing over how to make complex technology easy to use. He cultivates diverse, resilient organizations and knows that the best cultures flow from the work itself.
-
-Sam is also an active writer and speaker on the intersection of Design and AI. His professional work has been recognized by D&AD, Fast Company, and Time Magazine."
+          bio="He is a product designer whose work spans AI, innovation strategy, and everything from products serving billions of users to scrappy 0-1 prototypes. He stays close to the work, obsessing over how to make complex technology easy to use. He cultivates diverse, resilient organizations and knows that the best cultures flow from the work itself. Sam is also an active writer and speaker on the intersection of design and AI, and his work has been recognized by D&AD, Fast Company, and Time Magazine."
         />
         <BlogList mediumUsername="@itssamuelpayne" onArticlesLoad={onArticlesLoad} />
       </main>

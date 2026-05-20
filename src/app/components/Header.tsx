@@ -28,7 +28,7 @@ export function Header() {
           <MediumIcon />
         </a>
         <a 
-          href="https://www.threads.com/@itssamuelpayne" 
+          href="https://www.threads.com/@samuelpayeesq"
           target="_blank" 
           rel="noopener noreferrer"
           className="w-[17px] h-[17px] text-gray-600 transition-colors hover:transition-none"
@@ -39,7 +39,7 @@ export function Header() {
           <ThreadsIcon />
         </a>
         <a 
-          href="https://www.instagram.com/itssamuelpayne" 
+          href="https://www.instagram.com/samuelpayeesq"
           target="_blank" 
           rel="noopener noreferrer"
           className="w-[17px] h-[17px] text-gray-600 transition-colors hover:transition-none"
