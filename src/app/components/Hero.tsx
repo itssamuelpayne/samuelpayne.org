@@ -20,7 +20,7 @@ export function Hero({
       
       <div className="space-y-6">
         {bioLines.map((line, index) => (
-          <p key={index} className="leading-relaxed font-['Inter',_sans-serif] text-gray-800">
+          <p key={index} className="font-light tracking-tight leading-relaxed font-['DM_Sans',_sans-serif] text-gray-700">
             {line}
           </p>
         ))}
