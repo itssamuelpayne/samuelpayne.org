@@ -16,7 +16,7 @@ interface BlogListProps {
   onArticlesLoad?: (articles: Article[]) => void;
 }
 
-export function BlogList({ mediumUsername = '@itssamuelpayne', onArticlesLoad }: BlogListProps) {
+export function BlogList({ mediumUsername = '@samuelpayneesq', onArticlesLoad }: BlogListProps) {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

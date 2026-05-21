@@ -17,7 +17,7 @@ export function Header() {
       
       <nav className="flex items-center gap-3">
         <a 
-          href="https://medium.com/@itssamuelpayne" 
+          href="https://medium.com/@samuelpayneesq" 
           target="_blank" 
           rel="noopener noreferrer"
           className="w-[17px] h-[17px] text-gray-600 transition-colors hover:transition-none"
