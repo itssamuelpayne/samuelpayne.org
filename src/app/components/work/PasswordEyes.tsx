@@ -4,115 +4,178 @@ export type EyeState = 'open' | 'closed' | 'wide' | 'blinking';
 
 interface PasswordEyesProps {
   state: EyeState;
-  /** 0..1 — used to gently steer the pupils as the user types */
+  /** 0..1 — drifts the pupils horizontally as the user types */
   gaze?: number;
 }
 
-// Layout: each eye sits in a 60-wide column, 28 of gap between.
-// Pupils ride at cy 30. Moving them ±2.5 in x reads as "looking";
-// any more becomes goofy.
-const EYE_RY_OPEN = 14;
-const EYE_RY_CLOSED = 1.2;
-const EYE_RY_WIDE = 17;
+// Chunky cartoon proportions. Big white eyeballs with thick black stroke,
+// large pupils with a small white catchlight.
+const EYE_RX = 38;
+const EYE_RY_OPEN = 38;
+const EYE_RY_CLOSED = 3;
+const STROKE = 5;
 
-const PUPIL_R_OPEN = 4.5;
-const PUPIL_R_WIDE = 3.2;
+const PUPIL_R_OPEN = 16;
+const PUPIL_R_WIDE = 7;
+const HIGHLIGHT_R = 3.5;
+const HIGHLIGHT_OFFSET = { x: 5, y: -5 };
 
-function gazeOffset(g: number) {
-  const clamped = Math.max(0, Math.min(1, g));
-  return (clamped - 0.5) * 5;
+// Eye centers inside the viewBox (240 × 100).
+const LEFT_EYE = { cx: 50, cy: 50 };
+const RIGHT_EYE = { cx: 190, cy: 50 };
+
+// Per-state pupil offsets from each eye center.
+// - open:    looking down at the input field below
+// - closed:  cross-eyed, both pupils pointed inward and down (focused, intense)
+// - wide:    pupils centered (alarmed)
+// - blinking: doesn't matter (pupils hidden mid-blink)
+function pupilTargets(state: EyeState, gaze: number) {
+  const drift = (gaze - 0.5) * 3;
+  switch (state) {
+    case 'open':
+      return {
+        left: { dx: drift, dy: 9 },
+        right: { dx: drift, dy: 9 },
+      };
+    case 'closed':
+      return {
+        left: { dx: 14, dy: 8 },
+        right: { dx: -14, dy: 8 },
+      };
+    case 'wide':
+      return {
+        left: { dx: 0, dy: 0 },
+        right: { dx: 0, dy: 0 },
+      };
+    case 'blinking':
+      return {
+        left: { dx: 0, dy: 0 },
+        right: { dx: 0, dy: 0 },
+      };
+  }
 }
 
 export function PasswordEyes({ state, gaze = 0.5 }: PasswordEyesProps) {
-  const dx = gazeOffset(gaze);
+  const { left, right } = pupilTargets(state, gaze);
 
-  // Resting targets per state.
-  const ryTarget =
-    state === 'closed' ? EYE_RY_CLOSED : state === 'wide' ? EYE_RY_WIDE : EYE_RY_OPEN;
-  const pupilRTarget =
-    state === 'closed' ? 0 : state === 'wide' ? PUPIL_R_WIDE : PUPIL_R_OPEN;
-  const pupilOpacityTarget = state === 'closed' ? 0 : 1;
-
-  // Blink loop while submitting.
   const ryAnimate =
-    state === 'blinking' ? [EYE_RY_OPEN, EYE_RY_CLOSED, EYE_RY_OPEN] : ryTarget;
-  const pupilOpacityAnimate =
-    state === 'blinking' ? [1, 0, 1] : pupilOpacityTarget;
+    state === 'blinking'
+      ? [EYE_RY_OPEN, EYE_RY_CLOSED, EYE_RY_OPEN]
+      : EYE_RY_OPEN;
+
+  const pupilOpacity = state === 'blinking' ? [1, 0, 1] : 1;
+  const pupilR = state === 'wide' ? PUPIL_R_WIDE : PUPIL_R_OPEN;
 
   const lidTransition =
     state === 'blinking'
       ? { duration: 1.4, repeat: Infinity, ease: 'easeInOut' as const }
-      : state === 'wide'
-        ? { type: 'spring' as const, stiffness: 600, damping: 14 }
-        : { type: 'spring' as const, stiffness: 500, damping: 28 };
+      : { type: 'spring' as const, stiffness: 350, damping: 22 };
 
-  // Pupil shrink uses a tween — springs would overshoot into negative radius,
-  // which SVG rejects.
   const pupilTransition =
     state === 'blinking'
       ? { duration: 1.4, repeat: Infinity, ease: 'easeInOut' as const }
-      : { duration: 0.18, ease: 'easeOut' as const };
+      : state === 'wide'
+        ? { type: 'spring' as const, stiffness: 600, damping: 14 }
+        : { type: 'spring' as const, stiffness: 400, damping: 20 };
 
-  // Small head-shake when surprised.
-  const wrapperAnim = state === 'wide' ? { x: [0, -4, 4, -2, 2, 0] } : { x: 0 };
+  const wrapperAnim = state === 'wide' ? { x: [0, -6, 6, -3, 3, 0] } : { x: 0 };
 
   return (
     <motion.svg
-      width="148"
-      height="60"
-      viewBox="0 0 148 60"
-      fill="none"
+      width="240"
+      height="100"
+      viewBox="0 0 240 100"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       animate={wrapperAnim}
-      transition={state === 'wide' ? { duration: 0.4 } : { duration: 0 }}
+      transition={state === 'wide' ? { duration: 0.5 } : { duration: 0 }}
       style={{ display: 'block', margin: '0 auto' }}
     >
-      {/* Left eye */}
-      <motion.ellipse
-        cx={30}
-        cy={30}
-        rx={26}
-        ry={EYE_RY_OPEN}
-        initial={false}
-        animate={{ ry: ryAnimate }}
-        transition={lidTransition}
-        fill="white"
-        stroke="#111827"
-        strokeWidth={1.5}
+      <Eye
+        center={LEFT_EYE}
+        ryAnimate={ryAnimate}
+        lidTransition={lidTransition}
+        pupilDx={left.dx}
+        pupilDy={left.dy}
+        pupilR={pupilR}
+        pupilOpacity={pupilOpacity}
+        pupilTransition={pupilTransition}
       />
-      <motion.circle
-        cx={30 + dx}
-        cy={30}
-        r={PUPIL_R_OPEN}
-        initial={false}
-        animate={{ r: pupilRTarget, opacity: pupilOpacityAnimate }}
-        transition={pupilTransition}
-        fill="#111827"
-      />
-
-      {/* Right eye */}
-      <motion.ellipse
-        cx={118}
-        cy={30}
-        rx={26}
-        ry={EYE_RY_OPEN}
-        initial={false}
-        animate={{ ry: ryAnimate }}
-        transition={lidTransition}
-        fill="white"
-        stroke="#111827"
-        strokeWidth={1.5}
-      />
-      <motion.circle
-        cx={118 + dx}
-        cy={30}
-        r={PUPIL_R_OPEN}
-        initial={false}
-        animate={{ r: pupilRTarget, opacity: pupilOpacityAnimate }}
-        transition={pupilTransition}
-        fill="#111827"
+      <Eye
+        center={RIGHT_EYE}
+        ryAnimate={ryAnimate}
+        lidTransition={lidTransition}
+        pupilDx={right.dx}
+        pupilDy={right.dy}
+        pupilR={pupilR}
+        pupilOpacity={pupilOpacity}
+        pupilTransition={pupilTransition}
       />
     </motion.svg>
+  );
+}
+
+// Helper: one cartoon eye (white ball + pupil + catchlight).
+function Eye({
+  center,
+  ryAnimate,
+  lidTransition,
+  pupilDx,
+  pupilDy,
+  pupilR,
+  pupilOpacity,
+  pupilTransition,
+}: {
+  center: { cx: number; cy: number };
+  ryAnimate: number | number[];
+  lidTransition: object;
+  pupilDx: number;
+  pupilDy: number;
+  pupilR: number;
+  pupilOpacity: number | number[];
+  pupilTransition: object;
+}) {
+  return (
+    <>
+      <motion.ellipse
+        cx={center.cx}
+        cy={center.cy}
+        rx={EYE_RX}
+        ry={EYE_RY_OPEN}
+        initial={false}
+        animate={{ ry: ryAnimate }}
+        transition={lidTransition}
+        fill="white"
+        stroke="#111827"
+        strokeWidth={STROKE}
+      />
+      <motion.circle
+        cx={center.cx}
+        cy={center.cy}
+        r={PUPIL_R_OPEN}
+        initial={false}
+        animate={{
+          cx: center.cx + pupilDx,
+          cy: center.cy + pupilDy,
+          r: pupilR,
+          opacity: pupilOpacity,
+        }}
+        transition={pupilTransition}
+        fill="#111827"
+      />
+      <motion.circle
+        cx={center.cx + HIGHLIGHT_OFFSET.x}
+        cy={center.cy + HIGHLIGHT_OFFSET.y}
+        r={HIGHLIGHT_R}
+        initial={false}
+        animate={{
+          cx: center.cx + pupilDx + HIGHLIGHT_OFFSET.x,
+          cy: center.cy + pupilDy + HIGHLIGHT_OFFSET.y,
+          opacity: pupilOpacity,
+        }}
+        transition={pupilTransition}
+        fill="white"
+      />
+    </>
   );
 }

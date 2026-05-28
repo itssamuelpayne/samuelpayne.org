@@ -75,23 +75,12 @@ export function PasswordGate({ onUnlocked }: PasswordGateProps) {
 
   return (
     <div className="min-h-screen w-full bg-white flex items-center justify-center px-8">
-      <div className="w-full max-w-md text-center">
-        <div className="mb-12">
-          <div className="mb-10">
-            <PasswordEyes state={eyeState} gaze={gaze} />
-          </div>
-          <h1
-            className="text-[2.25rem] leading-[1.1] tracking-tight font-['Playfair_Display',_serif] text-gray-900"
-            style={{ fontWeight: 600 }}
-          >
-            A small collection of design work, kept quiet.
-          </h1>
-          <p className="mt-6 font-['Playfair_Display',_serif] text-gray-500 leading-relaxed">
-            Enter the password to view.
-          </p>
+      <div className="w-full max-w-md flex flex-col items-center">
+        <div className="mb-14">
+          <PasswordEyes state={eyeState} gaze={gaze} />
         </div>
 
-        <form onSubmit={submit} className="space-y-4">
+        <form onSubmit={submit} className="w-full">
           <input
             type="password"
             value={value}
@@ -99,29 +88,22 @@ export function PasswordGate({ onUnlocked }: PasswordGateProps) {
               setValue(e.target.value);
               if (state === 'wrong' || state === 'error') setState('idle');
             }}
+            placeholder="Password"
             autoFocus
             autoComplete="off"
             spellCheck={false}
             disabled={submitting}
             aria-label="Password"
-            className="w-full bg-transparent border-0 border-b border-gray-200 focus:border-gray-900 focus:outline-none text-center font-['Playfair_Display',_serif] text-lg text-gray-900 pb-3 pt-2 transition-colors disabled:opacity-60"
+            className="w-full bg-transparent border-0 border-b border-gray-200 focus:border-gray-900 focus:outline-none text-center font-['Playfair_Display',_serif] text-lg text-gray-900 pb-3 pt-2 placeholder:text-gray-300 placeholder:font-normal placeholder:transition-opacity placeholder:duration-200 focus:placeholder:opacity-0 transition-colors disabled:opacity-60"
           />
 
-          <div className="h-4">
+          <div className="h-4 mt-4 text-center">
             {message && (
               <p className="text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.15em] uppercase">
                 {message}
               </p>
             )}
           </div>
-
-          <button
-            type="submit"
-            disabled={submitting || !value}
-            className="mt-4 text-[10px] font-['Space_Mono',_monospace] text-gray-900 tracking-[0.25em] uppercase border-b border-gray-900 pb-1 hover:opacity-60 transition-opacity disabled:opacity-30 disabled:cursor-not-allowed"
-          >
-            {submitting ? 'Checking' : 'Enter'}
-          </button>
         </form>
       </div>
     </div>
