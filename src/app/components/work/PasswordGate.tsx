@@ -66,7 +66,7 @@ export function PasswordGate({ onUnlocked }: PasswordGateProps) {
             spellCheck={false}
             disabled={submitting}
             aria-label="Password"
-            className="w-full bg-transparent border-0 border-b border-gray-200 focus:border-gray-900 focus:outline-none text-center font-['Playfair_Display',_serif] text-lg text-gray-900 pb-3 pt-2 placeholder:text-gray-300 placeholder:font-normal placeholder:transition-opacity placeholder:duration-200 focus:placeholder:opacity-0 transition-colors disabled:opacity-60"
+            className="w-full bg-transparent border-0 border-b border-gray-200 focus:border-gray-900 focus:outline-none text-center font-['Playfair_Display',_serif] text-lg text-gray-900 pb-3 pt-2 placeholder:text-gray-300 placeholder:font-normal transition-colors disabled:opacity-60"
           />
 
           <div className="h-4 mt-4 text-center">
