@@ -1,6 +1,5 @@
 import { Link, useOutletContext } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Header } from '../Header';
 import { Footer } from '../Footer';
 import type { WorkOutletContext } from './WorkLayout';
 import type { Project } from '../../../content/types';
@@ -10,27 +9,11 @@ export function WorkIndex() {
 
   return (
     <div className="min-h-screen w-full bg-white">
-      <Header />
+      {/* Visually-hidden page heading for screen readers / page hierarchy */}
+      <h1 className="sr-only">Selected Work</h1>
 
       <main>
-        {/* Editorial intro */}
-        <section className="max-w-2xl mx-auto px-16 py-20 pb-12">
-          <p className="text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.2em] uppercase mb-6">
-            Selected Work
-          </p>
-          <h1
-            className="text-[2.75rem] leading-[1.05] tracking-tight mb-8 font-['Playfair_Display',_serif] text-gray-900"
-            style={{ fontWeight: 600 }}
-          >
-            A few projects I’ve been close to.
-          </h1>
-          <p className="leading-relaxed font-['Playfair_Display',_serif] text-gray-700">
-            Not a full archive — just the pieces I keep coming back to, with the thinking that surrounded them.
-          </p>
-        </section>
-
-        {/* Side-by-side project rows */}
-        <section className="max-w-7xl mx-auto px-8 pt-16 pb-24">
+        <section className="max-w-7xl mx-auto px-8 pt-24 pb-24">
           <ul className="space-y-32">
             {projects.map((project) => (
               <li key={project.slug}>

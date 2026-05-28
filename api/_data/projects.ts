@@ -14,10 +14,10 @@ export const projects: Project[] = [
     tags: ['Brand', 'Digital'],
     summary:
       'A digital catalog capturing the essence of a luxury furniture brand — typography, stillness, and a quiet sense of confidence.',
-    thumbnail: 'https://picsum.photos/seed/anders-thumb/800/600',
+    thumbnail: '/portfoliomedia/Final-Hero-High-Res.gif',
     hero: {
       kind: 'image',
-      src: 'https://picsum.photos/seed/anders-hero/2400/1400',
+      src: '/portfoliomedia/Final-Hero-High-Res.gif',
       alt: 'Anders Interiors brand hero',
     },
     overview: {
@@ -98,10 +98,10 @@ export const projects: Project[] = [
     tags: ['Brand', 'Editorial'],
     summary:
       'A magazine and identity for a community of long-distance runners. Bold, plainspoken, built to print well and read fast.',
-    thumbnail: 'https://picsum.photos/seed/range-thumb/800/600',
+    thumbnail: '/portfoliomedia/Hero%20Android%20Widget.png',
     hero: {
       kind: 'image',
-      src: 'https://picsum.photos/seed/range-hero/2400/1400',
+      src: '/portfoliomedia/Hero%20Android%20Widget.png',
       alt: 'Range Crazy magazine spread',
     },
     overview: {
