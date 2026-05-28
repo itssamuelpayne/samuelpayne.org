@@ -1,5 +1,7 @@
-import { useEffect, useRef, useState, type FormEvent } from 'react';
-import { PasswordEyes, type EyeState } from './PasswordEyes';
+import { useState, type FormEvent } from 'react';
+
+// PasswordEyes sits in this folder (PasswordEyes.tsx) and is intentionally
+// unwired for now — we're iterating on the gate's personality separately.
 
 interface PasswordGateProps {
   // Called after the server accepts the password and sets the session cookie.
@@ -12,32 +14,6 @@ type SubmitState = 'idle' | 'submitting' | 'wrong' | 'error';
 export function PasswordGate({ onUnlocked }: PasswordGateProps) {
   const [value, setValue] = useState('');
   const [state, setState] = useState<SubmitState>('idle');
-  const wideTimer = useRef<number | null>(null);
-  const [forceWide, setForceWide] = useState(false);
-
-  // When a wrong-password lands, pop the eyes wide for a beat, then settle
-  // back to the input-driven state.
-  useEffect(() => {
-    if (state !== 'wrong') return;
-    setForceWide(true);
-    if (wideTimer.current) window.clearTimeout(wideTimer.current);
-    wideTimer.current = window.setTimeout(() => setForceWide(false), 700);
-    return () => {
-      if (wideTimer.current) window.clearTimeout(wideTimer.current);
-    };
-  }, [state]);
-
-  const eyeState: EyeState = forceWide
-    ? 'wide'
-    : state === 'submitting'
-      ? 'blinking'
-      : value.length > 0
-        ? 'closed'
-        : 'open';
-
-  // Pupil gaze nudges right as the field fills, so the eyes "watch" the
-  // caret. Capped so it never reads as bug-eyed.
-  const gaze = Math.min(value.length / 12, 1);
 
   async function submit(e: FormEvent) {
     e.preventDefault();
@@ -75,10 +51,13 @@ export function PasswordGate({ onUnlocked }: PasswordGateProps) {
 
   return (
     <div className="min-h-screen w-full bg-white flex items-center justify-center px-8">
-      <div className="w-full max-w-md flex flex-col items-center">
-        <div className="mb-14">
-          <PasswordEyes state={eyeState} gaze={gaze} />
-        </div>
+      <div className="w-full max-w-md flex flex-col items-center text-center">
+        <h1
+          className="text-[2rem] leading-[1.1] tracking-tight mb-12 font-['Playfair_Display',_serif] text-gray-900"
+          style={{ fontWeight: 600 }}
+        >
+          A small collection of design work, kept quiet.
+        </h1>
 
         <form onSubmit={submit} className="w-full">
           <input
