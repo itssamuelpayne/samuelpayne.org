@@ -52,13 +52,6 @@ export function PasswordGate({ onUnlocked }: PasswordGateProps) {
   return (
     <div className="min-h-screen w-full bg-white flex items-center justify-center px-8">
       <div className="w-full max-w-md flex flex-col items-center text-center">
-        <h1
-          className="text-[2rem] leading-[1.1] tracking-tight mb-12 font-['Playfair_Display',_serif] text-gray-900"
-          style={{ fontWeight: 600 }}
-        >
-          A small collection of design work, kept quiet.
-        </h1>
-
         <form onSubmit={submit} className="w-full">
           <input
             type="password"
