@@ -1,4 +1,5 @@
-import { useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
+import { PasswordEyes, type EyeState } from './PasswordEyes';
 
 interface PasswordGateProps {
   // Called after the server accepts the password and sets the session cookie.
@@ -11,6 +12,32 @@ type SubmitState = 'idle' | 'submitting' | 'wrong' | 'error';
 export function PasswordGate({ onUnlocked }: PasswordGateProps) {
   const [value, setValue] = useState('');
   const [state, setState] = useState<SubmitState>('idle');
+  const wideTimer = useRef<number | null>(null);
+  const [forceWide, setForceWide] = useState(false);
+
+  // When a wrong-password lands, pop the eyes wide for a beat, then settle
+  // back to the input-driven state.
+  useEffect(() => {
+    if (state !== 'wrong') return;
+    setForceWide(true);
+    if (wideTimer.current) window.clearTimeout(wideTimer.current);
+    wideTimer.current = window.setTimeout(() => setForceWide(false), 700);
+    return () => {
+      if (wideTimer.current) window.clearTimeout(wideTimer.current);
+    };
+  }, [state]);
+
+  const eyeState: EyeState = forceWide
+    ? 'wide'
+    : state === 'submitting'
+      ? 'blinking'
+      : value.length > 0
+        ? 'closed'
+        : 'open';
+
+  // Pupil gaze nudges right as the field fills, so the eyes "watch" the
+  // caret. Capped so it never reads as bug-eyed.
+  const gaze = Math.min(value.length / 12, 1);
 
   async function submit(e: FormEvent) {
     e.preventDefault();
@@ -50,9 +77,9 @@ export function PasswordGate({ onUnlocked }: PasswordGateProps) {
     <div className="min-h-screen w-full bg-white flex items-center justify-center px-8">
       <div className="w-full max-w-md text-center">
         <div className="mb-12">
-          <p className="text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.2em] uppercase mb-6">
-            Selected Work
-          </p>
+          <div className="mb-10">
+            <PasswordEyes state={eyeState} gaze={gaze} />
+          </div>
           <h1
             className="text-[2.25rem] leading-[1.1] tracking-tight font-['Playfair_Display',_serif] text-gray-900"
             style={{ fontWeight: 600 }}
