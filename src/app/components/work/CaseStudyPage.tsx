@@ -77,8 +77,13 @@ export function CaseStudyPage() {
           {project.hero.kind === 'image' ? (
             <img src={project.hero.src} alt={project.hero.alt} className="w-full h-auto block" />
           ) : (
+            // Heroes autoplay-loop-muted (cinematic). Section videos in the
+            // body retain controls / click-to-play.
             <video
-              controls
+              autoPlay
+              loop
+              muted
+              playsInline
               preload="metadata"
               poster={project.hero.poster}
               aria-label={project.hero.alt}

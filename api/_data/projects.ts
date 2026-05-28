@@ -6,19 +6,19 @@ import type { Project } from '../../src/content/types';
 
 export const projects: Project[] = [
   {
-    slug: 'anders-interiors',
-    title: 'Anders Interiors',
-    client: 'Anders Studio',
+    slug: 'android-12-widgets',
+    title: 'Android 12 Widgets',
+    client: 'Google',
     role: 'Design Lead',
-    year: '2024',
-    tags: ['Brand', 'Digital'],
+    year: '2021',
+    tags: ['Product', 'OS'],
     summary:
-      'A digital catalog capturing the essence of a luxury furniture brand — typography, stillness, and a quiet sense of confidence.',
-    thumbnail: '/portfoliomedia/Final-Hero-High-Res.gif',
+      'Designed home-screen widgets for Android 12 — surfacing live information without forcing app-switching, scalable across device sizes.',
+    thumbnail: '/portfoliomedia/Hero%20Android%20Widget.png',
     hero: {
       kind: 'image',
-      src: '/portfoliomedia/Final-Hero-High-Res.gif',
-      alt: 'Anders Interiors brand hero',
+      src: '/portfoliomedia/Hero%20Android%20Widget.png',
+      alt: 'Android 12 widgets on a home screen',
     },
     overview: {
       what: 'Redesigned the brand system and shipped a digital catalog for Anders’ spring collection — typography, motion language, and a small library of templated layouts the team can extend.',
@@ -90,19 +90,20 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'range-crazy',
-    title: 'Range Crazy',
-    client: 'Range Crazy',
+    slug: 'ios-at-google',
+    title: 'iOS at Google',
+    client: 'Google',
     role: 'Design Director',
     year: '2023',
-    tags: ['Brand', 'Editorial'],
+    tags: ['Product', 'iOS'],
     summary:
-      'A magazine and identity for a community of long-distance runners. Bold, plainspoken, built to print well and read fast.',
-    thumbnail: '/portfoliomedia/Hero%20Android%20Widget.png',
+      'Led iOS design for Google’s core consumer apps — making each app feel native to iPhone while staying true to Google’s product voice.',
+    thumbnail: '/portfoliomedia/Final-Hero-High-Res.mp4',
     hero: {
-      kind: 'image',
-      src: '/portfoliomedia/Hero%20Android%20Widget.png',
-      alt: 'Range Crazy magazine spread',
+      kind: 'video',
+      src: '/portfoliomedia/Final-Hero-High-Res.mp4',
+      poster: '/portfoliomedia/Final-Hero-Poster.jpg',
+      alt: 'iOS at Google product highlights',
     },
     overview: {
       what: 'Built the visual identity, editorial system, and first print issue of Range Crazy — a quarterly for ultrarunners.',

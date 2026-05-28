@@ -35,14 +35,27 @@ function ProjectRow({ project }: { project: Project }) {
       to={`/work/${project.slug}`}
       className="group grid grid-cols-1 md:grid-cols-12 gap-y-8 gap-x-16 items-start"
     >
-      {/* Image */}
+      {/* Thumbnail — animated if the file is a video, still otherwise */}
       <figure className="md:col-span-7 overflow-hidden">
-        <img
-          src={project.thumbnail}
-          alt={project.title}
-          loading="lazy"
-          className="w-full h-auto block transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-        />
+        {/\.(mp4|webm)$/i.test(project.thumbnail) ? (
+          <video
+            src={project.thumbnail}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-label={project.title}
+            className="w-full h-auto block transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+          />
+        ) : (
+          <img
+            src={project.thumbnail}
+            alt={project.title}
+            loading="lazy"
+            className="w-full h-auto block transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+          />
+        )}
       </figure>
 
       {/* Copy */}
