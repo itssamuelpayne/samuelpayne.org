@@ -11,9 +11,6 @@ export function Footer() {
         </p>
         
         <nav className="flex items-center gap-8">
-          <Link to="/work" className="text-xs text-gray-500 hover:text-gray-900 transition-colors font-['Playfair_Display',_serif]">
-            Work
-          </Link>
           <Link to="/speaking" className="text-xs text-gray-500 hover:text-gray-900 transition-colors font-['Playfair_Display',_serif]">
             Speaking
           </Link>
