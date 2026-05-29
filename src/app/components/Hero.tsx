@@ -1,16 +1,17 @@
-// Homepage bio. Three clusters — Now (Meta), Before (Google), Closer —
-// with the first sentence treated as a lede.
+// Homepage bio. Three clusters — Now (Meta), Before (Google), Closer.
+// Compact spacing, restrained hierarchy: lede sets the present, body
+// carries the details.
 
 const BODY =
-  "text-lg leading-relaxed font-['Playfair_Display',_serif] text-gray-700";
+  "text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-700";
 
 export function Hero() {
   return (
-    <section className="max-w-2xl mx-auto px-16 pt-20 pb-16">
-      {/* Now — lede + supporting */}
+    <section className="max-w-2xl mx-auto px-16 pt-12 pb-16">
+      {/* Now */}
       <p
-        className="text-[1.625rem] leading-[1.3] tracking-tight font-['Playfair_Display',_serif] text-gray-900 mb-5"
-        style={{ fontWeight: 600 }}
+        className="text-[1.375rem] leading-[1.25] tracking-tight font-['Playfair_Display',_serif] text-gray-900 mb-3"
+        style={{ fontWeight: 500 }}
       >
         I lead Ecosystem Design at Meta Reality Labs.
       </p>
@@ -18,8 +19,8 @@ export function Hero() {
         My team builds the systems and tools people use to make AI experiences for wearables.
       </p>
 
-      {/* Before — Google accomplishments */}
-      <div className="mt-12 space-y-5">
+      {/* Before */}
+      <div className="mt-7 space-y-2.5">
         <p className={BODY}>Before Meta I spent nearly a decade at Google.</p>
         <p className={BODY}>
           I built a global design team for the Google Play app — a $50B business with 3 billion users.
@@ -33,8 +34,8 @@ export function Hero() {
         </p>
       </div>
 
-      {/* Closer — character + recognition */}
-      <div className="mt-12 space-y-5">
+      {/* Closer */}
+      <div className="mt-7 space-y-2.5">
         <p className={BODY}>
           I like to make complicated things simple. I sometimes write about design and AI.
         </p>

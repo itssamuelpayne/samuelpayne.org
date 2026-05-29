@@ -10,6 +10,7 @@ interface Article {
   pubDate: string;
   content?: string;
   headerImage?: string;
+  excerpt?: string;
 }
 
 const USERNAME = 'samuelpayneesq';
@@ -76,6 +77,7 @@ export function WritingPage() {
             pubDate: item.pubDate,
             content: item.content || item.description,
             headerImage: img?.getAttribute('src') || undefined,
+            excerpt: extractExcerpt(doc),
           };
         });
 
@@ -100,11 +102,11 @@ export function WritingPage() {
       <main>
         <h1 className="sr-only">Writing</h1>
 
-        <section className="max-w-4xl mx-auto px-8 pt-24 pb-24">
+        <section className="max-w-5xl mx-auto px-8 pt-20 pb-24">
           {loading && <LoadingState />}
           {error && <ErrorState message={error} />}
           {!loading && !error && (
-            <ul className="space-y-32">
+            <ul className="space-y-20">
               {articles.map((article) => (
                 <li key={article.id}>
                   <ArticleRow article={article} />
@@ -124,27 +126,40 @@ function ArticleRow({ article }: { article: Article }) {
   const date = formatDate(article.pubDate);
 
   return (
-    <Link to={`/article/${article.id}`} className="group block">
-      {article.headerImage && (
-        <figure className="w-full overflow-hidden mb-10">
-          <img
-            src={article.headerImage}
-            alt={article.title}
-            loading="lazy"
-            className="w-full h-auto block transition-transform duration-700 ease-out group-hover:scale-[1.015]"
-          />
+    <Link
+      to={`/article/${article.id}`}
+      className="group grid grid-cols-1 md:grid-cols-12 gap-y-6 gap-x-10 items-start"
+    >
+      {article.headerImage ? (
+        <figure className="md:col-span-5 overflow-hidden">
+          <div className="w-full aspect-[4/3] overflow-hidden bg-gray-100">
+            <img
+              src={article.headerImage}
+              alt={article.title}
+              loading="lazy"
+              className="w-full h-full object-cover block transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+            />
+          </div>
         </figure>
+      ) : (
+        <div className="md:col-span-5" aria-hidden />
       )}
-      <div className="text-center max-w-2xl mx-auto px-4">
-        <p className="text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.2em] uppercase mb-4">
+
+      <div className="md:col-span-7 md:pt-1">
+        <p className="text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.2em] uppercase mb-3">
           {date}
         </p>
         <h2
-          className="text-[2.25rem] leading-[1.1] tracking-tight font-['Playfair_Display',_serif] text-gray-900 group-hover:opacity-60 transition-opacity"
-          style={{ fontWeight: 600 }}
+          className="text-[1.625rem] leading-[1.2] tracking-tight font-['Playfair_Display',_serif] text-gray-900 mb-4 group-hover:opacity-60 transition-opacity"
+          style={{ fontWeight: 400 }}
         >
           {article.title}
         </h2>
+        {article.excerpt && (
+          <p className="text-[15px] leading-[1.55] font-['Playfair_Display',_serif] text-gray-600">
+            {article.excerpt}
+          </p>
+        )}
       </div>
     </Link>
   );
@@ -181,4 +196,18 @@ function formatDate(s: string) {
     day: 'numeric',
     year: 'numeric',
   });
+}
+
+// Pulls the first meaningful paragraph out of a parsed article body and
+// trims it to a single-line preview.
+function extractExcerpt(doc: Document, maxChars = 200): string {
+  const paragraphs = Array.from(doc.querySelectorAll('p'));
+  for (const p of paragraphs) {
+    const text = (p.textContent || '').trim().replace(/\s+/g, ' ');
+    if (text.length >= 40) {
+      if (text.length <= maxChars) return text;
+      return text.slice(0, maxChars).replace(/\s+\S*$/, '') + '…';
+    }
+  }
+  return '';
 }

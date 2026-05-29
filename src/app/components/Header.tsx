@@ -10,11 +10,24 @@ export function Header() {
   const currentColor = useAnimatedColor();
 
   return (
-    <header className="w-full px-16 py-12 flex items-center justify-between">
-      <Link to="/" className="flex items-center gap-4 cursor-pointer">
-        <AnimatedLogo size={40} />
-      </Link>
-      
+    <header className="w-full px-16 py-12 flex items-start justify-between">
+      <div className="flex flex-col gap-5">
+        <Link to="/" className="cursor-pointer w-fit">
+          <AnimatedLogo size={40} />
+        </Link>
+        <nav className="flex flex-col gap-1.5 font-['Playfair_Display',_serif] text-[15px] text-gray-700">
+          <Link to="/writing" className="w-fit hover:text-gray-900 transition-colors">
+            Writing
+          </Link>
+          <Link to="/speaking" className="w-fit hover:text-gray-900 transition-colors">
+            Speaking
+          </Link>
+          <Link to="/contact" className="w-fit hover:text-gray-900 transition-colors">
+            Contact
+          </Link>
+        </nav>
+      </div>
+
       <nav className="flex items-center gap-3">
         <a 
           href="https://medium.com/@samuelpayneesq" 
