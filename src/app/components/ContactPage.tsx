@@ -9,8 +9,8 @@ export function ContactPage() {
       <main>
         <h1 className="sr-only">Contact</h1>
 
-        <section className="max-w-5xl mx-auto px-8 pt-20 pb-24">
-          <div className="max-w-2xl space-y-4">
+        <section className="max-w-2xl px-16 pt-12 pb-16">
+          <div className="space-y-4">
             <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-700">
               The best way to reach me is through{' '}
               <a
