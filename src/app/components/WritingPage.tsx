@@ -9,13 +9,21 @@ interface Article {
   link: string;
   pubDate: string;
   content?: string;
+  contentSnippet?: string;
+  categories?: string[];
   headerImage?: string;
   excerpt?: string;
 }
 
+interface WritingPageProps {
+  // Lifts the fetched articles into App state so /article/:id can find
+  // them. Without this the article route shows 'Article not found'.
+  onArticlesLoad?: (articles: Article[]) => void;
+}
+
 const USERNAME = 'samuelpayneesq';
 
-export function WritingPage() {
+export function WritingPage({ onArticlesLoad }: WritingPageProps = {}) {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -70,18 +78,24 @@ export function WritingPage() {
           const html: string = item.content || item.description || '';
           const doc = parser.parseFromString(html, 'text/html');
           const img = doc.querySelector('img');
+          const excerpt = extractExcerpt(doc);
           return {
             id,
             title: item.title,
             link: item.link,
             pubDate: item.pubDate,
             content: item.content || item.description,
+            contentSnippet: excerpt,
+            categories: Array.isArray(item.categories) ? item.categories : [],
             headerImage: img?.getAttribute('src') || undefined,
-            excerpt: extractExcerpt(doc),
+            excerpt,
           };
         });
 
-        if (!cancelled) setArticles(transformed);
+        if (!cancelled) {
+          setArticles(transformed);
+          onArticlesLoad?.(transformed);
+        }
       } catch {
         if (!cancelled) setError('Unable to load articles right now.');
       } finally {
@@ -93,6 +107,8 @@ export function WritingPage() {
     return () => {
       cancelled = true;
     };
+    // onArticlesLoad is intentionally not a dep — we only re-fetch on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

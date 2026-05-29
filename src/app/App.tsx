@@ -26,7 +26,7 @@ export default function App() {
             </>
           }
         />
-        <Route path="/writing" element={<WritingPage />} />
+        <Route path="/writing" element={<WritingPage onArticlesLoad={setArticles} />} />
         <Route path="/speaking" element={<SpeakerPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route element={<WorkLayout />}>
