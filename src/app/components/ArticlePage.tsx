@@ -53,8 +53,8 @@ export function ArticlePage({ articles = [] }: ArticlePageProps) {
     <div className="min-h-screen">
       <article className="max-w-2xl px-16 py-20">
         {/* Back Button */}
-        <Link 
-          to="/" 
+        <Link
+          to="/writing"
           className="inline-flex items-center gap-2 text-gray-400 hover:text-[#FF4000] transition-colors mb-12 font-['Space_Mono',_monospace] text-[10px] tracking-wider"
         >
           <ArrowLeft className="w-3 h-3" />
@@ -107,8 +107,8 @@ export function ArticlePage({ articles = [] }: ArticlePageProps) {
 
         {/* Bottom Navigation */}
         <div className="mt-12 pt-8 border-t border-gray-100">
-          <Link 
-            to="/" 
+          <Link
+            to="/writing"
             className="inline-flex items-center gap-2 text-gray-400 hover:text-[#FF4000] transition-colors font-['Space_Mono',_monospace] text-[10px] tracking-wider"
           >
             <ArrowLeft className="w-3 h-3" />
