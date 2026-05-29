@@ -16,7 +16,7 @@ export function WorkIndex() {
       <h1 className="sr-only">Selected Work</h1>
 
       <main>
-        <section className="max-w-7xl px-16 pt-12 pb-24">
+        <section className="max-w-5xl px-16 pt-20 pb-24">
           <ul className="space-y-16">
             {projects.map((project) => (
               <li key={project.slug}>
@@ -42,7 +42,7 @@ function ProjectRow({ project }: { project: Project }) {
     >
       {/* Thumbnail — cropped 4:3 to match the writing rows */}
       <figure className="md:col-span-5 overflow-hidden">
-        <div className="w-full aspect-[4/3] overflow-hidden bg-gray-100">
+        <div className="w-full aspect-[16/9] overflow-hidden bg-gray-100">
           {isVideo ? (
             <video
               src={project.thumbnail}

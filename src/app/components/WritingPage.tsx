@@ -149,7 +149,7 @@ function ArticleRow({ article }: { article: Article }) {
     >
       {article.headerImage ? (
         <figure className="md:col-span-5 overflow-hidden">
-          <div className="w-full aspect-[4/3] overflow-hidden bg-gray-100">
+          <div className="w-full aspect-[16/9] overflow-hidden bg-gray-100">
             <img
               src={article.headerImage}
               alt={article.title}
