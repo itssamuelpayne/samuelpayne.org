@@ -51,7 +51,7 @@ export function ArticlePage({ articles = [] }: ArticlePageProps) {
 
   return (
     <div className="min-h-screen">
-      <article className="max-w-2xl mx-auto px-16 py-20">
+      <article className="max-w-2xl px-16 py-20">
         {/* Back Button */}
         <Link 
           to="/" 

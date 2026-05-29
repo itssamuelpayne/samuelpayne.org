@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 
@@ -172,10 +173,15 @@ function ArticleRow({ article }: { article: Article }) {
           {article.title}
         </h2>
         {article.excerpt && (
-          <p className="text-[14px] leading-[1.6] font-['Playfair_Display',_serif] text-gray-600">
+          <p className="text-[14px] leading-[1.6] font-['Playfair_Display',_serif] text-gray-600 mb-5">
             {article.excerpt}
           </p>
         )}
+
+        <span className="inline-flex items-center gap-2 text-[10px] font-['Space_Mono',_monospace] text-gray-900 tracking-[0.25em] uppercase border-b border-gray-900 pb-1 group-hover:opacity-60 transition-opacity">
+          More
+          <ArrowRight className="w-3 h-3" />
+        </span>
       </div>
     </Link>
   );

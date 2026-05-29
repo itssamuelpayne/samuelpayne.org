@@ -16,7 +16,7 @@ export function WorkIndex() {
       <h1 className="sr-only">Selected Work</h1>
 
       <main>
-        <section className="max-w-7xl mx-auto px-8 pt-24 pb-24">
+        <section className="max-w-7xl px-16 pt-24 pb-24">
           <ul className="space-y-32">
             {projects.map((project) => (
               <li key={project.slug}>
