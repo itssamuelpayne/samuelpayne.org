@@ -11,7 +11,7 @@ export function Hero() {
       {/* Now */}
       <div className="space-y-2.5">
         <p className={BODY}>
-          Hello, I’m Sam. I lead Ecosystem Design at Meta Reality Labs.
+          I lead Ecosystem Design at Meta Reality Labs.
         </p>
         <p className={BODY}>
           My team builds the systems and tools people use to make AI experiences for wearables.
