@@ -22,7 +22,7 @@ export function Hero() {
       <div className="mt-7 space-y-2.5">
         <p className={BODY}>Before Meta I spent nearly a decade at Google.</p>
         <p className={BODY}>
-          I built a global design team for the Google Play app — a $50B business with 3 billion users.
+          I build a global design team for Google Play — a $50B business with 3 billion users.
         </p>
         <p className={BODY}>
           I redesigned how Google apps work on iOS (all 114 of them).
