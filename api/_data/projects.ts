@@ -4,90 +4,30 @@ import type { Project } from '../../src/content/types';
 // Vercel exposes only top-level files in /api as routes; files in /api/_data
 // are private (the leading underscore tells Vercel to ignore them).
 
+// All overview/section copy below is FPO. Replace with your real narrative.
+
 export const projects: Project[] = [
   {
-    slug: 'android-12-widgets',
-    title: 'Android 12 Widgets',
-    client: 'Google',
-    role: 'Design Lead',
-    year: '2021',
-    tags: ['Product', 'OS'],
+    slug: 'wearables-ecosystem',
+    title: 'Wearables Ecosystem',
+    client: 'Meta Reality Labs',
+    role: 'Director of Ecosystem Design',
+    year: '2024 — present',
+    tags: ['Product', 'Wearables', 'AI'],
     summary:
-      'Designed home-screen widgets for Android 12 — surfacing live information without forcing app-switching, scalable across device sizes.',
-    thumbnail: '/portfoliomedia/Hero%20Android%20Widget.png',
+      'Leading ecosystem design at Meta Reality Labs — the tools that let people create AI experiences for wearables.',
+    thumbnail: 'https://picsum.photos/seed/wearables-thumb/1600/1000',
     hero: {
       kind: 'image',
-      src: '/portfoliomedia/Hero%20Android%20Widget.png',
-      alt: 'Android 12 widgets on a home screen',
+      src: 'https://picsum.photos/seed/wearables-hero/2400/1400',
+      alt: 'FPO — Wearables Ecosystem hero',
     },
     overview: {
-      what: 'Redesigned the brand system and shipped a digital catalog for Anders’ spring collection — typography, motion language, and a small library of templated layouts the team can extend.',
-      why: 'The existing site read as inventory. The pieces themselves carry the brand; the surface needed to step back and let them do the work.',
-      outcome: 'Time-on-page roughly doubled. The internal team adopted the templates without asking for layout help — the strongest signal that the system holds.',
+      what: '[What you did]',
+      why: '[Why it mattered]',
+      outcome: '[Why it worked]',
     },
-    sections: [
-      {
-        type: 'commentary',
-        heading: 'Starting from the room',
-        body: 'We began by photographing six interiors in natural light, no styling, no retouching. Everything that followed — type, color, the way the catalog breathes — came out of how those rooms actually felt.',
-      },
-      {
-        type: 'media',
-        size: 'bleed',
-        media: {
-          kind: 'image',
-          src: 'https://picsum.photos/seed/anders-room/2400/1400',
-          alt: 'Anders living room composition',
-        },
-        caption: 'A single room, photographed unstyled.',
-      },
-      {
-        type: 'pair',
-        left: {
-          kind: 'image',
-          src: 'https://picsum.photos/seed/anders-type/1200/900',
-          alt: 'Typography specimen',
-        },
-        right: {
-          kind: 'image',
-          src: 'https://picsum.photos/seed/anders-palette/1200/900',
-          alt: 'Color palette',
-        },
-        leftCaption: 'Display: a custom cut of Söhne for the wordmark.',
-        rightCaption: 'Four warm neutrals, one dark, one accent.',
-      },
-      {
-        type: 'commentary',
-        heading: 'Motion as restraint',
-        body: 'Most luxury sites overcompensate with parallax and reveal animations. We did the opposite — the only motion in the catalog is a slow ease as you scroll past each piece, the way you’d walk through a showroom.',
-      },
-      {
-        type: 'media',
-        size: 'wide',
-        media: {
-          kind: 'video',
-          src: 'https://www.w3schools.com/html/mov_bbb.mp4',
-          poster: 'https://picsum.photos/seed/anders-video/2000/1200',
-          alt: 'Catalog walkthrough',
-        },
-        caption: 'A 40-second walkthrough of the catalog.',
-        commentary:
-          'The cursor is the only thing moving on screen for a beat — the work is about getting out of the customer’s way.',
-      },
-      {
-        type: 'stats',
-        items: [
-          { value: '2.1×', label: 'Time on page' },
-          { value: '38%', label: 'Catalog-to-inquiry rate' },
-          { value: '6 wks', label: 'From kickoff to launch' },
-        ],
-      },
-      {
-        type: 'quote',
-        quote: 'It finally feels like our showroom on a screen.',
-        attribution: 'Founder, Anders Studio',
-      },
-    ],
+    sections: [],
   },
   {
     slug: 'ios-at-google',
@@ -106,26 +46,99 @@ export const projects: Project[] = [
       alt: 'iOS at Google product highlights',
     },
     overview: {
-      what: 'Built the visual identity, editorial system, and first print issue of Range Crazy — a quarterly for ultrarunners.',
-      why: 'The category is saturated with gear-marketing aesthetics. The audience wanted something that respected their attention and read like a real magazine.',
-      outcome: 'First print run sold through in nine days. The grid carried cleanly into the web and Instagram surfaces with almost no adaptation.',
+      what: '[What you did]',
+      why: '[Why it mattered]',
+      outcome: '[Why it worked]',
     },
-    sections: [
-      {
-        type: 'commentary',
-        heading: 'A grid you can run on',
-        body: 'The whole system is one 12-column grid with three text sizes. That’s it. Everything we made — covers, features, race recaps, web — sits on it without modification.',
-      },
-      {
-        type: 'media',
-        size: 'bleed',
-        media: {
-          kind: 'image',
-          src: 'https://picsum.photos/seed/range-spread/2400/1400',
-          alt: 'Editorial spread',
-        },
-      },
-    ],
+    sections: [],
+  },
+  {
+    slug: 'android-12-widgets',
+    title: 'Android 12 Widgets',
+    client: 'Google',
+    role: 'Design Lead',
+    year: '2021',
+    tags: ['Product', 'OS'],
+    summary:
+      'Designed home-screen widgets for Android 12 — surfacing live information without forcing app-switching, scalable across device sizes.',
+    thumbnail: '/portfoliomedia/Hero%20Android%20Widget.png',
+    hero: {
+      kind: 'image',
+      src: '/portfoliomedia/Hero%20Android%20Widget.png',
+      alt: 'Android 12 widgets on a home screen',
+    },
+    overview: {
+      what: '[What you did]',
+      why: '[Why it mattered]',
+      outcome: '[Why it worked]',
+    },
+    sections: [],
+  },
+  {
+    slug: 'google-play-console',
+    title: 'Google Play Console',
+    client: 'Google',
+    role: 'Design Director',
+    year: '2019 — 2022',
+    tags: ['Product', 'Developer Tools'],
+    summary:
+      'Led design for the Google Play developer ecosystem — the tools and surfaces a global app developer community uses every day.',
+    thumbnail: 'https://picsum.photos/seed/play-console-thumb/1600/1000',
+    hero: {
+      kind: 'image',
+      src: 'https://picsum.photos/seed/play-console-hero/2400/1400',
+      alt: 'FPO — Google Play Console hero',
+    },
+    overview: {
+      what: '[What you did]',
+      why: '[Why it mattered]',
+      outcome: '[Why it worked]',
+    },
+    sections: [],
+  },
+  {
+    slug: 'creative-and-content-team',
+    title: 'Creative & Content Team',
+    client: 'Google',
+    role: 'Group Creative Director',
+    year: '2018 — 2022',
+    tags: ['Leadership', 'Brand', 'Content'],
+    summary:
+      'Ran the Creative & Content org behind a product used by three billion people.',
+    thumbnail: 'https://picsum.photos/seed/creative-content-thumb/1600/1000',
+    hero: {
+      kind: 'image',
+      src: 'https://picsum.photos/seed/creative-content-hero/2400/1400',
+      alt: 'FPO — Creative & Content Team hero',
+    },
+    overview: {
+      what: '[What you did]',
+      why: '[Why it mattered]',
+      outcome: '[Why it worked]',
+    },
+    sections: [],
+  },
+  {
+    slug: 'partner-innovation',
+    title: 'Partner Innovation',
+    client: 'Google',
+    role: 'Design Lead',
+    year: '2017 — 2019',
+    tags: ['Product', '0→1', 'Prototyping'],
+    summary:
+      '0→1 prototypes built with external partners — testing what comes next before it has a name.',
+    thumbnail: 'https://picsum.photos/seed/partner-innovation-thumb/1600/1000',
+    hero: {
+      kind: 'image',
+      src: 'https://picsum.photos/seed/partner-innovation-hero/2400/1400',
+      alt: 'FPO — Partner Innovation hero',
+    },
+    overview: {
+      what: '[What you did]',
+      why: '[Why it mattered]',
+      outcome: '[Why it worked]',
+    },
+    sections: [],
   },
 ];
 
