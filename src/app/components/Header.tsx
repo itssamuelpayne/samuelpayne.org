@@ -17,7 +17,10 @@ export function Header() {
         </Link>
         <nav className="flex flex-col gap-1.5 font-['Playfair_Display',_serif] text-[15px] text-gray-700">
           <Link to="/writing" className="w-fit hover:text-gray-900 transition-colors">
-            Writing
+            Articles
+          </Link>
+          <Link to="/work" className="w-fit hover:text-gray-900 transition-colors">
+            Portfolio
           </Link>
           <Link to="/speaking" className="w-fit hover:text-gray-900 transition-colors">
             Speaking
