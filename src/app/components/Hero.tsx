@@ -1,29 +1,46 @@
-interface HeroProps {
-  name?: string;
-  intro?: string;
-  bio?: string;
-}
+// Homepage bio. Three clusters — Now (Meta), Before (Google), Closer —
+// with the first sentence treated as a lede.
 
-export function Hero({ 
-  name = "Your Name",
-  intro = "Sam leads high-performing design teams in complex organizations—he helps them do the best work of their lives.",
-  bio = "His experience spans AI, product design, and innovation strategy, ranging from products serving billions of uses to scrappy 0-1 prototypes. He's happiest when he's close to the work, pushing to simplify and make even the most complex technology easy to use. He cultivates diverse, resilient organizations because he focuses on the work (and most good things flow from that).\\n\\nSam is an active writer and speaker at the intersection of design and AI. His work has been recognized by D&AD, Fast Company, and Time Magazine."
-}: HeroProps) {
-  // Split by manual line breaks
-  const bioLines = bio.split('\\n\\n');
-  
+const BODY =
+  "text-lg leading-relaxed font-['Playfair_Display',_serif] text-gray-700";
+
+export function Hero() {
   return (
-    <section className="max-w-2xl mx-auto px-16 py-20 pb-8 border-b border-gray-100">
-      <h1 className="text-[2.75rem] leading-[1.05] tracking-tight mb-8 font-['Playfair_Display',_serif] text-gray-900" style={{ fontWeight: 600 }}>
-        {intro}
-      </h1>
-      
-      <div className="space-y-6">
-        {bioLines.map((line, index) => (
-          <p key={index} className="tracking-tight leading-relaxed font-['Playfair_Display',_serif] text-gray-700">
-            {line}
-          </p>
-        ))}
+    <section className="max-w-2xl mx-auto px-16 pt-20 pb-16">
+      {/* Now — lede + supporting */}
+      <p
+        className="text-[1.625rem] leading-[1.3] tracking-tight font-['Playfair_Display',_serif] text-gray-900 mb-5"
+        style={{ fontWeight: 600 }}
+      >
+        I lead Ecosystem Design at Meta Reality Labs.
+      </p>
+      <p className={BODY}>
+        My team builds the systems and tools people use to make AI experiences for wearables.
+      </p>
+
+      {/* Before — Google accomplishments */}
+      <div className="mt-12 space-y-5">
+        <p className={BODY}>Before Meta I spent nearly a decade at Google.</p>
+        <p className={BODY}>
+          I built a global design team for the Google Play app — a $50B business with 3 billion users.
+        </p>
+        <p className={BODY}>
+          I redesigned how Google apps work on iOS (all 114 of them).
+        </p>
+        <p className={BODY}>I launched features like Widgets on Android 12.</p>
+        <p className={BODY}>
+          I also got to build technology with big partners. Like an experience for Disney that added sound effects to storytime, and machine learning technology that helped preserve an endangered language.
+        </p>
+      </div>
+
+      {/* Closer — character + recognition */}
+      <div className="mt-12 space-y-5">
+        <p className={BODY}>
+          I like to make complicated things simple. I sometimes write about design and AI.
+        </p>
+        <p className={BODY}>
+          My work has been recognized by D&amp;AD, Fast Company, and Time.
+        </p>
       </div>
     </section>
   );

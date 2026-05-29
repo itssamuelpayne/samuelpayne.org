@@ -1,5 +1,6 @@
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { HomeMenu } from './components/HomeMenu';
 import { BlogList } from './components/BlogList';
 import { Footer } from './components/Footer';
 
@@ -12,10 +13,15 @@ export function HomePage({ onArticlesLoad }: HomePageProps) {
     <div className="min-h-screen w-full bg-white">
       <Header />
       <main>
-        <Hero 
-          intro="Sam leads high-performing design teams in complex organizations—he helps them do the best work of their lives."
-          bio="He currently leads Ecosystem Design at Meta Reality Labs, building the tools that help people create AI experiences for wearables.\n\nBefore Meta, he spent nearly a decade at Google: building and scaling a global design team, leading design for the $50B Play developer ecosystem, and running the Creative & Content org behind a product used by three billion people.\n\nHe stays close to the work, likes to make complex things simple, and believes the best team cultures flow from the work itself.\n\nSam writes and speaks on design and AI. His work has been recognized by D&AD, Fast Company, and Time Magazine."
-        />
+        <Hero />
+        <HomeMenu />
+
+        {/* Writing preview */}
+        <div className="max-w-2xl mx-auto px-16">
+          <p className="text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.25em] uppercase pt-12 pb-2">
+            Writing
+          </p>
+        </div>
         <BlogList mediumUsername="@samuelpayneesq" onArticlesLoad={onArticlesLoad} />
       </main>
       <Footer />
