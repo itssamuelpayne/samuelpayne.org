@@ -1,6 +1,6 @@
-// Homepage bio. Three clusters — Now (Meta), Before (Google), Closer.
-// Compact spacing, restrained hierarchy: lede sets the present, body
-// carries the details.
+// Homepage bio. Three clusters — Now (Meta), Before (Google), Closer —
+// rendered as plain body throughout. The wave at the top sets the voice;
+// the details speak for themselves.
 
 const BODY =
   "text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-700";
@@ -9,15 +9,14 @@ export function Hero() {
   return (
     <section className="max-w-2xl mx-auto px-16 pt-12 pb-16">
       {/* Now */}
-      <p
-        className="text-[1.375rem] leading-[1.25] tracking-tight font-['Playfair_Display',_serif] text-gray-900 mb-3"
-        style={{ fontWeight: 500 }}
-      >
-        I lead Ecosystem Design at Meta Reality Labs.
-      </p>
-      <p className={BODY}>
-        My team builds the systems and tools people use to make AI experiences for wearables.
-      </p>
+      <div className="space-y-2.5">
+        <p className={BODY}>
+          👋🏻 Hello, I’m Sam. I lead Ecosystem Design at Meta Reality Labs.
+        </p>
+        <p className={BODY}>
+          My team builds the systems and tools people use to make AI experiences for wearables.
+        </p>
+      </div>
 
       {/* Before */}
       <div className="mt-7 space-y-2.5">

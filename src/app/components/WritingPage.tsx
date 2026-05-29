@@ -106,7 +106,7 @@ export function WritingPage() {
           {loading && <LoadingState />}
           {error && <ErrorState message={error} />}
           {!loading && !error && (
-            <ul className="space-y-20">
+            <ul className="space-y-16">
               {articles.map((article) => (
                 <li key={article.id}>
                   <ArticleRow article={article} />
@@ -150,13 +150,13 @@ function ArticleRow({ article }: { article: Article }) {
           {date}
         </p>
         <h2
-          className="text-[1.625rem] leading-[1.2] tracking-tight font-['Playfair_Display',_serif] text-gray-900 mb-4 group-hover:opacity-60 transition-opacity"
+          className="text-[1.375rem] leading-[1.2] tracking-tight font-['Playfair_Display',_serif] text-gray-900 mb-3 group-hover:opacity-60 transition-opacity"
           style={{ fontWeight: 400 }}
         >
           {article.title}
         </h2>
         {article.excerpt && (
-          <p className="text-[15px] leading-[1.55] font-['Playfair_Display',_serif] text-gray-600">
+          <p className="text-[14px] leading-[1.6] font-['Playfair_Display',_serif] text-gray-600">
             {article.excerpt}
           </p>
         )}
