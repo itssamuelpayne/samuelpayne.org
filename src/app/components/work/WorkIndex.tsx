@@ -1,5 +1,6 @@
 import { Link, useOutletContext } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { Header } from '../Header';
 import { Footer } from '../Footer';
 import type { WorkOutletContext } from './WorkLayout';
 import type { Project } from '../../../content/types';
@@ -9,6 +10,8 @@ export function WorkIndex() {
 
   return (
     <div className="min-h-screen w-full bg-white">
+      <Header />
+
       {/* Visually-hidden page heading for screen readers / page hierarchy */}
       <h1 className="sr-only">Selected Work</h1>
 

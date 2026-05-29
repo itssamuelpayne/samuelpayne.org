@@ -7,7 +7,7 @@ const BODY =
 
 export function Hero() {
   return (
-    <section className="max-w-2xl mx-auto px-16 pt-12 pb-16">
+    <section className="max-w-2xl px-16 pt-12 pb-16">
       {/* Now */}
       <div className="space-y-2.5">
         <p className={BODY}>
