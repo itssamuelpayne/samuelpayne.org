@@ -102,7 +102,7 @@ export function WritingPage() {
       <main>
         <h1 className="sr-only">Writing</h1>
 
-        <section className="max-w-5xl mx-auto px-8 pt-20 pb-24">
+        <section className="max-w-5xl px-16 pt-20 pb-24">
           {loading && <LoadingState />}
           {error && <ErrorState message={error} />}
           {!loading && !error && (

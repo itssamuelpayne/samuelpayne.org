@@ -50,7 +50,7 @@ export function SpeakerPage() {
       <main>
         <h1 className="sr-only">Speaking</h1>
 
-        <section className="max-w-5xl mx-auto px-8 pt-20 pb-24">
+        <section className="max-w-5xl px-16 pt-20 pb-24">
           {/* Intro */}
           <div className="max-w-2xl space-y-4 mb-20">
             <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-700">
