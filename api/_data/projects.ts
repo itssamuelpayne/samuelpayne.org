@@ -38,12 +38,11 @@ export const projects: Project[] = [
     tags: ['Product', 'iOS'],
     summary:
       'Led iOS design for Google’s core consumer apps — making each app feel native to iPhone while staying true to Google’s product voice.',
-    thumbnail: '/portfoliomedia/Final-Hero-High-Res.mp4',
+    thumbnail: '/portfoliomedia/Hero%20Android%20Widget.png',
     hero: {
-      kind: 'video',
-      src: '/portfoliomedia/Final-Hero-High-Res.mp4',
-      poster: '/portfoliomedia/Final-Hero-Poster.jpg',
-      alt: 'iOS at Google product highlights',
+      kind: 'image',
+      src: '/portfoliomedia/Hero%20Android%20Widget.png',
+      alt: 'iOS at Google — project hero',
     },
     overview: {
       what: '[What you did]',
@@ -61,11 +60,12 @@ export const projects: Project[] = [
     tags: ['Product', 'OS'],
     summary:
       'Designed home-screen widgets for Android 12 — surfacing live information without forcing app-switching, scalable across device sizes.',
-    thumbnail: '/portfoliomedia/Hero%20Android%20Widget.png',
+    thumbnail: '/portfoliomedia/Final-Hero-High-Res.mp4',
     hero: {
-      kind: 'image',
-      src: '/portfoliomedia/Hero%20Android%20Widget.png',
-      alt: 'Android 12 widgets on a home screen',
+      kind: 'video',
+      src: '/portfoliomedia/Final-Hero-High-Res.mp4',
+      poster: '/portfoliomedia/Final-Hero-Poster.jpg',
+      alt: 'Android 12 widgets — hero animation',
     },
     overview: {
       what: '[What you did]',
@@ -155,6 +155,15 @@ export const projects: Project[] = [
           kind: 'image',
           src: '/portfoliomedia/Android%2012%20Widgets/tablet%202.png',
           alt: 'Android 12 widgets on a tablet — cool theming',
+        },
+      },
+      {
+        type: 'media',
+        size: 'bleed',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Hero%20Android%20Widget.png',
+          alt: 'Android 12 widgets — closing composition',
         },
       },
     ],

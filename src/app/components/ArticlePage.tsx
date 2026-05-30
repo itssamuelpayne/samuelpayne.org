@@ -58,7 +58,7 @@ export function ArticlePage({ articles = [] }: ArticlePageProps) {
           className="inline-flex items-center gap-2 text-gray-400 hover:text-[#FF4000] transition-colors mb-12 font-['Space_Mono',_monospace] text-[10px] tracking-wider"
         >
           <ArrowLeft className="w-3 h-3" />
-          BACK
+          ALL WRITING
         </Link>
 
         {/* Article Header */}
@@ -112,7 +112,7 @@ export function ArticlePage({ articles = [] }: ArticlePageProps) {
             className="inline-flex items-center gap-2 text-gray-400 hover:text-[#FF4000] transition-colors font-['Space_Mono',_monospace] text-[10px] tracking-wider"
           >
             <ArrowLeft className="w-3 h-3" />
-            BACK TO ALL ARTICLES
+            ALL WRITING
           </Link>
         </div>
       </article>
