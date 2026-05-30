@@ -262,7 +262,7 @@ export const projects: Project[] = [
     sections: [],
   },
   {
-    slug: 'creative-and-content-team',
+    slug: 'google-creative-shop',
     title: 'Google Creative Shop',
     client: 'Google',
     role: 'Group Creative Director',
@@ -293,11 +293,11 @@ export const projects: Project[] = [
     tags: ['Product', '0→1', 'Prototyping'],
     summary:
       '0→1 prototypes built with external partners — testing what comes next before it has a name.',
-    thumbnail: 'https://picsum.photos/seed/partner-innovation-thumb/1600/1000',
+    thumbnail: '/portfoliomedia/Partner%20Innovation/kupu.png',
     hero: {
       kind: 'image',
-      src: 'https://picsum.photos/seed/partner-innovation-hero/2400/1400',
-      alt: 'FPO — Partner Innovation hero',
+      src: '/portfoliomedia/Partner%20Innovation/kupu.png',
+      alt: 'Kupu — an illustrated portrait with camera focus brackets framing a moko kauae',
     },
     overview: {
       what: '[What you did]',
