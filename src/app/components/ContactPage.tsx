@@ -10,7 +10,7 @@ export function ContactPage() {
         <h1 className="sr-only">Contact</h1>
 
         <section className="max-w-2xl px-16 pt-12 pb-16">
-          <div className="space-y-4">
+          <div className="space-y-5">
             <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-800">
               You can message me on{' '}
               <a
