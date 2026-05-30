@@ -88,51 +88,6 @@ export const projects: Project[] = [
         body: '[Add commentary on the system-wide rethink: Material You theming, dynamic color, the relationship between the OS and each app surface.]',
       },
       {
-        type: 'pair',
-        left: {
-          kind: 'image',
-          src: '/portfoliomedia/Android%2012%20Widgets/Keep.png',
-          alt: 'Google Keep widget showing notes and a quick-action customize panel',
-        },
-        right: {
-          kind: 'image',
-          src: '/portfoliomedia/Android%2012%20Widgets/drive.png',
-          alt: 'Google Drive widgets — quick actions and recent files',
-        },
-        leftCaption: 'Keep — notes and quick capture',
-        rightCaption: 'Drive — search and recents',
-      },
-      {
-        type: 'pair',
-        left: {
-          kind: 'image',
-          src: '/portfoliomedia/Android%2012%20Widgets/Fi.png',
-          alt: 'Google Fi data widget showing remaining gigabytes',
-        },
-        right: {
-          kind: 'image',
-          src: '/portfoliomedia/Android%2012%20Widgets/YT%20Music.png',
-          alt: 'YouTube Music widget — currently playing track and recents',
-        },
-        leftCaption: 'Fi — at-a-glance data',
-        rightCaption: 'YouTube Music — now playing',
-      },
-      {
-        type: 'media',
-        size: 'wide',
-        media: {
-          kind: 'image',
-          src: '/portfoliomedia/Android%2012%20Widgets/maps.png',
-          alt: 'Google Maps widget — quick destinations: home, work, gas, restaurant, groceries, coffee',
-        },
-        caption: 'Maps — saved destinations as taps',
-      },
-      {
-        type: 'commentary',
-        heading: 'How they respond',
-        body: '[Add commentary on the responsive grammar: resize behavior, in-widget actions, scrollable surfaces — widgets that behave like first-class app moments.]',
-      },
-      {
         type: 'media',
         size: 'wide',
         media: {
@@ -143,6 +98,16 @@ export const projects: Project[] = [
           ambient: true,
         },
         caption: 'Resize — widgets grow with the grid',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/maps.png',
+          alt: 'Google Maps widget — quick destinations: home, work, gas, restaurant, groceries, coffee',
+        },
+        caption: 'Maps — saved destinations as taps',
       },
       {
         type: 'media',
@@ -160,6 +125,21 @@ export const projects: Project[] = [
         type: 'media',
         size: 'wide',
         media: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/Tablet%201.png',
+          alt: 'Android 12 widgets on a tablet — warm theming',
+        },
+        caption: 'Tablet — at scale',
+      },
+      {
+        type: 'commentary',
+        heading: 'How they respond',
+        body: '[Add commentary on the responsive grammar: resize behavior, in-widget actions, scrollable surfaces — widgets that behave like first-class app moments.]',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
           kind: 'video',
           src: '/portfoliomedia/Android%2012%20Widgets/Keep-Scroll.mp4',
           poster: '/portfoliomedia/Android%2012%20Widgets/Keep-Scroll-poster.jpg',
@@ -169,19 +149,13 @@ export const projects: Project[] = [
         caption: 'Keep — scrollable content, in place',
       },
       {
-        type: 'pair',
-        left: {
-          kind: 'image',
-          src: '/portfoliomedia/Android%2012%20Widgets/Tablet%201.png',
-          alt: 'Android 12 widgets on a tablet — warm theming',
-        },
-        right: {
+        type: 'media',
+        size: 'bleed',
+        media: {
           kind: 'image',
           src: '/portfoliomedia/Android%2012%20Widgets/tablet%202.png',
           alt: 'Android 12 widgets on a tablet — cool theming',
         },
-        leftCaption: 'Warm — Material You adapts',
-        rightCaption: 'Cool — same surfaces, different mood',
       },
     ],
   },
