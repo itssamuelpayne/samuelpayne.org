@@ -1,23 +1,48 @@
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { fetchArticles, type Article } from '../lib/medium';
+import { Loading } from './ui/Loading';
 
 interface ArticlePageProps {
   articles?: Article[];
 }
 
-interface Article {
-  id: string;
-  title: string;
-  link: string;
-  pubDate: string;
-  contentSnippet?: string;
-  content?: string;
-  categories?: string[];
-}
-
 export function ArticlePage({ articles = [] }: ArticlePageProps) {
   const { id } = useParams<{ id: string }>();
-  const article = articles.find(a => a.id === id);
+  // Articles passed from a prior page (writing list / home) are used when
+  // present; otherwise — on a refresh or deep-link — we fetch the feed here.
+  const [fetched, setFetched] = useState<Article[] | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const article = (fetched ?? articles).find((a) => a.id === id);
+
+  useEffect(() => {
+    if (article) return;
+    let cancelled = false;
+    setLoading(true);
+    fetchArticles()
+      .then((list) => {
+        if (!cancelled) setFetched(list);
+      })
+      .catch(() => {})
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+    // Re-run when the article id changes and we don't already have it.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id]);
+
+  if (!article && loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <Loading />
+      </div>
+    );
+  }
 
   if (!article) {
     return (

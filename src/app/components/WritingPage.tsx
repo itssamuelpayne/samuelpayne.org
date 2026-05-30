@@ -4,26 +4,14 @@ import { ArrowRight } from 'lucide-react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { Loading } from './ui/Loading';
-
-interface Article {
-  id: string;
-  title: string;
-  link: string;
-  pubDate: string;
-  content?: string;
-  contentSnippet?: string;
-  categories?: string[];
-  headerImage?: string;
-  excerpt?: string;
-}
+import { fetchArticles, type Article } from '../lib/medium';
 
 interface WritingPageProps {
   // Lifts the fetched articles into App state so /article/:id can find
-  // them. Without this the article route shows 'Article not found'.
+  // them without re-fetching. The article page can still fetch on its own
+  // for refreshes / deep-links.
   onArticlesLoad?: (articles: Article[]) => void;
 }
-
-const USERNAME = 'samuelpayneesq';
 
 export function WritingPage({ onArticlesLoad }: WritingPageProps = {}) {
   const [articles, setArticles] = useState<Article[]>([]);
@@ -33,79 +21,19 @@ export function WritingPage({ onArticlesLoad }: WritingPageProps = {}) {
   useEffect(() => {
     let cancelled = false;
 
-    async function load() {
-      try {
-        const proxies = [
-          `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${USERNAME}`,
-          `https://api.allorigins.win/get?url=${encodeURIComponent(`https://medium.com/feed/@${USERNAME}`)}`,
-        ];
-
-        let items: any[] | null = null;
-        for (const url of proxies) {
-          try {
-            const res = await fetch(url);
-            if (!res.ok) continue;
-            const json = await res.json();
-            if (json.status === 'ok' && json.items) {
-              items = json.items;
-              break;
-            }
-            if (json.contents) {
-              const parser = new DOMParser();
-              const doc = parser.parseFromString(json.contents, 'text/xml');
-              const list = Array.from(doc.querySelectorAll('item'));
-              items = list.map((item, i) => ({
-                title: item.querySelector('title')?.textContent || '',
-                link: item.querySelector('link')?.textContent || '',
-                pubDate: item.querySelector('pubDate')?.textContent || '',
-                guid: item.querySelector('guid')?.textContent || `article-${i}`,
-                description: item.querySelector('description')?.textContent || '',
-              }));
-              break;
-            }
-          } catch {
-            continue;
-          }
-        }
-
+    fetchArticles()
+      .then((transformed) => {
         if (cancelled) return;
-        if (!items) throw new Error('feed unreachable');
-
-        const parser = new DOMParser();
-        const transformed: Article[] = items.map((item, i) => {
-          let id = `article-${i}`;
-          const guid: string = item.guid || item.link || '';
-          const m = guid.match(/\/p\/([a-zA-Z0-9]+)/);
-          if (m) id = m[1];
-          const html: string = item.content || item.description || '';
-          const doc = parser.parseFromString(html, 'text/html');
-          const img = doc.querySelector('img');
-          const excerpt = extractExcerpt(doc);
-          return {
-            id,
-            title: item.title,
-            link: item.link,
-            pubDate: item.pubDate,
-            content: item.content || item.description,
-            contentSnippet: excerpt,
-            categories: Array.isArray(item.categories) ? item.categories : [],
-            headerImage: img?.getAttribute('src') || undefined,
-            excerpt,
-          };
-        });
-
-        if (!cancelled) {
-          setArticles(transformed);
-          onArticlesLoad?.(transformed);
-        }
-      } catch {
+        setArticles(transformed);
+        onArticlesLoad?.(transformed);
+      })
+      .catch(() => {
         if (!cancelled) setError('Unable to load articles right now.');
-      } finally {
+      })
+      .finally(() => {
         if (!cancelled) setLoading(false);
-      }
-    }
+      });
 
-    load();
     return () => {
       cancelled = true;
     };
@@ -214,18 +142,4 @@ function formatDate(s: string) {
     day: 'numeric',
     year: 'numeric',
   });
-}
-
-// Pulls the first meaningful paragraph out of a parsed article body and
-// trims it to a single-line preview.
-function extractExcerpt(doc: Document, maxChars = 200): string {
-  const paragraphs = Array.from(doc.querySelectorAll('p'));
-  for (const p of paragraphs) {
-    const text = (p.textContent || '').trim().replace(/\s+/g, ' ');
-    if (text.length >= 40) {
-      if (text.length <= maxChars) return text;
-      return text.slice(0, maxChars).replace(/\s+\S*$/, '') + '…';
-    }
-  }
-  return '';
 }
