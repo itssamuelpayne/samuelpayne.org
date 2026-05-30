@@ -24,9 +24,9 @@ export function SpeakerPage() {
       <main>
         <h1 className="sr-only">Speaking</h1>
 
-        <section className="max-w-5xl px-16 pt-20 pb-24">
+        <section className="max-w-2xl px-16 pt-20 pb-24">
           {/* Intro */}
-          <div className="max-w-2xl space-y-4 mb-20">
+          <div className="space-y-4 mb-20">
             <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-800">
               I regularly speak at design and technology conferences and enjoy talking about design, AI, and the creative process. Email{' '}
               <a
@@ -43,14 +43,14 @@ export function SpeakerPage() {
           <img
             src="/portfoliomedia/cespanel.png"
             alt="Sam on a panel at CES"
-            className="w-full max-w-2xl h-auto block mb-20"
+            className="w-full h-auto block mb-20"
             loading="lazy"
           />
 
           {/* Testimonials */}
           <ul className="space-y-10">
             {testimonials.map((t, i) => (
-              <li key={i} className="max-w-3xl">
+              <li key={i}>
                 <blockquote className="text-[17px] leading-[1.5] font-['Playfair_Display',_serif] text-gray-800 italic mb-3">
                   “{t.quote}”
                 </blockquote>
