@@ -11,6 +11,25 @@ function Media({ asset }: { asset: MediaAsset }) {
       />
     );
   }
+
+  // Ambient: GIF-style autoplay / loop / muted. Otherwise: click-to-play.
+  if (asset.ambient) {
+    return (
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        poster={asset.poster}
+        aria-label={asset.alt}
+        className="w-full h-auto block bg-black"
+      >
+        <source src={asset.src} />
+      </video>
+    );
+  }
+
   return (
     <video
       controls

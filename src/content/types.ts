@@ -1,6 +1,14 @@
 export type MediaAsset =
   | { kind: 'image'; src: string; alt: string }
-  | { kind: 'video'; src: string; poster: string; alt: string };
+  | {
+      kind: 'video';
+      src: string;
+      poster: string;
+      alt: string;
+      /** Ambient = autoplay/loop/muted (replaces a GIF). Default behavior
+       *  is click-to-play with controls. */
+      ambient?: boolean;
+    };
 
 export type Section =
   | {
