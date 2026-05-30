@@ -263,7 +263,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'creative-and-content-team',
-    title: 'Creative & Content Team',
+    title: 'Google Creative Shop',
     client: 'Google',
     role: 'Group Creative Director',
     year: '2018 — 2022',
