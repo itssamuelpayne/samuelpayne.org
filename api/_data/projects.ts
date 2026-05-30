@@ -304,7 +304,30 @@ export const projects: Project[] = [
       why: '[Why it mattered]',
       outcome: '[Why it worked]',
     },
-    sections: [],
+    sections: [
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'video',
+          src: '/portfoliomedia/Partner%20Innovation/book-ears-casestudy.mp4',
+          poster:
+            '/portfoliomedia/Partner%20Innovation/book-ears-casestudy-poster.jpg',
+          alt: 'Book Ears case study film',
+        },
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'video',
+          src: '/portfoliomedia/Partner%20Innovation/book-ears-prototype.mp4',
+          poster:
+            '/portfoliomedia/Partner%20Innovation/book-ears-prototype-poster.jpg',
+          alt: 'Book Ears working prototype walkthrough',
+        },
+      },
+    ],
   },
 ];
 

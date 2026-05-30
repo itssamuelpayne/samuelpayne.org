@@ -1,4 +1,74 @@
+import { useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import type { MediaAsset, Section } from '../../../content/types';
+
+function VideoPlayer({
+  src,
+  poster,
+  alt,
+}: {
+  src: string;
+  poster: string;
+  alt: string;
+}) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [started, setStarted] = useState(false);
+
+  const play = () => {
+    const v = ref.current;
+    if (!v) return;
+    setStarted(true);
+    v.play();
+  };
+
+  return (
+    <div className="group relative w-full overflow-hidden bg-black">
+      <video
+        ref={ref}
+        controls={started}
+        preload="metadata"
+        playsInline
+        poster={poster}
+        aria-label={alt}
+        onEnded={() => setStarted(false)}
+        className="w-full h-auto block"
+      >
+        <source src={src} />
+      </video>
+
+      <AnimatePresence>
+        {!started && (
+          <motion.button
+            type="button"
+            onClick={play}
+            aria-label={`Play video: ${alt}`}
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute inset-0 flex items-center justify-center cursor-pointer focus:outline-none"
+          >
+            <span className="absolute inset-0 bg-black/15 transition-colors duration-500 group-hover:bg-black/25" />
+            <motion.span
+              whileHover={{ scale: 1.06 }}
+              whileTap={{ scale: 0.96 }}
+              transition={{ type: 'spring', stiffness: 320, damping: 22 }}
+              className="relative flex items-center justify-center w-20 h-20 rounded-full bg-white/85 backdrop-blur-[2px] shadow-[0_8px_40px_rgba(0,0,0,0.25)]"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="w-7 h-7 translate-x-[2px] text-gray-900"
+                fill="currentColor"
+                aria-hidden
+              >
+                <path d="M5 3.5v17a1 1 0 0 0 1.53.85l13-8.5a1 1 0 0 0 0-1.7l-13-8.5A1 1 0 0 0 5 3.5z" />
+              </svg>
+            </motion.span>
+          </motion.button>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 function Media({ asset }: { asset: MediaAsset }) {
   if (asset.kind === 'image') {
@@ -30,17 +100,7 @@ function Media({ asset }: { asset: MediaAsset }) {
     );
   }
 
-  return (
-    <video
-      controls
-      preload="metadata"
-      poster={asset.poster}
-      aria-label={asset.alt}
-      className="w-full h-auto block bg-black"
-    >
-      <source src={asset.src} />
-    </video>
-  );
+  return <VideoPlayer src={asset.src} poster={asset.poster} alt={asset.alt} />;
 }
 
 const sizeWrapper: Record<NonNullable<Extract<Section, { type: 'media' }>['size']>, string> = {
