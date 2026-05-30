@@ -13,8 +13,16 @@ const colorSequence = [
 
 const CYCLE_DURATION = 120000; // 2 minutes in milliseconds
 
-export function useAnimatedColor() {
-  const [currentColor, setCurrentColor] = useState(colorSequence[0]);
+// Where the cycle begins. Chosen once per page load (not always orange) and
+// shared by the logo and every hover color so they stay in sync. The last
+// color duplicates the first to close the loop, so the random range excludes it.
+export const COLOR_START_OFFSET = Math.floor(
+  Math.random() * (colorSequence.length - 1)
+);
+
+export function useAnimatedColor(startOffset = COLOR_START_OFFSET) {
+  const len = colorSequence.length;
+  const [currentColor, setCurrentColor] = useState(colorSequence[startOffset % len]);
 
   useEffect(() => {
     const startTime = Date.now();
@@ -22,7 +30,7 @@ export function useAnimatedColor() {
     const updateColor = () => {
       const elapsed = Date.now() - startTime;
       const progress = (elapsed % CYCLE_DURATION) / CYCLE_DURATION;
-      const index = Math.floor(progress * colorSequence.length);
+      const index = (Math.floor(progress * len) + startOffset) % len;
       setCurrentColor(colorSequence[index]);
     };
 
@@ -30,7 +38,7 @@ export function useAnimatedColor() {
     const interval = setInterval(updateColor, 100); // Update every 100ms
 
     return () => clearInterval(interval);
-  }, []);
+  }, [startOffset, len]);
 
   return currentColor;
 }
