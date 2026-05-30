@@ -281,7 +281,19 @@ export const projects: Project[] = [
       why: '[Why it mattered]',
       outcome: '[Why it worked]',
     },
-    sections: [],
+    sections: [
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'video',
+          src: '/portfoliomedia/Creative%20%26%20Content/creativeshop.mp4',
+          poster: '/portfoliomedia/Creative%20%26%20Content/creativeshop-poster.jpg',
+          alt: 'Creative Shop — Creative & Content team reel',
+          ambient: true,
+        },
+      },
+    ],
   },
   {
     slug: 'partner-innovation',
