@@ -4,6 +4,7 @@ import type { Project } from '../../../content/types';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { PasswordGate } from './PasswordGate';
+import { Loading } from '../ui/Loading';
 
 type Status = 'loading' | 'locked' | 'ready' | 'error';
 
@@ -72,11 +73,10 @@ function WorkLoadingState() {
       <Header />
       <main className="flex-1 flex items-center justify-center">
         <div
-          className="text-[10px] font-['Space_Mono',_monospace] text-gray-300 tracking-[0.25em] uppercase transition-opacity duration-300"
+          className="transition-opacity duration-300"
           style={{ opacity: show ? 1 : 0 }}
-          aria-live="polite"
         >
-          Loading
+          <Loading />
         </div>
       </main>
       <Footer />

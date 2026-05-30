@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { Loading } from './ui/Loading';
 
 interface Article {
   id: string;
@@ -190,12 +191,7 @@ function ArticleRow({ article }: { article: Article }) {
 function LoadingState() {
   return (
     <div className="min-h-[40vh] flex items-center justify-center">
-      <div
-        className="text-[10px] font-['Space_Mono',_monospace] text-gray-300 tracking-[0.25em] uppercase"
-        aria-live="polite"
-      >
-        Loading
-      </div>
+      <Loading />
     </div>
   );
 }

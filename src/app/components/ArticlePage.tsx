@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 
 interface ArticlePageProps {
   articles?: Article[];
@@ -52,21 +52,23 @@ export function ArticlePage({ articles = [] }: ArticlePageProps) {
   return (
     <div className="min-h-screen">
       <article className="max-w-2xl px-16 py-20">
-        {/* Back Button */}
-        <Link
-          to="/writing"
-          className="inline-flex items-center gap-2 text-gray-400 hover:text-[#FF4000] transition-colors mb-12 font-['Space_Mono',_monospace] text-[10px] tracking-wider"
-        >
-          <ArrowLeft className="w-3 h-3" />
-          ALL WRITING
-        </Link>
-
         {/* Article Header */}
         <header className="mb-6 pb-8 border-b border-gray-100">
-          <h1 className="font-['Playfair_Display',_serif] text-4xl leading-tight tracking-tight mb-6 text-gray-900">
-            {article.title}
-          </h1>
-          
+          <a
+            href={article.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block w-fit mb-6"
+          >
+            <h1 className="font-['Playfair_Display',_serif] text-4xl leading-tight tracking-tight mb-3 text-gray-900 transition-colors group-hover:text-[#FF4000]">
+              {article.title}
+            </h1>
+            <span className="inline-flex items-center gap-1.5 text-[9px] font-['Space_Mono',_monospace] text-gray-400 group-hover:text-[#FF4000] tracking-[0.2em] uppercase transition-colors">
+              Read on Medium
+              <ArrowUpRight className="w-3 h-3" />
+            </span>
+          </a>
+
           <div className="flex items-center gap-4 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-wider">
             <time>{formatDate(article.pubDate)}</time>
             <span>•</span>
