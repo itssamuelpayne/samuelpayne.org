@@ -270,30 +270,19 @@ export const projects: Project[] = [
     tags: ['Leadership', 'Brand', 'Content'],
     summary:
       'Ran the Creative & Content org behind a product used by three billion people.',
-    thumbnail: 'https://picsum.photos/seed/creative-content-thumb/1600/1000',
+    thumbnail: '/portfoliomedia/Creative%20%26%20Content/creativeshop-poster.jpg',
     hero: {
-      kind: 'image',
-      src: 'https://picsum.photos/seed/creative-content-hero/2400/1400',
-      alt: 'FPO — Creative & Content Team hero',
+      kind: 'video',
+      src: '/portfoliomedia/Creative%20%26%20Content/creativeshop.mp4',
+      poster: '/portfoliomedia/Creative%20%26%20Content/creativeshop-poster.jpg',
+      alt: 'Creative Shop — a reel of Creative & Content craft work',
     },
     overview: {
-      what: '[What you did]',
-      why: '[Why it mattered]',
-      outcome: '[Why it worked]',
+      what: '[A short, simple line on what the team made and the craft on display in the reel above.]',
+      why: '[A short line on why this work mattered.]',
+      outcome: '[A short line on the impact.]',
     },
-    sections: [
-      {
-        type: 'media',
-        size: 'wide',
-        media: {
-          kind: 'video',
-          src: '/portfoliomedia/Creative%20%26%20Content/creativeshop.mp4',
-          poster: '/portfoliomedia/Creative%20%26%20Content/creativeshop-poster.jpg',
-          alt: 'Creative Shop — Creative & Content team reel',
-          ambient: true,
-        },
-      },
-    ],
+    sections: [],
   },
   {
     slug: 'partner-innovation',
