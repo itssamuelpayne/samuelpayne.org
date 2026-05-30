@@ -270,7 +270,7 @@ export const projects: Project[] = [
     tags: ['Leadership', 'Brand', 'Content'],
     summary:
       'Ran the Creative & Content org behind a product used by three billion people.',
-    thumbnail: '/portfoliomedia/Creative%20%26%20Content/creativeshop-poster.jpg',
+    thumbnail: '/portfoliomedia/Creative%20%26%20Content/Kenni%20Chaffee%20Header.png',
     hero: {
       kind: 'video',
       src: '/portfoliomedia/Creative%20%26%20Content/creativeshop.mp4',
