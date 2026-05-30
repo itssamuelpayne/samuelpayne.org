@@ -38,18 +38,89 @@ export const projects: Project[] = [
     tags: ['Product', 'iOS'],
     summary:
       'Led iOS design for Google’s core consumer apps — making each app feel native to iPhone while staying true to Google’s product voice.',
-    thumbnail: '/portfoliomedia/Hero%20Android%20Widget.png',
+    thumbnail: '/portfoliomedia/iOS%20at%20Google/iOS%20header.png',
     hero: {
       kind: 'image',
-      src: '/portfoliomedia/Hero%20Android%20Widget.png',
-      alt: 'iOS at Google — project hero',
+      src: '/portfoliomedia/iOS%20at%20Google/iOS%20header.png',
+      alt: 'iOS at Google — a gallery of Google widgets across Home and Lock Screen',
     },
     overview: {
-      what: '[What you did]',
-      why: '[Why it mattered]',
-      outcome: '[Why it worked]',
+      what: 'Led iOS design for Google’s flagship consumer apps, bringing Home Screen and Lock Screen widgets to iPhone — Search, Drive, Gmail, Calendar, Maps, Translate, Meet, and more — each one native to iOS while unmistakably Google.',
+      why: 'iOS 14 and iOS 16 opened the Home Screen and Lock Screen to third-party widgets for the first time. It was a rare chance to put Google’s most-used products one glance away — but only if they felt like they belonged on iPhone rather than ported from Android.',
+      outcome: 'Designing to Apple’s widget grammar — its sizes, materials, and interaction patterns — while keeping each product instantly recognizable, the widgets read as genuinely native. Google showed up on the iPhone Home and Lock Screen as a first-class citizen.',
     },
-    sections: [],
+    sections: [
+      {
+        type: 'commentary',
+        heading: 'Home Screen widgets',
+        body: '[Add commentary on the Home Screen widget system: glanceable utility, the Google stack, and designing each app to Apple’s widget sizes and materials.]',
+      },
+      {
+        type: 'media',
+        size: 'inset',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/iOS%20at%20Google/Work.png',
+          alt: 'iPhone Home Screen with stacked Google widgets — Drive search, Calendar, and Gmail',
+        },
+        caption: 'Home Screen — Drive, Calendar, and Gmail in a single glance',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/iOS%20at%20Google/Drive%20Translate.png',
+          alt: 'Google Drive and Google Translate widgets — searchable files and a Spanish-to-French translation',
+        },
+        caption: 'Drive and Translate — search files and translate on the spot',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/iOS%20at%20Google/gmail%20meet.png',
+          alt: 'Gmail and Google Meet widgets — an inbox preview beside a two-person video call',
+        },
+        caption: 'Gmail and Meet — triage the inbox and join a call without opening the app',
+      },
+      {
+        type: 'commentary',
+        heading: 'Lock Screen widgets',
+        body: '[Add commentary on iOS 16 Lock Screen widgets: glanceable info and quick actions before you unlock, working within Apple’s tinted, space-constrained slots.]',
+      },
+      {
+        type: 'media',
+        size: 'bleed',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/iOS%20at%20Google/Hero%20lsw.png',
+          alt: 'Five iPhones showing Google Lock Screen widgets across different wallpapers',
+        },
+        caption: 'Lock Screen widgets — Google across the lineup',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/iOS%20at%20Google/LSW.png',
+          alt: 'Lock Screen close-up with a Google Search pill, quick actions, and live Google widget cards',
+        },
+        caption: 'Search, Lens, and live cards — a tap from the Lock Screen',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/iOS%20at%20Google/LSW%20iphone.png',
+          alt: 'iPhone Lock Screen showing Gmail unread count and a suggested Drive widget',
+        },
+        caption: 'Gmail and Drive — surfaced before you unlock',
+      },
+    ],
   },
   {
     slug: 'android-12-widgets',

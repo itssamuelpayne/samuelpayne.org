@@ -33,13 +33,13 @@ export function SpeakerPage() {
       quote:
         'thank you again! your talk was exceptionally well-received by all participants within and beyond Yale — and your panel on AI’s impact to tech an absolute highlight!',
       author: 'Jack Xuhui',
-      org: 'Yale School of Management',
+      org: 'Yale School of Management (AI for Business Leaders Conference)',
     },
     {
       quote:
         'it was great to hear from a creative leader like yourself. Your points on psychological safety, smart experimentation, and the power of technology to deliver at scale were just fantastic.',
       author: 'Fahad Ahmed',
-      org: 'Experience Director, The CMO Program, Deloitte',
+      org: 'Experience Director, The CMO Program, Deloitte (CES 2025)',
     },
   ];
 
@@ -54,17 +54,14 @@ export function SpeakerPage() {
           {/* Intro */}
           <div className="max-w-2xl space-y-4 mb-20">
             <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-700">
-              Please email{' '}
+              I regularly speak at design and technology conferences and enjoy talking about design, AI, and the creative process. Email{' '}
               <a
                 href="mailto:speaking@samuelpayne.org"
                 className="underline hover:text-gray-900 transition-colors"
               >
                 speaking@samuelpayne.org
               </a>{' '}
-              to inquire about booking Sam to speak at your event.
-            </p>
-            <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-700">
-              Sam speaks regularly at design and technology conferences, addressing a wide range of audiences: the Wall Street Journal, Google, the Yale School of Management, and D&amp;AD. He enjoys industry panels, though insists on a mix of gender, perspective, and background — it’s more fun that way.
+              for more information.
             </p>
           </div>
 

@@ -12,7 +12,7 @@ export function ContactPage() {
         <section className="max-w-2xl px-16 pt-12 pb-16">
           <div className="space-y-4">
             <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-700">
-              The best way to reach me is through{' '}
+              You can message me on{' '}
               <a
                 href="https://www.linkedin.com/in/samuelpayne/"
                 target="_blank"
@@ -30,7 +30,7 @@ export function ContactPage() {
               >
                 Threads
               </a>
-              . I typically respond within a few days.
+              . I typically respond within a day or two.
             </p>
             <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-700">
               For speaking inquiries, please email{' '}
