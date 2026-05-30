@@ -72,7 +72,112 @@ export const projects: Project[] = [
       why: '[Why it mattered]',
       outcome: '[Why it worked]',
     },
-    sections: [],
+    sections: [
+      {
+        type: 'media',
+        size: 'bleed',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/Tablet%203.png',
+          alt: 'Android 12 widgets on a tablet — Material You theming with warm yellows and greens',
+        },
+      },
+      {
+        type: 'commentary',
+        heading: 'An ecosystem, not a sticker pack',
+        body: '[Add commentary on the system-wide rethink: Material You theming, dynamic color, the relationship between the OS and each app surface.]',
+      },
+      {
+        type: 'pair',
+        left: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/Keep.png',
+          alt: 'Google Keep widget showing notes and a quick-action customize panel',
+        },
+        right: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/drive.png',
+          alt: 'Google Drive widgets — quick actions and recent files',
+        },
+        leftCaption: 'Keep — notes and quick capture',
+        rightCaption: 'Drive — search and recents',
+      },
+      {
+        type: 'pair',
+        left: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/Fi.png',
+          alt: 'Google Fi data widget showing remaining gigabytes',
+        },
+        right: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/YT%20Music.png',
+          alt: 'YouTube Music widget — currently playing track and recents',
+        },
+        leftCaption: 'Fi — at-a-glance data',
+        rightCaption: 'YouTube Music — now playing',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/maps.png',
+          alt: 'Google Maps widget — quick destinations: home, work, gas, restaurant, groceries, coffee',
+        },
+        caption: 'Maps — saved destinations as taps',
+      },
+      {
+        type: 'commentary',
+        heading: 'How they respond',
+        body: '[Add commentary on the responsive grammar: resize behavior, in-widget actions, scrollable surfaces — widgets that behave like first-class app moments.]',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/Drive-Resize.gif',
+          alt: 'Drive widget being resized — drag handles appear at the corners',
+        },
+        caption: 'Resize — widgets grow with the grid',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/Gmail-Archive_1.gif',
+          alt: 'Gmail widget — a thread being archived directly from the home screen',
+        },
+        caption: 'Gmail — act without launching the app',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/Keep-Scroll.gif',
+          alt: 'Keep widget — notes list scrolled inside the widget surface',
+        },
+        caption: 'Keep — scrollable content, in place',
+      },
+      {
+        type: 'pair',
+        left: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/Tablet%201.png',
+          alt: 'Android 12 widgets on a tablet — warm theming',
+        },
+        right: {
+          kind: 'image',
+          src: '/portfoliomedia/Android%2012%20Widgets/tablet%202.png',
+          alt: 'Android 12 widgets on a tablet — cool theming',
+        },
+        leftCaption: 'Warm — Material You adapts',
+        rightCaption: 'Cool — same surfaces, different mood',
+      },
+    ],
   },
   {
     slug: 'google-play-console',
