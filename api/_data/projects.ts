@@ -311,8 +311,7 @@ export const projects: Project[] = [
         media: {
           kind: 'video',
           src: '/portfoliomedia/Partner%20Innovation/book-ears-casestudy.mp4',
-          poster:
-            '/portfoliomedia/Partner%20Innovation/book-ears-casestudy-poster.jpg',
+          poster: '/portfoliomedia/Partner%20Innovation/moana%20keyframe.png',
           alt: 'Book Ears case study film',
         },
       },
