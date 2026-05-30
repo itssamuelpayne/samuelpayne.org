@@ -93,7 +93,7 @@ function WorkErrorState({ onRetry }: { onRetry: () => void }) {
           <p className="text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.2em] uppercase mb-6">
             Something went sideways
           </p>
-          <p className="font-['Playfair_Display',_serif] text-gray-700 mb-8 leading-relaxed">
+          <p className="font-['Playfair_Display',_serif] text-gray-800 mb-8 leading-relaxed">
             Couldn’t reach the server. Check your connection and try again.
           </p>
           <button

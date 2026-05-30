@@ -11,7 +11,7 @@ export function ContactPage() {
 
         <section className="max-w-2xl px-16 pt-12 pb-16">
           <div className="space-y-4">
-            <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-700">
+            <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-800">
               You can message me on{' '}
               <a
                 href="https://www.linkedin.com/in/samuelpayne/"
@@ -32,7 +32,7 @@ export function ContactPage() {
               </a>
               . I typically respond within a day or two.
             </p>
-            <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-700">
+            <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-800">
               For speaking inquiries, please email{' '}
               <a
                 href="mailto:speaking@samuelpayne.org"

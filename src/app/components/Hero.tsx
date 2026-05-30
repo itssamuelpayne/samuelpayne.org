@@ -1,7 +1,7 @@
 // Homepage bio. Four flowing paragraphs — Now, Then, Partners, Closer.
 
 const BODY =
-  "text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-700";
+  "text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-800";
 
 export function Hero() {
   return (
@@ -17,7 +17,7 @@ export function Hero() {
           I also got to build technology with big partners. Like an experience for Disney that added sound effects to storytime, and machine learning technology that helped preserve an endangered language.
         </p>
         <p className={BODY}>
-          I like to make complicated things simple, and sometimes write about design and AI. My work has been recognized by D&amp;AD, Fast Company, and Time Magazine.
+          I like to make complicated things simple. I sometimes write about design and AI. My work has been recognized by D&amp;AD, Fast Company, and Time Magazine.
         </p>
       </div>
     </section>

@@ -68,7 +68,7 @@ export function CaseStudyPage() {
           >
             {project.title}
           </h1>
-          <p className="text-lg font-['Playfair_Display',_serif] text-gray-700 leading-relaxed">
+          <p className="text-lg font-['Playfair_Display',_serif] text-gray-800 leading-relaxed">
             {project.summary}
           </p>
         </header>
@@ -140,7 +140,7 @@ function OverviewBlock({ label, body }: { label: string; body: string }) {
         </p>
       </div>
       <div className="md:col-span-3">
-        <p className="font-['Playfair_Display',_serif] text-gray-700 leading-relaxed">{body}</p>
+        <p className="font-['Playfair_Display',_serif] text-gray-800 leading-relaxed">{body}</p>
       </div>
     </div>
   );

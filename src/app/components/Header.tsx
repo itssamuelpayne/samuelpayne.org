@@ -18,7 +18,7 @@ export function Header() {
         <Link to="/" className="cursor-pointer w-fit">
           <AnimatedLogo size={40} />
         </Link>
-        <nav className="flex flex-col gap-1.5 font-['Playfair_Display',_serif] text-[15px] text-gray-700">
+        <nav className="flex flex-col gap-1.5 font-['Playfair_Display',_serif] text-[15px] text-gray-800">
           <Link
             to="/writing"
             className="w-fit transition-colors hover:transition-none"

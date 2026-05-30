@@ -102,7 +102,7 @@ function ArticleRow({ article }: { article: Article }) {
           {article.title}
         </h2>
         {article.excerpt && (
-          <p className="text-[14px] leading-[1.6] font-['Playfair_Display',_serif] text-gray-600 mb-5">
+          <p className="text-[14px] leading-[1.6] font-['Playfair_Display',_serif] text-gray-700 mb-5">
             {article.excerpt}
           </p>
         )}

@@ -59,7 +59,7 @@ function Caption({ children }: { children: React.ReactNode }) {
 
 function Commentary({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mt-6 max-w-2xl mx-auto px-8 font-['Playfair_Display',_serif] text-gray-700 leading-relaxed text-center">
+    <p className="mt-6 max-w-2xl mx-auto px-8 font-['Playfair_Display',_serif] text-gray-800 leading-relaxed text-center">
       {children}
     </p>
   );
@@ -116,7 +116,7 @@ export function SectionBlock({ section }: { section: Section }) {
               {section.heading}
             </h3>
           )}
-          <p className="font-['Playfair_Display',_serif] text-gray-700 leading-relaxed">
+          <p className="font-['Playfair_Display',_serif] text-gray-800 leading-relaxed">
             {section.body}
           </p>
         </section>

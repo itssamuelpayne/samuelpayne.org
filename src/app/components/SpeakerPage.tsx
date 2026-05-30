@@ -27,7 +27,7 @@ export function SpeakerPage() {
         <section className="max-w-5xl px-16 pt-20 pb-24">
           {/* Intro */}
           <div className="max-w-2xl space-y-4 mb-20">
-            <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-700">
+            <p className="text-[17px] leading-[1.45] font-['Playfair_Display',_serif] text-gray-800">
               I regularly speak at design and technology conferences and enjoy talking about design, AI, and the creative process. Email{' '}
               <a
                 href="mailto:speaking@samuelpayne.org"
@@ -51,7 +51,7 @@ export function SpeakerPage() {
           <ul className="space-y-10">
             {testimonials.map((t, i) => (
               <li key={i} className="max-w-3xl">
-                <blockquote className="text-[17px] leading-[1.5] font-['Playfair_Display',_serif] text-gray-700 italic mb-3">
+                <blockquote className="text-[17px] leading-[1.5] font-['Playfair_Display',_serif] text-gray-800 italic mb-3">
                   “{t.quote}”
                 </blockquote>
                 <div className="text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.2em] uppercase">

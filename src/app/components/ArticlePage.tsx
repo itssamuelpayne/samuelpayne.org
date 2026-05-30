@@ -118,7 +118,7 @@ export function ArticlePage({ articles = [] }: ArticlePageProps) {
         <div className="prose prose-lg max-w-none">
           {article.content ? (
             <div 
-              className="font-['Playfair_Display',_serif] text-gray-700 leading-relaxed tracking-tight article-content"
+              className="font-['Playfair_Display',_serif] text-gray-800 leading-relaxed tracking-tight article-content"
               dangerouslySetInnerHTML={{ __html: article.content }}
               style={{
                 fontSize: '1.125rem',
@@ -126,7 +126,7 @@ export function ArticlePage({ articles = [] }: ArticlePageProps) {
               }}
             />
           ) : (
-            <div className="font-['Playfair_Display',_serif] text-gray-700 leading-relaxed tracking-tight space-y-6">
+            <div className="font-['Playfair_Display',_serif] text-gray-800 leading-relaxed tracking-tight space-y-6">
               <p>{article.contentSnippet || 'Article content is being loaded...'}</p>
             </div>
           )}
