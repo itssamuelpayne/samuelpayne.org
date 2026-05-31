@@ -25,6 +25,10 @@ export type Section =
       leftCaption?: string;
       rightCaption?: string;
     }
+  | {
+      type: 'trio';
+      items: { media: MediaAsset; caption?: string }[];
+    }
   | { type: 'commentary'; heading?: string; body: string }
   | { type: 'stats'; items: { value: string; label: string }[] }
   | { type: 'quote'; quote: string; attribution?: string };

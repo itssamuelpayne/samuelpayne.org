@@ -26,8 +26,8 @@ export const projects: Project[] = [
     sections: [],
   },
   {
-    slug: 'ios-at-google',
-    title: 'iOS at Google',
+    slug: 'google-on-ios',
+    title: 'Google on iOS',
     client: 'Google',
     role: 'Design Director',
     year: '2019',
@@ -52,14 +52,33 @@ export const projects: Project[] = [
         body: '[Add commentary on the Home Screen widget system: glanceable utility, the Google stack, and designing each app to Apple’s widget sizes and materials.]',
       },
       {
-        type: 'media',
-        size: 'inset',
-        media: {
-          kind: 'image',
-          src: '/portfoliomedia/iOS%20at%20Google/Work.png',
-          alt: 'iPhone Home Screen with stacked Google widgets — Drive search, Calendar, and Gmail',
-        },
-        caption: 'Home Screen — Drive, Calendar, and Gmail in a single glance',
+        type: 'trio',
+        items: [
+          {
+            media: {
+              kind: 'image',
+              src: '/portfoliomedia/iOS%20at%20Google/Work.png',
+              alt: 'iPhone Home Screen with stacked Google widgets — Drive search, Calendar, and Gmail',
+            },
+            caption: 'A home screen — Drive, Calendar, and Gmail',
+          },
+          {
+            media: {
+              kind: 'image',
+              src: '/portfoliomedia/iOS%20at%20Google/morning.png',
+              alt: 'iPhone Home Screen on a teal wallpaper — Google Photos, Fit, Maps, and YouTube Music widgets',
+            },
+            caption: 'A morning screen — Photos, Fit, Maps, Music',
+          },
+          {
+            media: {
+              kind: 'image',
+              src: '/portfoliomedia/iOS%20at%20Google/student.png',
+              alt: 'iPhone Home Screen on a pink wallpaper — Google Search, Tasks, Calendar, and Gmail widgets for a student',
+            },
+            caption: 'A student’s screen — Search, Tasks, Calendar, Gmail',
+          },
+        ],
       },
       {
         type: 'media',
@@ -80,21 +99,6 @@ export const projects: Project[] = [
           alt: 'Chrome widgets on iOS — a search bar with voice and Lens, beside the Chrome Dino quick-launch',
         },
         caption: 'Chrome — search, voice, and Lens a tap away',
-      },
-      {
-        type: 'pair',
-        left: {
-          kind: 'image',
-          src: '/portfoliomedia/iOS%20at%20Google/morning.png',
-          alt: 'iPhone Home Screen on a teal wallpaper — Google Photos, Fit, Maps, and YouTube Music widgets',
-        },
-        leftCaption: 'A morning screen — Photos, Fit, Maps, and Music',
-        right: {
-          kind: 'image',
-          src: '/portfoliomedia/iOS%20at%20Google/student.png',
-          alt: 'iPhone Home Screen on a pink wallpaper — Google Search, Tasks, Calendar, and Gmail widgets for a student',
-        },
-        rightCaption: 'A student’s screen — Search, Tasks, Calendar, and Gmail',
       },
       {
         type: 'commentary',
@@ -245,8 +249,7 @@ export const projects: Project[] = [
     tags: ['Product', 'Developer Tools'],
     summary:
       'Led design for the Google Play developer ecosystem — the tools and surfaces a global app developer community uses every day.',
-    thumbnail:
-      '/portfoliomedia/Google%20Play%20Console/play-console-hero-poster.jpg',
+    thumbnail: '/portfoliomedia/Google%20Play%20Console/play-console-hero.mp4',
     hero: {
       kind: 'video',
       src: '/portfoliomedia/Google%20Play%20Console/play-console-hero.mp4',
@@ -349,7 +352,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'partner-innovation',
-    title: 'Partner Innovation',
+    title: 'Google Partner Innovation',
     client: 'Google',
     role: 'Design Lead',
     year: '2017',

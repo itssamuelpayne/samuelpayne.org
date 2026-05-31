@@ -165,6 +165,25 @@ export function SectionBlock({ section }: { section: Section }) {
       );
     }
 
+    case 'trio': {
+      return (
+        <section className="my-20 max-w-6xl mx-auto px-8">
+          <div className="grid grid-cols-3 gap-4 md:gap-6 items-start">
+            {section.items.map((item, i) => (
+              <figure key={i}>
+                <Media asset={item.media} />
+                {item.caption && (
+                  <figcaption className="mt-4 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.15em] uppercase">
+                    {item.caption}
+                  </figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        </section>
+      );
+    }
+
     case 'commentary': {
       return (
         <section className="my-20 max-w-2xl mx-auto px-8">
