@@ -161,7 +161,7 @@ export const projects: Project[] = [
     year: '2021',
     tags: ['Product', 'OS'],
     summary:
-      'Designed home-screen widgets for Android 12 — surfacing live information without forcing app-switching, scalable across device sizes.',
+      'To support the launch of Android 12, I was part of a cross-Google team tasked with shipping 18 first-party widgets in six months. We used our experience running the cross-Google iOS team to stand up a new group doing the same job for Android, working closely with the Material Design team who shipped Material You as part of Android 12.',
     thumbnail: '/portfoliomedia/Android%2012%20Widgets/Material%20You.png',
     hero: {
       kind: 'video',
@@ -169,7 +169,7 @@ export const projects: Project[] = [
       poster: '/portfoliomedia/Final-Hero-Poster.jpg',
       alt: 'Android 12 widgets — hero animation',
     },
-    overview: ['[Overview copy coming soon.]'],
+    overview: [],
     sections: [
       {
         type: 'media',
@@ -182,7 +182,7 @@ export const projects: Project[] = [
       },
       {
         type: 'commentary',
-        body: '[Add commentary on the system-wide rethink: Material You theming, dynamic color, the relationship between the OS and each app surface.]',
+        body: 'A large part of the work was evolving the dynamic sizing constraints across the Android OS, along with new interaction patterns suited to both locked and unlocked home screens.',
       },
       {
         type: 'media',
@@ -227,10 +227,6 @@ export const projects: Project[] = [
           alt: 'Android 12 widgets on a tablet — warm theming',
         },
         caption: 'Tablet — at scale',
-      },
-      {
-        type: 'commentary',
-        body: '[Add commentary on the responsive grammar: resize behavior, in-widget actions, scrollable surfaces — widgets that behave like first-class app moments.]',
       },
       {
         type: 'media',
