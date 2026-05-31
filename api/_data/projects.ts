@@ -45,46 +45,34 @@ export const projects: Project[] = [
     },
     overview: [
       'Console allows developers and businesses to manage their apps and games on Google Play. It’s the economic engine of the ecosystem, driving distribution, marketing, payments, security, integrity and analytics. I was asked to fix a struggling design team split across four time zones, and modernize a legacy web product.',
-      'We undertook a significant redesign of the product, completely reorganizing the information architecture. We prioritized new go-to-market features, and helped the business adopt new user-facing features like short videos to promote app and game content.',
-      'We also introduced Gemini to third-party workflows, speeding up essential features like localization and analytics. We undertook all this work whilst restructuring the team across time-zones. Adding designers in India and introducing global partners who could help us implement such significant changes across an essential product.',
     ],
     sections: [
       {
-        type: 'media',
-        size: 'inset',
-        media: {
+        type: 'commentary',
+        body: 'We undertook a significant redesign of the product, completely reorganizing the information architecture. We prioritized new go-to-market features, and helped the business adopt new user-facing features like short videos to promote app and game content.',
+      },
+      {
+        type: 'pair',
+        left: {
           kind: 'video',
           src: '/portfoliomedia/Google%20Play%20Console/menu.mp4',
           poster: '/portfoliomedia/Google%20Play%20Console/menu-poster.jpg',
           alt: 'Console left navigation grouped by developer task',
           ambient: true,
         },
-        caption: 'Navigation — a task-based information architecture',
-      },
-      {
-        type: 'media',
-        size: 'wide',
-        media: {
+        leftCaption: 'Navigation — a task-based information architecture',
+        right: {
           kind: 'video',
           src: '/portfoliomedia/Google%20Play%20Console/dashboard.mp4',
           poster: '/portfoliomedia/Google%20Play%20Console/dashboard-poster.jpg',
           alt: 'App dashboard surfacing releases, vitals, growth, and revenue',
           ambient: true,
         },
-        caption: 'Dashboard — app health at a glance',
+        rightCaption: 'Dashboard — app health at a glance',
       },
       {
-        type: 'media',
-        size: 'wide',
-        media: {
-          kind: 'video',
-          src: '/portfoliomedia/Google%20Play%20Console/user-growth.mp4',
-          poster:
-            '/portfoliomedia/Google%20Play%20Console/user-growth-poster.jpg',
-          alt: 'Grow users — acquisition and retention charts explored with AI',
-          ambient: true,
-        },
-        caption: 'Grow users — acquisition insights, explorable with AI',
+        type: 'commentary',
+        body: 'We also introduced Gemini to third-party workflows, speeding up essential features like localization and analytics. We undertook all this work whilst restructuring the team across time-zones. Adding designers in India and introducing global partners who could help us implement such significant changes across an essential product.',
       },
       {
         type: 'media',
@@ -98,6 +86,19 @@ export const projects: Project[] = [
           ambient: true,
         },
         caption: 'Store listings — AI-assisted localization with Gemini',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'video',
+          src: '/portfoliomedia/Google%20Play%20Console/user-growth.mp4',
+          poster:
+            '/portfoliomedia/Google%20Play%20Console/user-growth-poster.jpg',
+          alt: 'Grow users — acquisition and retention charts explored with AI',
+          ambient: true,
+        },
+        caption: 'Grow users — acquisition insights, explorable with AI',
       },
     ],
   },
