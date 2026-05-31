@@ -284,6 +284,16 @@ export const projects: Project[] = [
         body: 'Our approach was to work with Apple ahead of each iOS release, then bring the headline features to every Google app. Widgets are a good example: we designed, built, and tested the concepts centrally, partnering with each product team to make the most of what iOS now offered.',
       },
       {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/iOS%20at%20Google/Chrome%20Widget.png',
+          alt: 'Chrome widgets on iOS — a search bar with voice and Lens, beside the Chrome Dino quick-launch',
+        },
+        caption: 'Chrome — search, voice, and Lens a tap away',
+      },
+      {
         type: 'trio',
         maxWidth: '864px',
         items: [
@@ -314,38 +324,8 @@ export const projects: Project[] = [
         ],
       },
       {
-        type: 'media',
-        size: 'wide',
-        media: {
-          kind: 'image',
-          src: '/portfoliomedia/iOS%20at%20Google/gmail%20meet.png',
-          alt: 'Gmail and Google Meet widgets — an inbox preview beside a two-person video call',
-        },
-        caption: 'Gmail and Meet — triage the inbox and join a call without opening the app',
-      },
-      {
-        type: 'media',
-        size: 'wide',
-        media: {
-          kind: 'image',
-          src: '/portfoliomedia/iOS%20at%20Google/Chrome%20Widget.png',
-          alt: 'Chrome widgets on iOS — a search bar with voice and Lens, beside the Chrome Dino quick-launch',
-        },
-        caption: 'Chrome — search, voice, and Lens a tap away',
-      },
-      {
         type: 'commentary',
         body: 'From there we expanded the widgets, adding functionality as we learned how people actually used them, then extended the work to Lock Screen widgets and other new iOS features.',
-      },
-      {
-        type: 'media',
-        size: 'bleed',
-        media: {
-          kind: 'image',
-          src: '/portfoliomedia/iOS%20at%20Google/Hero%20lsw.png',
-          alt: 'Five iPhones showing Google Lock Screen widgets across different wallpapers',
-        },
-        caption: 'Lock Screen widgets — Google across the lineup',
       },
       {
         type: 'media',
@@ -356,6 +336,16 @@ export const projects: Project[] = [
           alt: 'Lock Screen close-up with a Google Search pill, quick actions, and live Google widget cards',
         },
         caption: 'Search, Lens, and live cards — a tap from the Lock Screen',
+      },
+      {
+        type: 'media',
+        size: 'bleed',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/iOS%20at%20Google/Hero%20lsw.png',
+          alt: 'Five iPhones showing Google Lock Screen widgets across different wallpapers',
+        },
+        caption: 'Lock Screen widgets — Google across the lineup',
       },
     ],
   },
