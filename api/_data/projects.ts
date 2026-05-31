@@ -185,7 +185,7 @@ export const projects: Project[] = [
           alt: 'Drive widget being resized — drag handles appear at the corners',
           ambient: true,
         },
-        caption: 'Resize — widgets grow with the grid',
+        caption: 'Building a dynamic resizing system that gives people more choice',
       },
       {
         type: 'media',
@@ -195,7 +195,7 @@ export const projects: Project[] = [
           src: '/portfoliomedia/Android%2012%20Widgets/maps.png',
           alt: 'Google Maps widget — quick destinations: home, work, gas, restaurant, groceries, coffee',
         },
-        caption: 'Maps — saved destinations as taps',
+        caption: 'Creating one-tap actions for the home screen',
       },
       {
         type: 'media',
@@ -207,7 +207,7 @@ export const projects: Project[] = [
           alt: 'Gmail widget — a thread being archived directly from the home screen',
           ambient: true,
         },
-        caption: 'Gmail — act without launching the app',
+        caption: 'Designing new confirmation patterns for archiving from the home screen',
       },
       {
         type: 'media',
@@ -219,7 +219,7 @@ export const projects: Project[] = [
           alt: 'Keep widget — notes list scrolled inside the widget surface',
           ambient: true,
         },
-        caption: 'Keep — scrollable content, in place',
+        caption: 'Exploring scrolling behavior inside embeddable widgets',
       },
       {
         type: 'media',
