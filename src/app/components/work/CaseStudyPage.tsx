@@ -50,7 +50,7 @@ export function CaseStudyPage() {
           </Link>
         </div>
 
-        <header className="max-w-2xl mx-auto px-8 pt-8 pb-16 text-center">
+        <header className="max-w-2xl mx-auto px-8 pt-8 pb-12 text-center">
           <div className="flex items-center justify-center gap-3 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.2em] uppercase mb-6">
             <span>{project.year}</span>
             <span>•</span>
@@ -95,7 +95,7 @@ export function CaseStudyPage() {
         </section>
 
         {project.overview.length > 0 && (
-          <section className="max-w-2xl mx-auto px-8 py-24">
+          <section className="max-w-2xl mx-auto px-8 py-16">
             <div className="space-y-6">
               {project.overview.map((paragraph, i) => (
                 <p
@@ -117,7 +117,7 @@ export function CaseStudyPage() {
           ))}
         </div>
 
-        <section className="max-w-2xl mx-auto px-8 py-20 mt-12 border-t border-gray-100">
+        <section className="max-w-2xl mx-auto px-8 py-16 mt-8 border-t border-gray-100">
           <Link to={`/work/${next.slug}`} className="group block text-center">
             <p className="text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.2em] uppercase mb-4">
               Next

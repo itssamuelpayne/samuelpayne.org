@@ -138,7 +138,7 @@ export function SectionBlock({ section }: { section: Section }) {
     case 'media': {
       const size = section.size ?? 'wide';
       return (
-        <section className="my-20">
+        <section className="my-12">
           <div className={sizeWrapper[size]}>
             <Media asset={section.media} />
           </div>
@@ -155,7 +155,7 @@ export function SectionBlock({ section }: { section: Section }) {
       const fit =
         'block w-full h-auto sm:w-auto sm:h-[52vh] sm:max-h-[560px] sm:min-h-[320px] sm:max-w-full object-contain';
       return (
-        <section className="my-20 max-w-6xl mx-auto px-8">
+        <section className="my-12 max-w-6xl mx-auto px-8">
           <div className="flex flex-col sm:flex-row sm:items-start justify-center gap-6 md:gap-10">
             <figure className="flex flex-col items-center">
               <Media asset={section.left} className={fit} />
@@ -180,7 +180,7 @@ export function SectionBlock({ section }: { section: Section }) {
 
     case 'trio': {
       return (
-        <section className="my-20 max-w-6xl mx-auto px-8">
+        <section className="my-12 max-w-6xl mx-auto px-8">
           <div className="grid grid-cols-3 gap-4 md:gap-6 items-start">
             {section.items.map((item, i) => (
               <figure key={i}>
@@ -199,7 +199,7 @@ export function SectionBlock({ section }: { section: Section }) {
 
     case 'commentary': {
       return (
-        <section className="my-20 max-w-2xl mx-auto px-8">
+        <section className="my-12 max-w-2xl mx-auto px-8">
           {section.heading && (
             <h3
               className="text-[1.5rem] leading-tight tracking-tight mb-4 font-['Playfair_Display',_serif] text-gray-900"
@@ -217,7 +217,7 @@ export function SectionBlock({ section }: { section: Section }) {
 
     case 'stats': {
       return (
-        <section className="my-20 max-w-4xl mx-auto px-8">
+        <section className="my-12 max-w-4xl mx-auto px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {section.items.map((item, i) => (
               <div key={i} className="text-center">
@@ -239,7 +239,7 @@ export function SectionBlock({ section }: { section: Section }) {
 
     case 'quote': {
       return (
-        <section className="my-20 max-w-2xl mx-auto px-8 text-center">
+        <section className="my-12 max-w-2xl mx-auto px-8 text-center">
           <blockquote
             className="text-[1.75rem] leading-snug tracking-tight font-['Playfair_Display',_serif] text-gray-900"
             style={{ fontWeight: 500 }}
