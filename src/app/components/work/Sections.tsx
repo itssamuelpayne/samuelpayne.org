@@ -201,7 +201,7 @@ export function SectionBlock({ section }: { section: Section }) {
                   <Media asset={item.media} />
                 )}
                 {item.caption && (
-                  <figcaption className="mt-4 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.15em] uppercase">
+                  <figcaption className="mt-4 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.15em] uppercase text-center">
                     {item.caption}
                   </figcaption>
                 )}
