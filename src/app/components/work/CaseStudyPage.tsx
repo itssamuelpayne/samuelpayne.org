@@ -1,5 +1,5 @@
 import { Link, useOutletContext, useParams } from 'react-router-dom';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { SectionBlock } from './Sections';
@@ -40,17 +40,7 @@ export function CaseStudyPage() {
       <Header />
 
       <main>
-        <div className="max-w-6xl mx-auto px-8 pb-8">
-          <Link
-            to="/work"
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-gray-900 transition-colors font-['Space_Mono',_monospace] text-[10px] tracking-[0.2em] uppercase"
-          >
-            <ArrowLeft className="w-3 h-3" />
-            All Work
-          </Link>
-        </div>
-
-        <header className="max-w-2xl mx-auto px-8 pt-8 pb-12 text-center">
+        <header className="max-w-2xl mx-auto px-8 pt-16 pb-12 text-center">
           <div className="flex items-center justify-center gap-3 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.2em] uppercase mb-6">
             <span>{project.year}</span>
             {project.client && (

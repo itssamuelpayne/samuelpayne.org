@@ -5,7 +5,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 import { AnimatePresence } from 'motion/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HomePage } from './HomePage';
 import { ArticlePage } from './components/ArticlePage';
 import { Header } from './components/Header';
@@ -28,6 +28,13 @@ function AnimatedRoutes({
   // Key on the top-level segment so navigating within /work doesn't remount
   // WorkLayout (which would re-fetch projects and flash the loader).
   const sectionKey = location.pathname.split('/')[1] || 'home';
+
+  // Reset scroll to the top on every navigation so a new page (e.g. a case
+  // study) opens at its title and lede rather than inheriting the prior
+  // page's scroll offset.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <AnimatePresence mode="wait">
