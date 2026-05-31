@@ -136,7 +136,7 @@ export const projects: Project[] = [
     tags: ['Product', 'OS'],
     summary:
       'Designed home-screen widgets for Android 12 — surfacing live information without forcing app-switching, scalable across device sizes.',
-    thumbnail: '/portfoliomedia/Final-Hero-High-Res.mp4',
+    thumbnail: '/portfoliomedia/Android%2012%20Widgets/Material%20You.png',
     hero: {
       kind: 'video',
       src: '/portfoliomedia/Final-Hero-High-Res.mp4',
