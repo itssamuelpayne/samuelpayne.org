@@ -43,14 +43,13 @@ function ProjectRow({ project }: { project: Project }) {
         {isVideo ? (
           <video
             src={project.thumbnail}
+            autoPlay
             loop
             muted
             playsInline
-            preload="metadata"
+            preload="auto"
             aria-label={project.title}
             className="w-full h-full object-cover block"
-            onMouseEnter={(e) => e.currentTarget.play().catch(() => {})}
-            onMouseLeave={(e) => e.currentTarget.pause()}
           />
         ) : (
           <img
