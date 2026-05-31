@@ -272,22 +272,19 @@ export const projects: Project[] = [
     year: '2019',
     tags: ['Product', 'iOS'],
     summary:
-      'Led iOS design for Google’s flagship consumer apps, bringing Home Screen and Lock Screen widgets to iPhone — Search, Drive, Gmail, Calendar, Maps, Translate, Chrome, and more — each one native to iOS while unmistakably Google.',
+      'I was part of a small team of senior ICs who shaped Google’s app experience on iOS. We designed, built, and shipped coherent features across all 100+ Google apps — which meant working across the entire company, collaborating with design teams and cross-functional partners in every product area.',
     thumbnail: '/portfoliomedia/iOS%20at%20Google/Drive%20Translate.png',
     hero: {
       kind: 'image',
       src: '/portfoliomedia/iOS%20at%20Google/Drive%20Translate.png',
       alt: 'Google Drive and Google Translate widgets on iOS — a searchable file list beside a Spanish-to-French translation',
     },
-    overview: [
-      'iOS 14 and iOS 16 opened the Home Screen and Lock Screen to third-party widgets for the first time. It was a rare chance to put Google’s most-used products one glance away — but only if they felt like they belonged on iPhone rather than ported from Android.',
-      'Designing to Apple’s widget grammar — its sizes, materials, and interaction patterns — while keeping each product instantly recognizable, the widgets read as genuinely native. Google showed up on the iPhone Home and Lock Screen as a first-class citizen.',
-    ],
+    overview: [],
     sections: [
       {
         type: 'commentary',
         heading: 'Home Screen widgets',
-        body: '[Add commentary on the Home Screen widget system: glanceable utility, the Google stack, and designing each app to Apple’s widget sizes and materials.]',
+        body: 'Our approach was to work with Apple ahead of each iOS release, then bring the headline features to every Google app. Widgets are a good example: we designed, built, and tested the concepts centrally, partnering with each product team to make the most of what iOS now offered.',
       },
       {
         type: 'trio',
@@ -341,7 +338,7 @@ export const projects: Project[] = [
       {
         type: 'commentary',
         heading: 'Lock Screen widgets',
-        body: '[Add commentary on iOS 16 Lock Screen widgets: glanceable info and quick actions before you unlock, working within Apple’s tinted, space-constrained slots.]',
+        body: 'From there we expanded the widgets, adding functionality as we learned how people actually used them — and extended the work to Lock Screen widgets and other new iOS features.',
       },
       {
         type: 'media',
