@@ -54,8 +54,11 @@ export const projects: Project[] = [
           alt: 'Console left navigation grouped by developer task',
           ambient: true,
         },
-        eyebrow: 'Navigation — a task-based information architecture',
         body: 'We took on a significant redesign, reorganizing the information architecture from the ground up. We prioritized new go-to-market features and helped the business adopt user-facing ones too — like short videos that let developers promote their apps and games right on the store.',
+      },
+      {
+        type: 'commentary',
+        body: 'We prioritized recommendations and built responsive dashboards that adapt to whoever’s looking — Play Console is used by everyone from marketers to software engineers to CEOs. That lifted frequency of use, developer satisfaction, and the metrics tied to developer revenue.',
       },
       {
         type: 'media',
