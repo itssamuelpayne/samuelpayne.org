@@ -139,7 +139,10 @@ export function SectionBlock({ section }: { section: Section }) {
       const size = section.size ?? 'wide';
       return (
         <section className="my-12">
-          <div className={sizeWrapper[size]}>
+          <div
+            className={sizeWrapper[size]}
+            style={section.maxWidth ? { maxWidth: section.maxWidth } : undefined}
+          >
             <Media asset={section.media} />
           </div>
           {section.caption && <Caption>{section.caption}</Caption>}

@@ -15,6 +15,9 @@ export type Section =
       type: 'media';
       media: MediaAsset;
       size?: 'bleed' | 'wide' | 'inset';
+      /** CSS max-width override for the asset (e.g. '627px'). Takes
+       *  precedence over `size` to render a single asset smaller. */
+      maxWidth?: string;
       caption?: string;
       commentary?: string;
     }

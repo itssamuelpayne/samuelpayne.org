@@ -286,6 +286,7 @@ export const projects: Project[] = [
       {
         type: 'media',
         size: 'wide',
+        maxWidth: '627px',
         media: {
           kind: 'image',
           src: '/portfoliomedia/iOS%20at%20Google/Chrome%20Widget.png',
@@ -295,7 +296,7 @@ export const projects: Project[] = [
       },
       {
         type: 'trio',
-        maxWidth: '864px',
+        maxWidth: '778px',
         items: [
           {
             media: {
@@ -345,7 +346,6 @@ export const projects: Project[] = [
           src: '/portfoliomedia/iOS%20at%20Google/Hero%20lsw.png',
           alt: 'Five iPhones showing Google Lock Screen widgets across different wallpapers',
         },
-        caption: 'Lock Screen widgets — Google across the lineup',
       },
     ],
   },
