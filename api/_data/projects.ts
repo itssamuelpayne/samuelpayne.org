@@ -172,15 +172,6 @@ export const projects: Project[] = [
     overview: [],
     sections: [
       {
-        type: 'media',
-        size: 'bleed',
-        media: {
-          kind: 'image',
-          src: '/portfoliomedia/Android%2012%20Widgets/Tablet%203.png',
-          alt: 'Android 12 widgets on a tablet — Material You theming with warm yellows and greens',
-        },
-      },
-      {
         type: 'commentary',
         body: 'A large part of the work was evolving the dynamic sizing constraints across the Android OS, along with new interaction patterns suited to both locked and unlocked home screens.',
       },
@@ -222,16 +213,6 @@ export const projects: Project[] = [
         type: 'media',
         size: 'wide',
         media: {
-          kind: 'image',
-          src: '/portfoliomedia/Android%2012%20Widgets/Tablet%201.png',
-          alt: 'Android 12 widgets on a tablet — warm theming',
-        },
-        caption: 'Tablet — at scale',
-      },
-      {
-        type: 'media',
-        size: 'wide',
-        media: {
           kind: 'video',
           src: '/portfoliomedia/Android%2012%20Widgets/Keep-Scroll.mp4',
           poster: '/portfoliomedia/Android%2012%20Widgets/Keep-Scroll-poster.jpg',
@@ -239,15 +220,6 @@ export const projects: Project[] = [
           ambient: true,
         },
         caption: 'Keep — scrollable content, in place',
-      },
-      {
-        type: 'media',
-        size: 'bleed',
-        media: {
-          kind: 'image',
-          src: '/portfoliomedia/Android%2012%20Widgets/tablet%202.png',
-          alt: 'Android 12 widgets on a tablet — cool theming',
-        },
       },
       {
         type: 'media',
