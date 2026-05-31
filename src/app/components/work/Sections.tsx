@@ -184,7 +184,19 @@ export function SectionBlock({ section }: { section: Section }) {
           <div className="grid grid-cols-3 gap-4 md:gap-6 items-start">
             {section.items.map((item, i) => (
               <figure key={i}>
-                <Media asset={item.media} />
+                {section.aspect ? (
+                  <div
+                    className="w-full overflow-hidden"
+                    style={{ aspectRatio: section.aspect }}
+                  >
+                    <Media
+                      asset={item.media}
+                      className="block w-full h-full object-cover object-top"
+                    />
+                  </div>
+                ) : (
+                  <Media asset={item.media} />
+                )}
                 {item.caption && (
                   <figcaption className="mt-4 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.15em] uppercase">
                     {item.caption}

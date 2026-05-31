@@ -51,6 +51,7 @@ export const projects: Project[] = [
       },
       {
         type: 'trio',
+        aspect: '484/1560',
         items: [
           {
             media: {

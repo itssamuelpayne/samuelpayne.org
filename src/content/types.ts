@@ -28,6 +28,11 @@ export type Section =
   | {
       type: 'trio';
       items: { media: MediaAsset; caption?: string }[];
+      /** Force a uniform aspect ratio on every item (e.g. '484/1600') so
+       *  mismatched source sizes render at equal height and the captions
+       *  align. Items are cropped from the bottom (object-top). Omit to use
+       *  each asset's natural size. */
+      aspect?: string;
     }
   | {
       type: 'mediaText';
