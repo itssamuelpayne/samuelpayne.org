@@ -46,15 +46,39 @@ export const projects: Project[] = [
     overview: [],
     sections: [
       {
-        type: 'mediaText',
-        media: {
-          kind: 'video',
-          src: '/portfoliomedia/Google%20Play%20Console/menu.mp4',
-          poster: '/portfoliomedia/Google%20Play%20Console/menu-poster.jpg',
-          alt: 'Console left navigation grouped by developer task',
-          ambient: true,
-        },
+        type: 'commentary',
         body: 'We took on a significant redesign, reorganizing the information architecture from the ground up. We prioritized new go-to-market features and helped the business adopt user-facing ones too — like short videos that let developers promote their apps and games right on the store.',
+      },
+      {
+        type: 'trio',
+        items: [
+          {
+            media: {
+              kind: 'image',
+              src: '/portfoliomedia/Google%20Play%20Console/menu-iteration-1.jpg',
+              alt: 'Navigation exploration — early grouping of console tasks',
+            },
+            caption: 'Iteration 1',
+          },
+          {
+            media: {
+              kind: 'image',
+              src: '/portfoliomedia/Google%20Play%20Console/menu-iteration-2.jpg',
+              alt: 'Navigation exploration — refined task-based grouping',
+            },
+            caption: 'Iteration 2',
+          },
+          {
+            media: {
+              kind: 'video',
+              src: '/portfoliomedia/Google%20Play%20Console/menu.mp4',
+              poster: '/portfoliomedia/Google%20Play%20Console/menu-poster.jpg',
+              alt: 'Console left navigation grouped by developer task',
+              ambient: true,
+            },
+            caption: 'Shipped',
+          },
+        ],
       },
       {
         type: 'commentary',
