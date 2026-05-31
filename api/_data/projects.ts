@@ -115,19 +115,6 @@ export const projects: Project[] = [
         },
         caption: 'Store listings — AI-assisted localization with Gemini',
       },
-      {
-        type: 'media',
-        size: 'wide',
-        media: {
-          kind: 'video',
-          src: '/portfoliomedia/Google%20Play%20Console/user-growth.mp4',
-          poster:
-            '/portfoliomedia/Google%20Play%20Console/user-growth-poster.jpg',
-          alt: 'Grow users — acquisition and retention charts explored with AI',
-          ambient: true,
-        },
-        caption: 'Grow users — acquisition insights, explorable with AI',
-      },
     ],
   },
   {
