@@ -53,8 +53,6 @@ export function CaseStudyPage() {
         <header className="max-w-2xl mx-auto px-8 pt-8 pb-12 text-center">
           <div className="flex items-center justify-center gap-3 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.2em] uppercase mb-6">
             <span>{project.year}</span>
-            <span>•</span>
-            <span>{project.role}</span>
             {project.client && (
               <>
                 <span>•</span>
