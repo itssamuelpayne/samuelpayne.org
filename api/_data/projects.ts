@@ -180,7 +180,6 @@ export const projects: Project[] = [
       },
       {
         type: 'commentary',
-        heading: 'An ecosystem, not a sticker pack',
         body: '[Add commentary on the system-wide rethink: Material You theming, dynamic color, the relationship between the OS and each app surface.]',
       },
       {
@@ -229,7 +228,6 @@ export const projects: Project[] = [
       },
       {
         type: 'commentary',
-        heading: 'How they respond',
         body: '[Add commentary on the responsive grammar: resize behavior, in-widget actions, scrollable surfaces — widgets that behave like first-class app moments.]',
       },
       {
@@ -283,7 +281,6 @@ export const projects: Project[] = [
     sections: [
       {
         type: 'commentary',
-        heading: 'Home Screen widgets',
         body: 'Our approach was to work with Apple ahead of each iOS release, then bring the headline features to every Google app. Widgets are a good example: we designed, built, and tested the concepts centrally, partnering with each product team to make the most of what iOS now offered.',
       },
       {
@@ -338,7 +335,6 @@ export const projects: Project[] = [
       },
       {
         type: 'commentary',
-        heading: 'Lock Screen widgets',
         body: 'From there we expanded the widgets, adding functionality as we learned how people actually used them, then extended the work to Lock Screen widgets and other new iOS features.',
       },
       {
@@ -382,7 +378,6 @@ export const projects: Project[] = [
     sections: [
       {
         type: 'commentary',
-        heading: 'Disney Book Ears',
         body: 'Disney Book Ears was one of them. These were the early days of voice interaction design: Google had just acquired API.AI — soon renamed Dialogflow — and we were experimenting with the natural-language processing that would feed the first Google Assistant.',
       },
       {
@@ -415,7 +410,6 @@ export const projects: Project[] = [
       },
       {
         type: 'commentary',
-        heading: 'Te Reo Māori',
         body: 'Te Reo Māori is the native language of New Zealand. Because it’s a purely oral language, it’s at risk of disappearing as fewer people learn it.',
       },
       {
