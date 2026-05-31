@@ -34,7 +34,7 @@ export const projects: Project[] = [
     year: '2024',
     tags: ['Product', 'Developer Tools'],
     summary:
-      'Console allows developers and businesses to manage their apps and games on Google Play. It’s the economic engine of the ecosystem, driving distribution, marketing, payments, security, integrity and analytics. I was asked to fix a struggling design team split across four time zones, and modernize a legacy web product.',
+      'Play Console is where developers and businesses run their apps and games on Google Play — the economic engine of the ecosystem, driving distribution, marketing, payments, security, integrity, and analytics. I was brought in to do two things at once: steady a struggling design team spread across four time zones, and modernize a legacy web product.',
     thumbnail: '/portfoliomedia/Google%20Play%20Console/play-console-hero.mp4',
     hero: {
       kind: 'video',
@@ -46,8 +46,16 @@ export const projects: Project[] = [
     overview: [],
     sections: [
       {
-        type: 'commentary',
-        body: 'We undertook a significant redesign of the product, completely reorganizing the information architecture. We prioritized new go-to-market features, and helped the business adopt new user-facing features like short videos to promote app and game content.',
+        type: 'mediaText',
+        media: {
+          kind: 'video',
+          src: '/portfoliomedia/Google%20Play%20Console/menu.mp4',
+          poster: '/portfoliomedia/Google%20Play%20Console/menu-poster.jpg',
+          alt: 'Console left navigation grouped by developer task',
+          ambient: true,
+        },
+        eyebrow: 'Navigation — a task-based information architecture',
+        body: 'We took on a significant redesign, reorganizing the information architecture from the ground up. We prioritized new go-to-market features and helped the business adopt user-facing ones too — like short videos that let developers promote their apps and games right on the store.',
       },
       {
         type: 'media',
@@ -63,7 +71,7 @@ export const projects: Project[] = [
       },
       {
         type: 'commentary',
-        body: 'We also introduced Gemini to third-party workflows, speeding up essential features like localization and analytics. We undertook all this work whilst restructuring the team across time-zones. Adding designers in India and introducing global partners who could help us implement such significant changes across an essential product.',
+        body: 'We brought Gemini into third-party workflows, speeding up essential tasks like localization and analytics. And we did all of it while restructuring the team across time zones — adding designers in India and bringing on global partners who could help us land changes of this scale on a product developers depend on every day.',
       },
       {
         type: 'media',
@@ -349,7 +357,7 @@ export const projects: Project[] = [
     year: '2017',
     tags: ['Product', '0→1', 'Prototyping'],
     summary:
-      'I led a small, senior team working with more than 50 partners across Asia Pacific. From Sydney, we covered the region — Mumbai across to Tokyo, down to Auckland. We built hundreds of prototypes, helping partners embed Google’s technology in their businesses.',
+      'I led a small, senior team working with partners across Asia Pacific. From Sydney we covered the region — Mumbai across to Tokyo, down to Auckland — building hundreds of prototypes that helped them embed Google’s technology in their own businesses.',
     thumbnail: '/portfoliomedia/Partner%20Innovation/book-ears-casestudy-poster.png',
     hero: {
       kind: 'image',
@@ -361,11 +369,11 @@ export const projects: Project[] = [
       {
         type: 'commentary',
         heading: 'Disney Book Ears',
-        body: 'Disney Book Ears was one of them. It was early days for voice interaction design. Google had just acquired API.AI — soon renamed Dialogflow — and was experimenting with the natural language processing that fed into the first Google Assistant.',
+        body: 'Disney Book Ears was one of them. These were the early days of voice interaction design: Google had just acquired API.AI — soon renamed Dialogflow — and we were experimenting with the natural-language processing that would feed the first Google Assistant.',
       },
       {
         type: 'commentary',
-        body: 'We built a companion for parents. They could pick any Disney storybook, turn on Book Ears through their Google Home, and hear sound effects play from the speaker as they read aloud.',
+        body: 'We built a companion for parents. Pick any Disney storybook, switch on Book Ears through a Google Home, and the speaker plays sound effects in time as you read aloud.',
       },
       {
         type: 'media',
@@ -394,11 +402,11 @@ export const projects: Project[] = [
       {
         type: 'commentary',
         heading: 'Te Reo Māori',
-        body: 'Te Reo Māori is the native language of New Zealand. It’s a purely oral language and as such, is at risk of disappearing as people no longer learn it.',
+        body: 'Te Reo Māori is the native language of New Zealand. Because it’s a purely oral language, it’s at risk of disappearing as fewer people learn it.',
       },
       {
         type: 'commentary',
-        body: 'We used a collection of Google technologies to ingest Te Reo Māori into the Google Translate system, create a unique app experience that could translate any picture into the Te Reo Māori word, and help preserve an at-risk language.',
+        body: 'We used a collection of Google technologies to bring Te Reo Māori into Google Translate, then built an app that could turn anything you pointed your camera at into its Te Reo Māori word — a small way to help preserve a language at risk.',
       },
       {
         type: 'media',
@@ -432,7 +440,7 @@ export const projects: Project[] = [
       },
       {
         type: 'commentary',
-        body: 'The technology we built for this project was scaled via the Google Arts & Culture Program and has now gone on to help preserve hundreds of purely oral languages around the world.',
+        body: 'The technology we built here went on to scale through the Google Arts & Culture program, and now helps preserve hundreds of purely oral languages around the world.',
       },
     ],
   },

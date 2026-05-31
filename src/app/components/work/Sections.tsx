@@ -197,6 +197,38 @@ export function SectionBlock({ section }: { section: Section }) {
       );
     }
 
+    case 'mediaText': {
+      // A (typically tall) media asset beside a paragraph, vertically
+      // centered so a portrait nav rail reads elegantly next to the text.
+      const side = section.mediaSide ?? 'left';
+      return (
+        <section className="my-12 max-w-4xl mx-auto px-8">
+          <div
+            className={`flex flex-col gap-8 md:gap-12 md:items-center ${
+              side === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'
+            }`}
+          >
+            <figure className="shrink-0 flex w-full md:w-auto justify-center">
+              <Media
+                asset={section.media}
+                className="block w-auto h-auto max-h-[60vh] md:max-h-[520px] object-contain"
+              />
+            </figure>
+            <div className="flex-1">
+              {section.eyebrow && (
+                <p className="mb-4 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.2em] uppercase">
+                  {section.eyebrow}
+                </p>
+              )}
+              <p className="font-['Playfair_Display',_serif] text-gray-800 leading-relaxed text-lg">
+                {section.body}
+              </p>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
     case 'commentary': {
       return (
         <section className="my-12 max-w-2xl mx-auto px-8">

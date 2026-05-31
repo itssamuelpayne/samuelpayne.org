@@ -29,6 +29,15 @@ export type Section =
       type: 'trio';
       items: { media: MediaAsset; caption?: string }[];
     }
+  | {
+      type: 'mediaText';
+      media: MediaAsset;
+      body: string;
+      /** Small mono eyebrow above the body. */
+      eyebrow?: string;
+      /** Which side the media sits on (default left). */
+      mediaSide?: 'left' | 'right';
+    }
   | { type: 'commentary'; heading?: string; body: string }
   | { type: 'stats'; items: { value: string; label: string }[] }
   | { type: 'quote'; quote: string; attribution?: string };

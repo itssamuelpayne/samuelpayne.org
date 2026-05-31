@@ -75,10 +75,15 @@ export function CaseStudyPage() {
 
         <section className="w-full">
           {project.hero.kind === 'image' ? (
-            <img src={project.hero.src} alt={project.hero.alt} className="w-full h-auto block" />
+            <img
+              src={project.hero.src}
+              alt={project.hero.alt}
+              className="w-full max-h-[70vh] object-cover block"
+            />
           ) : (
             // Heroes autoplay-loop-muted (cinematic). Section videos in the
-            // body retain controls / click-to-play.
+            // body retain controls / click-to-play. Capped to a band so they
+            // don't dominate the fold on wide monitors.
             <video
               autoPlay
               loop
@@ -87,7 +92,7 @@ export function CaseStudyPage() {
               preload="metadata"
               poster={project.hero.poster}
               aria-label={project.hero.alt}
-              className="w-full h-auto block bg-black"
+              className="w-full max-h-[70vh] object-cover block bg-black"
             >
               <source src={project.hero.src} />
             </video>
