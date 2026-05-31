@@ -94,18 +94,20 @@ export function CaseStudyPage() {
           )}
         </section>
 
-        <section className="max-w-2xl mx-auto px-8 py-24">
-          <div className="space-y-6">
-            {project.overview.map((paragraph, i) => (
-              <p
-                key={i}
-                className="font-['Playfair_Display',_serif] text-gray-800 leading-relaxed text-lg"
-              >
-                {paragraph}
-              </p>
-            ))}
-          </div>
-        </section>
+        {project.overview.length > 0 && (
+          <section className="max-w-2xl mx-auto px-8 py-24">
+            <div className="space-y-6">
+              {project.overview.map((paragraph, i) => (
+                <p
+                  key={i}
+                  className="font-['Playfair_Display',_serif] text-gray-800 leading-relaxed text-lg"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </section>
+        )}
 
         <div className="border-t border-gray-100" />
 

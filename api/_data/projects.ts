@@ -34,7 +34,7 @@ export const projects: Project[] = [
     year: '2024',
     tags: ['Product', 'Developer Tools'],
     summary:
-      'Led design for the Google Play developer ecosystem — the tools and surfaces a global app developer community uses every day.',
+      'Console allows developers and businesses to manage their apps and games on Google Play. It’s the economic engine of the ecosystem, driving distribution, marketing, payments, security, integrity and analytics. I was asked to fix a struggling design team split across four time zones, and modernize a legacy web product.',
     thumbnail: '/portfoliomedia/Google%20Play%20Console/play-console-hero.mp4',
     hero: {
       kind: 'video',
@@ -43,13 +43,23 @@ export const projects: Project[] = [
         '/portfoliomedia/Google%20Play%20Console/play-console-hero-poster.jpg',
       alt: 'Animated Android, Gemini, Google Play, and Wear OS brand marks',
     },
-    overview: [
-      'Console allows developers and businesses to manage their apps and games on Google Play. It’s the economic engine of the ecosystem, driving distribution, marketing, payments, security, integrity and analytics. I was asked to fix a struggling design team split across four time zones, and modernize a legacy web product.',
-    ],
+    overview: [],
     sections: [
       {
         type: 'commentary',
         body: 'We undertook a significant redesign of the product, completely reorganizing the information architecture. We prioritized new go-to-market features, and helped the business adopt new user-facing features like short videos to promote app and game content.',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'video',
+          src: '/portfoliomedia/Google%20Play%20Console/dashboard.mp4',
+          poster: '/portfoliomedia/Google%20Play%20Console/dashboard-poster.jpg',
+          alt: 'App dashboard surfacing releases, vitals, growth, and revenue',
+          ambient: true,
+        },
+        caption: 'Dashboard — app health at a glance',
       },
       {
         type: 'pair',
@@ -63,12 +73,12 @@ export const projects: Project[] = [
         leftCaption: 'Navigation — a task-based information architecture',
         right: {
           kind: 'video',
-          src: '/portfoliomedia/Google%20Play%20Console/dashboard.mp4',
-          poster: '/portfoliomedia/Google%20Play%20Console/dashboard-poster.jpg',
-          alt: 'App dashboard surfacing releases, vitals, growth, and revenue',
+          src: '/portfoliomedia/Google%20Play%20Console/play-shorts.mp4',
+          poster: '/portfoliomedia/Google%20Play%20Console/play-shorts-poster.jpg',
+          alt: 'A short promotional video playing on a phone in the Play store listing',
           ambient: true,
         },
-        rightCaption: 'Dashboard — app health at a glance',
+        rightCaption: 'Short videos — promoting app and game content',
       },
       {
         type: 'commentary',
@@ -110,7 +120,7 @@ export const projects: Project[] = [
     year: '2022',
     tags: ['Leadership', 'Brand', 'Content'],
     summary:
-      'Ran the Creative & Content org behind a product used by three billion people.',
+      'Google Play has one of the largest product editorial programs in the world. I built the global team of designers, art directors, creative directors and animators who made upwards of 40,000 unique creative assets every year.',
     thumbnail: '/portfoliomedia/Creative%20%26%20Content/Kenni%20Chaffee%20Header.png',
     hero: {
       kind: 'video',
@@ -119,7 +129,6 @@ export const projects: Project[] = [
       alt: 'Creative Shop — a reel of Creative & Content craft work',
     },
     overview: [
-      'Google Play has one of the largest product editorial programs in the world. I built the global team of designers, art directors, creative directors and animators who made upwards of 40,000 unique creative assets every year.',
       'In addition to creating the assets ourselves, we built a network of collaborators who could contribute their unique illustration or animation style. I was responsible for multi-million dollar agency and partnership budgets, as well as the overall terms of the partner agreements.',
       'Creating a smooth operational rhythm for this team was a significant challenge, and we borrowed from agile and sprint methods to create a fast-moving group of senior ICs who all really enjoyed creating such fun work.',
       'The team was recognized with internal and external awards for craft, innovation and product impact.',
@@ -258,7 +267,7 @@ export const projects: Project[] = [
     year: '2019',
     tags: ['Product', 'iOS'],
     summary:
-      'Led iOS design for Google’s core consumer apps — making each app feel native to iPhone while staying true to Google’s product voice.',
+      'Led iOS design for Google’s flagship consumer apps, bringing Home Screen and Lock Screen widgets to iPhone — Search, Drive, Gmail, Calendar, Maps, Translate, Chrome, and more — each one native to iOS while unmistakably Google.',
     thumbnail: '/portfoliomedia/iOS%20at%20Google/Drive%20Translate.png',
     hero: {
       kind: 'image',
@@ -266,7 +275,6 @@ export const projects: Project[] = [
       alt: 'Google Drive and Google Translate widgets on iOS — a searchable file list beside a Spanish-to-French translation',
     },
     overview: [
-      'Led iOS design for Google’s flagship consumer apps, bringing Home Screen and Lock Screen widgets to iPhone — Search, Drive, Gmail, Calendar, Maps, Translate, Chrome, and more — each one native to iOS while unmistakably Google.',
       'iOS 14 and iOS 16 opened the Home Screen and Lock Screen to third-party widgets for the first time. It was a rare chance to put Google’s most-used products one glance away — but only if they felt like they belonged on iPhone rather than ported from Android.',
       'Designing to Apple’s widget grammar — its sizes, materials, and interaction patterns — while keeping each product instantly recognizable, the widgets read as genuinely native. Google showed up on the iPhone Home and Lock Screen as a first-class citizen.',
     ],
@@ -360,16 +368,14 @@ export const projects: Project[] = [
     year: '2017',
     tags: ['Product', '0→1', 'Prototyping'],
     summary:
-      '0→1 prototypes built with external partners — testing what comes next before it has a name.',
+      'I led a small, senior team working with more than 50 partners across Asia Pacific. From Sydney, we covered the region — Mumbai across to Tokyo, down to Auckland. We built hundreds of prototypes, helping partners embed Google’s technology in their businesses.',
     thumbnail: '/portfoliomedia/Partner%20Innovation/book-ears-casestudy-poster.png',
     hero: {
       kind: 'image',
       src: '/portfoliomedia/Partner%20Innovation/book-ears-casestudy-poster.png',
       alt: 'Book Ears — a parent and child reading a Disney storybook beside a Google Home speaker',
     },
-    overview: [
-      'I led a small, senior team working with more than 50 partners across Asia Pacific. From Sydney, we covered the region — Mumbai across to Tokyo, down to Auckland. We built hundreds of prototypes, helping partners embed Google’s technology in their businesses.',
-    ],
+    overview: [],
     sections: [
       {
         type: 'commentary',
