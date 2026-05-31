@@ -33,6 +33,9 @@ export type Section =
        *  align. Items are cropped from the bottom (object-top). Omit to use
        *  each asset's natural size. */
       aspect?: string;
+      /** CSS max-width for the row (e.g. '864px'; default '72rem'). Use a
+       *  narrower value to render the trio smaller. */
+      maxWidth?: string;
     }
   | {
       type: 'mediaText';

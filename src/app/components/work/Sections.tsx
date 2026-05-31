@@ -180,7 +180,10 @@ export function SectionBlock({ section }: { section: Section }) {
 
     case 'trio': {
       return (
-        <section className="my-12 max-w-6xl mx-auto px-8">
+        <section
+          className="my-12 mx-auto px-8"
+          style={{ maxWidth: section.maxWidth ?? '72rem' }}
+        >
           <div className="grid grid-cols-3 gap-4 md:gap-6 items-start">
             {section.items.map((item, i) => (
               <figure key={i}>

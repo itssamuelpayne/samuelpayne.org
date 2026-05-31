@@ -52,6 +52,7 @@ export const projects: Project[] = [
       {
         type: 'trio',
         aspect: '484/1560',
+        maxWidth: '864px',
         items: [
           {
             media: {
