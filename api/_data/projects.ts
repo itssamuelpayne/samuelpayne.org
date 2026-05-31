@@ -154,8 +154,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'android-12-widgets',
-    title: 'Android 12 Widgets',
+    slug: 'android-12',
+    title: 'Android 12',
     client: 'Google',
     role: 'Design Lead',
     year: '2021',
@@ -328,7 +328,7 @@ export const projects: Project[] = [
     tags: ['Product', '0→1', 'Prototyping'],
     summary:
       'I led a small, senior team working with partners across Asia Pacific. From Sydney we covered the region — Mumbai across to Tokyo, down to Auckland — building hundreds of prototypes that helped them embed Google’s technology in their own businesses.',
-    thumbnail: '/portfoliomedia/Partner%20Innovation/book-ears-casestudy-poster.png',
+    thumbnail: '/portfoliomedia/Partner%20Innovation/kupu%20ui.png',
     hero: {
       kind: 'image',
       src: '/portfoliomedia/Partner%20Innovation/book-ears-casestudy-poster.png',
