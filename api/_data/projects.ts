@@ -288,6 +288,7 @@ export const projects: Project[] = [
       },
       {
         type: 'trio',
+        maxWidth: '864px',
         items: [
           {
             media: {
