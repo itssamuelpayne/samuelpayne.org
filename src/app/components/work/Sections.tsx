@@ -113,7 +113,7 @@ function Media({
 
 const sizeWrapper: Record<NonNullable<Extract<Section, { type: 'media' }>['size']>, string> = {
   bleed: 'w-full',
-  wide: 'max-w-6xl mx-auto px-8',
+  wide: 'max-w-4xl mx-auto px-8',
   inset: 'max-w-2xl mx-auto px-8',
 };
 
