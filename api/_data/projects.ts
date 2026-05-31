@@ -272,7 +272,7 @@ export const projects: Project[] = [
     year: '2019',
     tags: ['Product', 'iOS'],
     summary:
-      'I was part of a small team of senior ICs who shaped Google’s app experience on iOS. We designed, built, and shipped coherent features across all 100+ Google apps — which meant working across the entire company, collaborating with design teams and cross-functional partners in every product area.',
+      'I was part of a small team of senior ICs who shaped Google’s app experience on iOS. We designed, built, and shipped coherent features across all 100+ Google apps. That meant working across the entire company, collaborating with design teams and cross-functional partners in every product area.',
     thumbnail: '/portfoliomedia/iOS%20at%20Google/Drive%20Translate.png',
     hero: {
       kind: 'image',
@@ -338,7 +338,7 @@ export const projects: Project[] = [
       {
         type: 'commentary',
         heading: 'Lock Screen widgets',
-        body: 'From there we expanded the widgets, adding functionality as we learned how people actually used them — and extended the work to Lock Screen widgets and other new iOS features.',
+        body: 'From there we expanded the widgets, adding functionality as we learned how people actually used them, then extended the work to Lock Screen widgets and other new iOS features.',
       },
       {
         type: 'media',
