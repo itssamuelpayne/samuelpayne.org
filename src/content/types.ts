@@ -39,10 +39,7 @@ export interface Project {
   summary: string;
   thumbnail: string;
   hero: MediaAsset;
-  overview: {
-    what: string;
-    why: string;
-    outcome: string;
-  };
+  /** Narrative intro paragraphs, shown beneath the hero. */
+  overview: string[];
   sections: Section[];
 }

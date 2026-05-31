@@ -95,10 +95,15 @@ export function CaseStudyPage() {
         </section>
 
         <section className="max-w-2xl mx-auto px-8 py-24">
-          <div className="space-y-12">
-            <OverviewBlock label="What" body={project.overview.what} />
-            <OverviewBlock label="Why it mattered" body={project.overview.why} />
-            <OverviewBlock label="Why it worked" body={project.overview.outcome} />
+          <div className="space-y-6">
+            {project.overview.map((paragraph, i) => (
+              <p
+                key={i}
+                className="font-['Playfair_Display',_serif] text-gray-800 leading-relaxed text-lg"
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
         </section>
 
@@ -127,21 +132,6 @@ export function CaseStudyPage() {
       </main>
 
       <Footer />
-    </div>
-  );
-}
-
-function OverviewBlock({ label, body }: { label: string; body: string }) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-      <div className="md:col-span-1">
-        <p className="text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.2em] uppercase pt-1">
-          {label}
-        </p>
-      </div>
-      <div className="md:col-span-3">
-        <p className="font-['Playfair_Display',_serif] text-gray-800 leading-relaxed">{body}</p>
-      </div>
     </div>
   );
 }
