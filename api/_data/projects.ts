@@ -423,6 +423,26 @@ export const projects: Project[] = [
         caption: 'Kupu — point your camera, learn the Te Reo Māori word',
       },
       {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Partner%20Innovation/kupu%20ui.png',
+          alt: 'Kupu app flow across five iPhones — splash screen, camera viewfinder, loading, and translations of a sky into the Te Reo Māori words tahatū and kapua',
+        },
+        caption: 'The app — splash, camera, and live translation',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Partner%20Innovation/kupu%20ui2.png',
+          alt: 'Kupu translating a lake-and-forest landscape — the Te Reo Māori word “wai” labelled over water',
+        },
+        caption: 'Point the camera at the world — “wai”, water',
+      },
+      {
         type: 'commentary',
         body: 'The technology we built for this project was scaled via the Google Arts & Culture Program and has now gone on to help preserve hundreds of purely oral languages around the world.',
       },
