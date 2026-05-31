@@ -4,7 +4,8 @@ import type { Project } from '../../src/content/types';
 // Vercel exposes only top-level files in /api as routes; files in /api/_data
 // are private (the leading underscore tells Vercel to ignore them).
 
-// All overview/section copy below is FPO. Replace with your real narrative.
+// Projects are listed newest-first; the work menu and "next project" links
+// follow this array order.
 
 export const projects: Project[] = [
   {
@@ -26,104 +27,112 @@ export const projects: Project[] = [
     sections: [],
   },
   {
-    slug: 'google-on-ios',
-    title: 'Google on iOS',
+    slug: 'google-play-console',
+    title: 'Google Play Console',
     client: 'Google',
     role: 'Design Director',
-    year: '2019',
-    tags: ['Product', 'iOS'],
+    year: '2024',
+    tags: ['Product', 'Developer Tools'],
     summary:
-      'Led iOS design for Google’s core consumer apps — making each app feel native to iPhone while staying true to Google’s product voice.',
-    thumbnail: '/portfoliomedia/iOS%20at%20Google/Drive%20Translate.png',
+      'Led design for the Google Play developer ecosystem — the tools and surfaces a global app developer community uses every day.',
+    thumbnail: '/portfoliomedia/Google%20Play%20Console/play-console-hero.mp4',
     hero: {
-      kind: 'image',
-      src: '/portfoliomedia/iOS%20at%20Google/Drive%20Translate.png',
-      alt: 'Google Drive and Google Translate widgets on iOS — a searchable file list beside a Spanish-to-French translation',
+      kind: 'video',
+      src: '/portfoliomedia/Google%20Play%20Console/play-console-hero.mp4',
+      poster:
+        '/portfoliomedia/Google%20Play%20Console/play-console-hero-poster.jpg',
+      alt: 'Animated Android, Gemini, Google Play, and Wear OS brand marks',
     },
     overview: [
-      'Led iOS design for Google’s flagship consumer apps, bringing Home Screen and Lock Screen widgets to iPhone — Search, Drive, Gmail, Calendar, Maps, Translate, Chrome, and more — each one native to iOS while unmistakably Google.',
-      'iOS 14 and iOS 16 opened the Home Screen and Lock Screen to third-party widgets for the first time. It was a rare chance to put Google’s most-used products one glance away — but only if they felt like they belonged on iPhone rather than ported from Android.',
-      'Designing to Apple’s widget grammar — its sizes, materials, and interaction patterns — while keeping each product instantly recognizable, the widgets read as genuinely native. Google showed up on the iPhone Home and Lock Screen as a first-class citizen.',
+      'Console allows developers and businesses to manage their apps and games on Google Play. It’s the economic engine of the ecosystem, driving distribution, marketing, payments, security, integrity and analytics. I was asked to fix a struggling design team split across four time zones, and modernize a legacy web product.',
+      'We undertook a significant redesign of the product, completely reorganizing the information architecture. We prioritized new go-to-market features, and helped the business adopt new user-facing features like short videos to promote app and game content.',
+      'We also introduced Gemini to third-party workflows, speeding up essential features like localization and analytics. We undertook all this work whilst restructuring the team across time-zones. Adding designers in India and introducing global partners who could help us implement such significant changes across an essential product.',
     ],
     sections: [
       {
-        type: 'commentary',
-        heading: 'Home Screen widgets',
-        body: '[Add commentary on the Home Screen widget system: glanceable utility, the Google stack, and designing each app to Apple’s widget sizes and materials.]',
-      },
-      {
-        type: 'trio',
-        items: [
-          {
-            media: {
-              kind: 'image',
-              src: '/portfoliomedia/iOS%20at%20Google/Work.png',
-              alt: 'iPhone Home Screen with stacked Google widgets — Drive search, Calendar, and Gmail',
-            },
-            caption: 'A home screen — Drive, Calendar, and Gmail',
-          },
-          {
-            media: {
-              kind: 'image',
-              src: '/portfoliomedia/iOS%20at%20Google/morning.png',
-              alt: 'iPhone Home Screen on a teal wallpaper — Google Photos, Fit, Maps, and YouTube Music widgets',
-            },
-            caption: 'A morning screen — Photos, Fit, Maps, Music',
-          },
-          {
-            media: {
-              kind: 'image',
-              src: '/portfoliomedia/iOS%20at%20Google/student.png',
-              alt: 'iPhone Home Screen on a pink wallpaper — Google Search, Tasks, Calendar, and Gmail widgets for a student',
-            },
-            caption: 'A student’s screen — Search, Tasks, Calendar, Gmail',
-          },
-        ],
+        type: 'media',
+        size: 'inset',
+        media: {
+          kind: 'video',
+          src: '/portfoliomedia/Google%20Play%20Console/menu.mp4',
+          poster: '/portfoliomedia/Google%20Play%20Console/menu-poster.jpg',
+          alt: 'Console left navigation grouped by developer task',
+          ambient: true,
+        },
+        caption: 'Navigation — a task-based information architecture',
       },
       {
         type: 'media',
         size: 'wide',
         media: {
-          kind: 'image',
-          src: '/portfoliomedia/iOS%20at%20Google/gmail%20meet.png',
-          alt: 'Gmail and Google Meet widgets — an inbox preview beside a two-person video call',
+          kind: 'video',
+          src: '/portfoliomedia/Google%20Play%20Console/dashboard.mp4',
+          poster: '/portfoliomedia/Google%20Play%20Console/dashboard-poster.jpg',
+          alt: 'App dashboard surfacing releases, vitals, growth, and revenue',
+          ambient: true,
         },
-        caption: 'Gmail and Meet — triage the inbox and join a call without opening the app',
+        caption: 'Dashboard — app health at a glance',
       },
       {
         type: 'media',
         size: 'wide',
         media: {
-          kind: 'image',
-          src: '/portfoliomedia/iOS%20at%20Google/Chrome%20Widget.png',
-          alt: 'Chrome widgets on iOS — a search bar with voice and Lens, beside the Chrome Dino quick-launch',
+          kind: 'video',
+          src: '/portfoliomedia/Google%20Play%20Console/user-growth.mp4',
+          poster:
+            '/portfoliomedia/Google%20Play%20Console/user-growth-poster.jpg',
+          alt: 'Grow users — acquisition and retention charts explored with AI',
+          ambient: true,
         },
-        caption: 'Chrome — search, voice, and Lens a tap away',
+        caption: 'Grow users — acquisition insights, explorable with AI',
       },
       {
-        type: 'commentary',
-        heading: 'Lock Screen widgets',
-        body: '[Add commentary on iOS 16 Lock Screen widgets: glanceable info and quick actions before you unlock, working within Apple’s tinted, space-constrained slots.]',
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'video',
+          src: '/portfoliomedia/Google%20Play%20Console/localization-ai.mp4',
+          poster:
+            '/portfoliomedia/Google%20Play%20Console/localization-ai-poster.jpg',
+          alt: 'Store listing localization with Gemini-generated descriptions',
+          ambient: true,
+        },
+        caption: 'Store listings — AI-assisted localization with Gemini',
       },
+    ],
+  },
+  {
+    slug: 'google-creative-shop',
+    title: 'Google Creative Shop',
+    client: 'Google',
+    role: 'Group Creative Director',
+    year: '2022',
+    tags: ['Leadership', 'Brand', 'Content'],
+    summary:
+      'Ran the Creative & Content org behind a product used by three billion people.',
+    thumbnail: '/portfoliomedia/Creative%20%26%20Content/Kenni%20Chaffee%20Header.png',
+    hero: {
+      kind: 'video',
+      src: '/portfoliomedia/Creative%20%26%20Content/creativeshop.mp4',
+      poster: '/portfoliomedia/Creative%20%26%20Content/creativeshop-poster.jpg',
+      alt: 'Creative Shop — a reel of Creative & Content craft work',
+    },
+    overview: [
+      'Google Play has one of the largest product editorial programs in the world. I built the global team of designers, art directors, creative directors and animators who made upwards of 40,000 unique creative assets every year.',
+      'In addition to creating the assets ourselves, we built a network of collaborators who could contribute their unique illustration or animation style. I was responsible for multi-million dollar agency and partnership budgets, as well as the overall terms of the partner agreements.',
+      'Creating a smooth operational rhythm for this team was a significant challenge, and we borrowed from agile and sprint methods to create a fast-moving group of senior ICs who all really enjoyed creating such fun work.',
+      'The team was recognized with internal and external awards for craft, innovation and product impact.',
+    ],
+    sections: [
       {
         type: 'media',
         size: 'bleed',
         media: {
           kind: 'image',
-          src: '/portfoliomedia/iOS%20at%20Google/Hero%20lsw.png',
-          alt: 'Five iPhones showing Google Lock Screen widgets across different wallpapers',
+          src: '/portfoliomedia/Creative%20%26%20Content/Kenni%20Chaffee%20Header.png',
+          alt: 'Creative & Content editorial craft — a hero composition from the Google Play editorial program',
         },
-        caption: 'Lock Screen widgets — Google across the lineup',
-      },
-      {
-        type: 'media',
-        size: 'wide',
-        media: {
-          kind: 'image',
-          src: '/portfoliomedia/iOS%20at%20Google/LSW.png',
-          alt: 'Lock Screen close-up with a Google Search pill, quick actions, and live Google widget cards',
-        },
-        caption: 'Search, Lens, and live cards — a tap from the Lock Screen',
+        caption: 'Editorial craft — one of tens of thousands of original assets made each year',
       },
     ],
   },
@@ -241,112 +250,104 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'google-play-console',
-    title: 'Google Play Console',
+    slug: 'google-on-ios',
+    title: 'Google on iOS',
     client: 'Google',
     role: 'Design Director',
-    year: '2024',
-    tags: ['Product', 'Developer Tools'],
+    year: '2019',
+    tags: ['Product', 'iOS'],
     summary:
-      'Led design for the Google Play developer ecosystem — the tools and surfaces a global app developer community uses every day.',
-    thumbnail: '/portfoliomedia/Google%20Play%20Console/play-console-hero.mp4',
+      'Led iOS design for Google’s core consumer apps — making each app feel native to iPhone while staying true to Google’s product voice.',
+    thumbnail: '/portfoliomedia/iOS%20at%20Google/Drive%20Translate.png',
     hero: {
-      kind: 'video',
-      src: '/portfoliomedia/Google%20Play%20Console/play-console-hero.mp4',
-      poster:
-        '/portfoliomedia/Google%20Play%20Console/play-console-hero-poster.jpg',
-      alt: 'Animated Android, Gemini, Google Play, and Wear OS brand marks',
+      kind: 'image',
+      src: '/portfoliomedia/iOS%20at%20Google/Drive%20Translate.png',
+      alt: 'Google Drive and Google Translate widgets on iOS — a searchable file list beside a Spanish-to-French translation',
     },
     overview: [
-      'Console allows developers and businesses to manage their apps and games on Google Play. It’s the economic engine of the ecosystem, driving distribution, marketing, payments, security, integrity and analytics. I was asked to fix a struggling design team split across four time zones, and modernize a legacy web product.',
-      'We undertook a significant redesign of the product, completely reorganizing the information architecture. We prioritized new go-to-market features, and helped the business adopt new user-facing features like short videos to promote app and game content.',
-      'We also introduced Gemini to third-party workflows, speeding up essential features like localization and analytics. We undertook all this work whilst restructuring the team across time-zones. Adding designers in India and introducing global partners who could help us implement such significant changes across an essential product.',
+      'Led iOS design for Google’s flagship consumer apps, bringing Home Screen and Lock Screen widgets to iPhone — Search, Drive, Gmail, Calendar, Maps, Translate, Chrome, and more — each one native to iOS while unmistakably Google.',
+      'iOS 14 and iOS 16 opened the Home Screen and Lock Screen to third-party widgets for the first time. It was a rare chance to put Google’s most-used products one glance away — but only if they felt like they belonged on iPhone rather than ported from Android.',
+      'Designing to Apple’s widget grammar — its sizes, materials, and interaction patterns — while keeping each product instantly recognizable, the widgets read as genuinely native. Google showed up on the iPhone Home and Lock Screen as a first-class citizen.',
     ],
     sections: [
       {
-        type: 'media',
-        size: 'inset',
-        media: {
-          kind: 'video',
-          src: '/portfoliomedia/Google%20Play%20Console/menu.mp4',
-          poster: '/portfoliomedia/Google%20Play%20Console/menu-poster.jpg',
-          alt: 'Console left navigation grouped by developer task',
-          ambient: true,
-        },
-        caption: 'Navigation — a task-based information architecture',
+        type: 'commentary',
+        heading: 'Home Screen widgets',
+        body: '[Add commentary on the Home Screen widget system: glanceable utility, the Google stack, and designing each app to Apple’s widget sizes and materials.]',
+      },
+      {
+        type: 'trio',
+        items: [
+          {
+            media: {
+              kind: 'image',
+              src: '/portfoliomedia/iOS%20at%20Google/Work.png',
+              alt: 'iPhone Home Screen with stacked Google widgets — Drive search, Calendar, and Gmail',
+            },
+            caption: 'A home screen — Drive, Calendar, and Gmail',
+          },
+          {
+            media: {
+              kind: 'image',
+              src: '/portfoliomedia/iOS%20at%20Google/morning.png',
+              alt: 'iPhone Home Screen on a teal wallpaper — Google Photos, Fit, Maps, and YouTube Music widgets',
+            },
+            caption: 'A morning screen — Photos, Fit, Maps, Music',
+          },
+          {
+            media: {
+              kind: 'image',
+              src: '/portfoliomedia/iOS%20at%20Google/student.png',
+              alt: 'iPhone Home Screen on a pink wallpaper — Google Search, Tasks, Calendar, and Gmail widgets for a student',
+            },
+            caption: 'A student’s screen — Search, Tasks, Calendar, Gmail',
+          },
+        ],
       },
       {
         type: 'media',
         size: 'wide',
         media: {
-          kind: 'video',
-          src: '/portfoliomedia/Google%20Play%20Console/dashboard.mp4',
-          poster: '/portfoliomedia/Google%20Play%20Console/dashboard-poster.jpg',
-          alt: 'App dashboard surfacing releases, vitals, growth, and revenue',
-          ambient: true,
+          kind: 'image',
+          src: '/portfoliomedia/iOS%20at%20Google/gmail%20meet.png',
+          alt: 'Gmail and Google Meet widgets — an inbox preview beside a two-person video call',
         },
-        caption: 'Dashboard — app health at a glance',
+        caption: 'Gmail and Meet — triage the inbox and join a call without opening the app',
       },
       {
         type: 'media',
         size: 'wide',
         media: {
-          kind: 'video',
-          src: '/portfoliomedia/Google%20Play%20Console/user-growth.mp4',
-          poster:
-            '/portfoliomedia/Google%20Play%20Console/user-growth-poster.jpg',
-          alt: 'Grow users — acquisition and retention charts explored with AI',
-          ambient: true,
+          kind: 'image',
+          src: '/portfoliomedia/iOS%20at%20Google/Chrome%20Widget.png',
+          alt: 'Chrome widgets on iOS — a search bar with voice and Lens, beside the Chrome Dino quick-launch',
         },
-        caption: 'Grow users — acquisition insights, explorable with AI',
+        caption: 'Chrome — search, voice, and Lens a tap away',
       },
       {
-        type: 'media',
-        size: 'wide',
-        media: {
-          kind: 'video',
-          src: '/portfoliomedia/Google%20Play%20Console/localization-ai.mp4',
-          poster:
-            '/portfoliomedia/Google%20Play%20Console/localization-ai-poster.jpg',
-          alt: 'Store listing localization with Gemini-generated descriptions',
-          ambient: true,
-        },
-        caption: 'Store listings — AI-assisted localization with Gemini',
+        type: 'commentary',
+        heading: 'Lock Screen widgets',
+        body: '[Add commentary on iOS 16 Lock Screen widgets: glanceable info and quick actions before you unlock, working within Apple’s tinted, space-constrained slots.]',
       },
-    ],
-  },
-  {
-    slug: 'google-creative-shop',
-    title: 'Google Creative Shop',
-    client: 'Google',
-    role: 'Group Creative Director',
-    year: '2022',
-    tags: ['Leadership', 'Brand', 'Content'],
-    summary:
-      'Ran the Creative & Content org behind a product used by three billion people.',
-    thumbnail: '/portfoliomedia/Creative%20%26%20Content/Kenni%20Chaffee%20Header.png',
-    hero: {
-      kind: 'video',
-      src: '/portfoliomedia/Creative%20%26%20Content/creativeshop.mp4',
-      poster: '/portfoliomedia/Creative%20%26%20Content/creativeshop-poster.jpg',
-      alt: 'Creative Shop — a reel of Creative & Content craft work',
-    },
-    overview: [
-      'Google Play has one of the largest product editorial programs in the world. I built the global team of designers, art directors, creative directors and animators who made upwards of 40,000 unique creative assets every year.',
-      'In addition to creating the assets ourselves, we built a network of collaborators who could contribute their unique illustration or animation style. I was responsible for multi-million dollar agency and partnership budgets, as well as the overall terms of the partner agreements.',
-      'Creating a smooth operational rhythm for this team was a significant challenge, and we borrowed from agile and sprint methods to create a fast-moving group of senior ICs who all really enjoyed creating such fun work.',
-      'The team was recognized with internal and external awards for craft, innovation and product impact.',
-    ],
-    sections: [
       {
         type: 'media',
         size: 'bleed',
         media: {
           kind: 'image',
-          src: '/portfoliomedia/Creative%20%26%20Content/Kenni%20Chaffee%20Header.png',
-          alt: 'Creative & Content editorial craft — a hero composition from the Google Play editorial program',
+          src: '/portfoliomedia/iOS%20at%20Google/Hero%20lsw.png',
+          alt: 'Five iPhones showing Google Lock Screen widgets across different wallpapers',
         },
-        caption: 'Editorial craft — one of tens of thousands of original assets made each year',
+        caption: 'Lock Screen widgets — Google across the lineup',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/iOS%20at%20Google/LSW.png',
+          alt: 'Lock Screen close-up with a Google Search pill, quick actions, and live Google widget cards',
+        },
+        caption: 'Search, Lens, and live cards — a tap from the Lock Screen',
       },
     ],
   },
