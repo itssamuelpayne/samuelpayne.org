@@ -62,25 +62,6 @@ export const projects: Project[] = [
         caption: 'Dashboard — app health at a glance',
       },
       {
-        type: 'pair',
-        left: {
-          kind: 'video',
-          src: '/portfoliomedia/Google%20Play%20Console/menu.mp4',
-          poster: '/portfoliomedia/Google%20Play%20Console/menu-poster.jpg',
-          alt: 'Console left navigation grouped by developer task',
-          ambient: true,
-        },
-        leftCaption: 'Navigation — a task-based information architecture',
-        right: {
-          kind: 'video',
-          src: '/portfoliomedia/Google%20Play%20Console/play-shorts.mp4',
-          poster: '/portfoliomedia/Google%20Play%20Console/play-shorts-poster.jpg',
-          alt: 'A short promotional video playing on a phone in the Play store listing',
-          ambient: true,
-        },
-        rightCaption: 'Short videos — promoting app and game content',
-      },
-      {
         type: 'commentary',
         body: 'We also introduced Gemini to third-party workflows, speeding up essential features like localization and analytics. We undertook all this work whilst restructuring the team across time-zones. Adding designers in India and introducing global partners who could help us implement such significant changes across an essential product.',
       },
