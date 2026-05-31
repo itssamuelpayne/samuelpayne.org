@@ -103,9 +103,8 @@ export const projects: Project[] = [
         body: 'We brought Gemini into third-party workflows, speeding up essential tasks like localization and analytics. And we did all of it while restructuring the team across time zones — adding designers in India and bringing on global partners who could help us land changes of this scale on a product developers depend on every day.',
       },
       {
-        type: 'media',
-        size: 'wide',
-        media: {
+        type: 'pair',
+        left: {
           kind: 'video',
           src: '/portfoliomedia/Google%20Play%20Console/localization-ai.mp4',
           poster:
@@ -113,12 +112,8 @@ export const projects: Project[] = [
           alt: 'Store listing localization with Gemini-generated descriptions',
           ambient: true,
         },
-        caption: 'Store listings — AI-assisted localization with Gemini',
-      },
-      {
-        type: 'media',
-        size: 'wide',
-        media: {
+        leftCaption: 'Store listings — AI-assisted localization with Gemini',
+        right: {
           kind: 'video',
           src: '/portfoliomedia/Google%20Play%20Console/user-growth.mp4',
           poster:
@@ -126,7 +121,7 @@ export const projects: Project[] = [
           alt: 'Grow users — acquisition and retention charts explored with AI',
           ambient: true,
         },
-        caption: 'Grow users — acquisition insights, explorable with AI',
+        rightCaption: 'Grow users — acquisition insights, explorable with AI',
       },
     ],
   },

@@ -149,24 +149,21 @@ export function SectionBlock({ section }: { section: Section }) {
     }
 
     case 'pair': {
-      // Equal media heights with proportional widths so a tall portrait nav
-      // rail can sit beside a wide landscape dashboard without either being
-      // stretched. Stacks full-width on mobile.
-      const fit =
-        'block w-full h-auto sm:w-auto sm:h-[52vh] sm:max-h-[560px] sm:min-h-[320px] sm:max-w-full object-contain';
+      // Two assets side by side at equal width. Best for matching aspect
+      // ratios (e.g. two 16:9 screens). Stacks full-width on mobile.
       return (
-        <section className="my-12 max-w-6xl mx-auto px-8">
-          <div className="flex flex-col sm:flex-row sm:items-start justify-center gap-6 md:gap-10">
-            <figure className="flex flex-col items-center">
-              <Media asset={section.left} className={fit} />
+        <section className="my-12 max-w-5xl mx-auto px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-start">
+            <figure>
+              <Media asset={section.left} />
               {section.leftCaption && (
                 <figcaption className="mt-4 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.15em] uppercase text-center">
                   {section.leftCaption}
                 </figcaption>
               )}
             </figure>
-            <figure className="flex flex-col items-center">
-              <Media asset={section.right} className={fit} />
+            <figure>
+              <Media asset={section.right} />
               {section.rightCaption && (
                 <figcaption className="mt-4 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.15em] uppercase text-center">
                   {section.rightCaption}
