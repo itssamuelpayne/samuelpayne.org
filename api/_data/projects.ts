@@ -52,7 +52,7 @@ export const projects: Project[] = [
       {
         type: 'trio',
         aspect: '484/1560',
-        maxWidth: '864px',
+        maxWidth: '778px',
         items: [
           {
             media: {
@@ -89,6 +89,7 @@ export const projects: Project[] = [
       {
         type: 'media',
         size: 'wide',
+        maxWidth: '806px',
         media: {
           kind: 'video',
           src: '/portfoliomedia/Google%20Play%20Console/dashboard.mp4',
@@ -105,6 +106,7 @@ export const projects: Project[] = [
       {
         type: 'media',
         size: 'wide',
+        maxWidth: '806px',
         media: {
           kind: 'video',
           src: '/portfoliomedia/Google%20Play%20Console/localization-ai.mp4',
