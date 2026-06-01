@@ -128,7 +128,7 @@ export const projects: Project[] = [
     tags: ['Leadership', 'Brand', 'Content'],
     summary:
       'Google Play has one of the largest product editorial programs in the world. I built the global team of designers, art directors, creative directors and animators who made upwards of 40,000 unique creative assets every year.',
-    thumbnail: '/portfoliomedia/Creative%20%26%20Content/Kenni%20Chaffee%20Header.png',
+    thumbnail: '/portfoliomedia/Creative%20%26%20Content/creativeshop-loop.mp4',
     hero: {
       kind: 'video',
       src: '/portfoliomedia/Creative%20%26%20Content/creativeshop.mp4',
@@ -162,7 +162,7 @@ export const projects: Project[] = [
     tags: ['Product', 'OS'],
     summary:
       'To support the launch of Android 12, I was part of a cross-Google team tasked with shipping 18 first-party widgets in six months. We used our experience running the cross-Google iOS team to stand up a new group doing the same job for Android, working closely with the Material Design team who shipped Material You as part of Android 12.',
-    thumbnail: '/portfoliomedia/Android%2012%20Widgets/Material%20You.png',
+    thumbnail: '/portfoliomedia/Final-Hero-High-Res.mp4',
     hero: {
       kind: 'video',
       src: '/portfoliomedia/Final-Hero-High-Res.mp4',
