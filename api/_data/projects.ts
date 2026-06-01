@@ -128,7 +128,7 @@ export const projects: Project[] = [
     tags: ['Leadership', 'Brand', 'Content'],
     summary:
       'Google Play has one of the largest product editorial programs in the world. I built the global team of designers, art directors, creative directors and animators who made upwards of 40,000 unique creative assets every year.',
-    thumbnail: '/portfoliomedia/Creative%20%26%20Content/creativeshop-loop.mp4',
+    thumbnail: '/portfoliomedia/Creative%20%26%20Content/creativeshop-assets.mp4',
     hero: {
       kind: 'video',
       src: '/portfoliomedia/Creative%20%26%20Content/creativeshop.mp4',
