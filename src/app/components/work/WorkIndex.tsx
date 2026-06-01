@@ -37,7 +37,7 @@ function ProjectRow({ project }: { project: Project }) {
   return (
     <Link
       to={`/work/${project.slug}`}
-      className="group block relative overflow-hidden"
+      className="group block relative overflow-hidden max-w-[806px]"
     >
       <div className="aspect-[16/9] w-full overflow-hidden bg-gray-100">
         {isVideo ? (
