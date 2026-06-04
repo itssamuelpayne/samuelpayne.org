@@ -16,7 +16,12 @@ const USERNAME = 'samuelpayneesq';
 // individual article pages so a deep-link / refresh to /article/:id can load
 // its own data instead of depending on in-memory state from a prior page.
 export async function fetchArticles(): Promise<Article[]> {
+  // Prefer our own same-origin endpoint, which reads Medium directly and
+  // stays fresh. Fall back to public proxies if it's unavailable (e.g. Medium
+  // rate-limits our server). rss2json is convenient but its cache goes stale
+  // for hours, which is why it's no longer first.
   const proxies = [
+    `/api/feed`,
     `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${USERNAME}`,
     `https://api.allorigins.win/get?url=${encodeURIComponent(`https://medium.com/feed/@${USERNAME}`)}`,
   ];

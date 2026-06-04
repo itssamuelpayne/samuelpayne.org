@@ -10,6 +10,7 @@ import react from '@vitejs/plugin-react'
 const API_ROUTES: Record<string, string> = {
   '/api/unlock': '/api/unlock.ts',
   '/api/projects': '/api/projects.ts',
+  '/api/feed': '/api/feed.ts',
 }
 
 // Vite dev middleware that adapts Node req/res into Web Request/Response
