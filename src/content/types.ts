@@ -57,9 +57,7 @@ export interface Project {
   slug: string;
   title: string;
   client?: string;
-  role: string;
   year: string;
-  tags: string[];
   summary: string;
   thumbnail: string;
   hero: MediaAsset;

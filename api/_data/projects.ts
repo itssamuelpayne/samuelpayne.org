@@ -12,29 +12,32 @@ export const projects: Project[] = [
     slug: 'wearables-ecosystem',
     title: 'Wearables Ecosystem',
     client: 'Meta Reality Labs',
-    role: 'Director of Ecosystem Design',
-    year: '2024 — present',
-    tags: ['Product', 'Wearables', 'AI'],
+    year: '2024–present',
     summary:
-      'Leading ecosystem design at Meta Reality Labs — the tools that let people create AI experiences for wearables.',
+      'I lead ecosystem design at Meta Reality Labs. We design the tools and systems that let third parties create AI experiences for our wearables.',
     thumbnail: 'https://picsum.photos/seed/wearables-thumb/1600/1000',
     hero: {
       kind: 'image',
       src: 'https://picsum.photos/seed/wearables-hero/2400/1400',
       alt: 'FPO — Wearables Ecosystem hero',
     },
-    overview: ['[Overview copy coming soon.]'],
+    overview: [
+      'I built the team from scratch. I defined the headcount, set the location strategy with leadership, hired, then mapped people’s skills to the work. As the team matured, I created leadership roles for the strongest people and handed them efforts to lead on their own. We design the tooling and the systems that underpin third-party experiences. We also build directly with high-profile partners. This work shows what the platform can do and pushes the technology forward.',
+      'We design across surfaces. Meta Ray-Ban Display glasses bring visual UI to glasses for the first time. It’s a hard modality, where voice and visual have to work together. The screenless Ray-Bans are voice-first. A pendant is something different again. Each surface has its own rules, and experiences need to move between them. That continuity, one experience holding together across modalities, is a core part of what we do.',
+      'We help partners two ways. We build experiences alongside them, and we define the components and design-system patterns underneath. We invent a pattern, ship it with a partner in the OS, then scale it across the system. The ecosystem opens in 2026. Much of this work goes straight to partners; my team is also building the public-facing infrastructure to support it.',
+      'I oversee the AI Developer Center and the Wearables Developer Center. These are where partners build agents, add third-party skills to the AI ecosystem, and ship wearables integrations through our SDK and Web Apps.',
+      'The whole thing is zero to one. Google and Apple inherited their app stores. That’s an advantage, but it’s also a constraint. We get to decide what the ecosystem should be, then build it.',
+      'I like being close to the work. The best teams I’ve run have little hierarchy and build together. The flip side of that is making room for your best people to lead, so I’ve created those roles on purpose, at Google and at Meta.',
+    ],
     sections: [],
   },
   {
     slug: 'google-play-console',
     title: 'Google Play Console',
     client: 'Google',
-    role: 'Design Director',
     year: '2024',
-    tags: ['Product', 'Developer Tools'],
     summary:
-      'Play Console is where developers and businesses run their apps and games on Google Play — the economic engine of the ecosystem, driving distribution, marketing, payments, security, integrity, and analytics. I was brought in to do two things at once: steady a struggling design team spread across four time zones, and modernize a legacy web product.',
+      'Play Console is where developers and businesses run their apps and games on Google Play, a $50 billion business with three billion users. It’s the economic engine of the ecosystem: distribution, marketing, payments, security, integrity, analytics. I was brought in to do two things at once: steady a struggling design team spread across four time zones, and modernize a legacy web product.',
     thumbnail: '/portfoliomedia/Google%20Play%20Console/play-console-hero.mp4',
     hero: {
       kind: 'video',
@@ -47,7 +50,7 @@ export const projects: Project[] = [
     sections: [
       {
         type: 'commentary',
-        body: 'We took on a significant redesign, reorganizing the information architecture from the ground up. We prioritized new go-to-market features and helped the business adopt user-facing ones too — like short videos that let developers promote their apps and games right on the store.',
+        body: 'We rebuilt the information architecture from the ground up. We prioritized new go-to-market features, and helped the business adopt user-facing ones too, like short videos that let developers promote their apps and games right on the store.',
       },
       {
         type: 'trio',
@@ -84,7 +87,7 @@ export const projects: Project[] = [
       },
       {
         type: 'commentary',
-        body: 'We prioritized recommendations and built responsive dashboards that adapt to whoever’s looking — Play Console is used by everyone from marketers to software engineers to CEOs. That lifted frequency of use, developer satisfaction, and the metrics tied to developer revenue.',
+        body: 'We built responsive dashboards that adapt to whoever’s looking. Play Console serves everyone from marketers to engineers to CEOs. The redesign lifted frequency of use, developer satisfaction, and the revenue metrics tied to both.',
       },
       {
         type: 'media',
@@ -97,11 +100,15 @@ export const projects: Project[] = [
           alt: 'App dashboard surfacing releases, vitals, growth, and revenue',
           ambient: true,
         },
-        caption: 'Dashboard — app health at a glance',
+        caption: 'Dashboard: app health at a glance',
       },
       {
         type: 'commentary',
-        body: 'We brought Gemini into third-party workflows, speeding up essential tasks like localization and analytics. And we did all of it while restructuring the team across time zones — adding designers in India and bringing on global partners who could help us land changes of this scale on a product developers depend on every day.',
+        body: 'I rebuilt the team while the product work was underway. I flattened the structure and took more than 20 people as direct reports, so we could rework the roadmap from the ground up without layers in the way. Once the approach was set and our cross-functional partners were behind it, I grew managers from inside the team to run efforts on their own. They went on to bigger roles and more impact.',
+      },
+      {
+        type: 'commentary',
+        body: 'Alongside the rebuild, we brought Gemini into third-party workflows, speeding up tasks like localization and analytics.',
       },
       {
         type: 'media',
@@ -115,7 +122,7 @@ export const projects: Project[] = [
           alt: 'Store listing localization with Gemini-generated descriptions',
           ambient: true,
         },
-        caption: 'Store listings — AI-assisted localization with Gemini',
+        caption: 'Store listings: AI-assisted localization with Gemini',
       },
     ],
   },
@@ -123,11 +130,9 @@ export const projects: Project[] = [
     slug: 'google-creative-shop',
     title: 'Google Creative Shop',
     client: 'Google',
-    role: 'Group Creative Director',
     year: '2022',
-    tags: ['Leadership', 'Brand', 'Content'],
     summary:
-      'Google Play has one of the largest product editorial programs in the world. I built the global team of designers, art directors, creative directors and animators who made upwards of 40,000 unique creative assets every year.',
+      'Google Play runs one of the largest product editorial programs in the world. I built and led Creative Shop, the global team of designers, art directors, creative directors, and animators who made 40,000 original creative assets a year.',
     thumbnail: '/portfoliomedia/Creative%20%26%20Content/creativeshop-feed.mp4',
     hero: {
       kind: 'video',
@@ -136,11 +141,23 @@ export const projects: Project[] = [
       alt: 'Creative Shop — a reel of Creative & Content craft work',
     },
     overview: [
-      'In addition to creating the assets ourselves, we built a network of collaborators who could contribute their unique illustration or animation style. I was responsible for multi-million dollar agency and partnership budgets, as well as the overall terms of the partner agreements.',
-      'Creating a smooth operational rhythm for this team was a significant challenge, and we borrowed from agile and sprint methods to create a fast-moving group of senior ICs who all really enjoyed creating such fun work.',
-      'The team was recognized with internal and external awards for craft, innovation and product impact.',
+      'This had been a problem the business couldn’t solve. It kept hiring creative directors, and they kept burning out. There was no process, no rigor. The team swung at briefs instead of building systems. I was asked to turn it into a true horizontal function: one team that could serve more than 200 designers across the org.',
+      'I rebuilt it in six months. We borrowed from agile and sprint methods, kept the group small and senior, and gave it an operating rhythm it could sustain. I ran the agency and partnership budgets and set the terms, and built a network of outside collaborators who brought their own illustration and animation styles. The function got faster and cost the business less.',
+      'The team won internal and external awards for craft, innovation, and product impact.',
     ],
     sections: [
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'video',
+          src: '/portfoliomedia/Creative%20%26%20Content/creativeshop-reel.mp4',
+          poster:
+            '/portfoliomedia/Creative%20%26%20Content/creativeshop-reel-poster.jpg',
+          alt: 'Creative Shop reel — a fast-cut montage of Google Play editorial assets across illustration, animation, and brand work',
+        },
+        caption: 'The reel — a year of editorial craft',
+      },
       {
         type: 'media',
         size: 'bleed',
@@ -149,19 +166,17 @@ export const projects: Project[] = [
           src: '/portfoliomedia/Creative%20%26%20Content/Kenni%20Chaffee%20Header.png',
           alt: 'Creative & Content editorial craft — a hero composition from the Google Play editorial program',
         },
-        caption: 'Editorial craft — one of tens of thousands of original assets made each year',
+        caption: 'Editorial craft: one of tens of thousands of original assets made each year',
       },
     ],
   },
   {
-    slug: 'android-12',
-    title: 'Android 12',
+    slug: 'material-you-widgets',
+    title: 'Material You Widgets',
     client: 'Google',
-    role: 'Design Lead',
     year: '2021',
-    tags: ['Product', 'OS'],
     summary:
-      'To support the launch of Android 12, I was part of a cross-Google team tasked with shipping 18 first-party widgets in six months. We used our experience running the cross-Google iOS team to stand up a new group doing the same job for Android, working closely with the Material Design team who shipped Material You as part of Android 12.',
+      'Android 12 needed 18 first-party widgets in six months. The timeline was a hail mary from senior product leadership. We’d just built Google’s widgets across iOS, and the company wanted the same on Android. I helped stand up the team, and we shipped, working alongside the Material Design group behind Material You.',
     thumbnail: '/portfoliomedia/Final-Hero-High-Res.mp4',
     hero: {
       kind: 'video',
@@ -173,7 +188,7 @@ export const projects: Project[] = [
     sections: [
       {
         type: 'commentary',
-        body: 'A large part of the work was evolving the dynamic sizing constraints across the Android OS, along with new interaction patterns suited to both locked and unlocked home screens.',
+        body: 'We evolved the dynamic sizing constraints across the OS, and designed new interaction patterns for both locked and unlocked home screens.',
       },
       {
         type: 'media',
@@ -236,11 +251,9 @@ export const projects: Project[] = [
     slug: 'google-on-ios',
     title: 'Google on iOS',
     client: 'Google',
-    role: 'Design Director',
     year: '2019',
-    tags: ['Product', 'iOS'],
     summary:
-      'I was part of a small team of senior ICs who shaped Google’s app experience on iOS. We designed, built, and shipped coherent features across all 100+ Google apps. That meant working across the entire company, collaborating with design teams and cross-functional partners in every product area.',
+      'I shaped Google’s strategy for its apps on iOS. When I started, Google was reluctant to invest in the platform. I made the case to the first-party teams, then defined the systems approach we’d use: shared components that could work across all 114 Google apps. We designed, built, and shipped coherent features across every one of them.',
     thumbnail: '/portfoliomedia/iOS%20at%20Google/Drive%20Translate.png',
     hero: {
       kind: 'image',
@@ -251,7 +264,7 @@ export const projects: Project[] = [
     sections: [
       {
         type: 'commentary',
-        body: 'Our approach was to work with Apple ahead of each iOS release, then bring the headline features to every Google app. Widgets are a good example: we designed, built, and tested the concepts centrally, partnering with each product team to make the most of what iOS now offered.',
+        body: 'We worked with Apple ahead of each iOS release, then brought the headline features to every Google app. Widgets are a good example. We designed, built, and tested the concepts centrally, then partnered with each product team to make the most of what iOS offered.',
       },
       {
         type: 'media',
@@ -262,7 +275,7 @@ export const projects: Project[] = [
           src: '/portfoliomedia/iOS%20at%20Google/Chrome%20Widget.png',
           alt: 'Chrome widgets on iOS — a search bar with voice and Lens, beside the Chrome Dino quick-launch',
         },
-        caption: 'Chrome — search, voice, and Lens a tap away',
+        caption: 'Chrome: search, voice, and Lens a tap away',
       },
       {
         type: 'trio',
@@ -274,7 +287,7 @@ export const projects: Project[] = [
               src: '/portfoliomedia/iOS%20at%20Google/Work.png',
               alt: 'iPhone Home Screen with stacked Google widgets — Drive search, Calendar, and Gmail',
             },
-            caption: 'A home screen — Drive, Calendar, and Gmail',
+            caption: 'A home screen: Drive, Calendar, and Gmail',
           },
           {
             media: {
@@ -282,7 +295,7 @@ export const projects: Project[] = [
               src: '/portfoliomedia/iOS%20at%20Google/morning.png',
               alt: 'iPhone Home Screen on a teal wallpaper — Google Photos, Fit, Maps, and YouTube Music widgets',
             },
-            caption: 'A morning screen — Photos, Fit, Maps, Music',
+            caption: 'A morning screen: Photos, Fit, Maps, Music',
           },
           {
             media: {
@@ -290,13 +303,13 @@ export const projects: Project[] = [
               src: '/portfoliomedia/iOS%20at%20Google/student.png',
               alt: 'iPhone Home Screen on a pink wallpaper — Google Search, Tasks, Calendar, and Gmail widgets for a student',
             },
-            caption: 'A student’s screen — Search, Tasks, Calendar, Gmail',
+            caption: 'A student’s screen: Search, Tasks, Calendar, Gmail',
           },
         ],
       },
       {
         type: 'commentary',
-        body: 'From there we expanded the widgets, adding functionality as we learned how people actually used them, then extended the work to Lock Screen widgets and other new iOS features.',
+        body: 'From there we expanded the widgets, adding functionality as we learned how people used them, then extended the work to Lock Screen widgets and other new iOS features. I worked with marketing and PR to shape the story inside and outside Google. The platform went from an afterthought to a priority, and that shift is what led Google to ask for the same on Android.',
       },
       {
         type: 'media',
@@ -306,7 +319,7 @@ export const projects: Project[] = [
           src: '/portfoliomedia/iOS%20at%20Google/LSW.png',
           alt: 'Lock Screen close-up with a Google Search pill, quick actions, and live Google widget cards',
         },
-        caption: 'Search, Lens, and live cards — a tap from the Lock Screen',
+        caption: 'Search, Lens, and live cards a tap from the Lock Screen',
       },
       {
         type: 'media',
@@ -323,11 +336,9 @@ export const projects: Project[] = [
     slug: 'partner-innovation',
     title: 'Google Partner Innovation',
     client: 'Google',
-    role: 'Design Lead',
     year: '2017',
-    tags: ['Product', '0→1', 'Prototyping'],
     summary:
-      'I led a small, senior team working with partners across Asia Pacific. From Sydney we covered the region — Mumbai across to Tokyo, down to Auckland — building hundreds of prototypes that helped them embed Google’s technology in their own businesses.',
+      'I led a small, senior team working with partners across Asia Pacific. From Sydney we covered the region, from Mumbai across to Tokyo and down to Auckland, building hundreds of prototypes that helped partners embed Google’s technology in their own businesses.',
     thumbnail: '/portfoliomedia/Partner%20Innovation/kupu%20ui.png',
     hero: {
       kind: 'image',
@@ -338,7 +349,7 @@ export const projects: Project[] = [
     sections: [
       {
         type: 'commentary',
-        body: 'Disney Book Ears was one of them. These were the early days of voice interaction design: Google had just acquired API.AI — soon renamed Dialogflow — and we were experimenting with the natural-language processing that would feed the first Google Assistant.',
+        body: 'Disney Book Ears was one of them. These were the early days of voice interaction design. Google had just acquired API.AI, soon renamed Dialogflow, and we were experimenting with the natural-language processing that would feed the first Google Assistant.',
       },
       {
         type: 'commentary',
@@ -354,7 +365,7 @@ export const projects: Project[] = [
             '/portfoliomedia/Partner%20Innovation/book-ears-casestudy-poster.png',
           alt: 'Book Ears case study film',
         },
-        caption: 'Book Ears — the case study film',
+        caption: 'Book Ears: the case study film',
       },
       {
         type: 'media',
@@ -374,7 +385,19 @@ export const projects: Project[] = [
       },
       {
         type: 'commentary',
-        body: 'We used a collection of Google technologies to bring Te Reo Māori into Google Translate, then built an app that could turn anything you pointed your camera at into its Te Reo Māori word — a small way to help preserve a language at risk.',
+        body: 'We used a collection of Google technologies to bring Te Reo Māori into Google Translate, then built an app that turned anything you pointed your camera at into its Te Reo Māori word. A small way to help preserve a language at risk.',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'video',
+          src: '/portfoliomedia/Partner%20Innovation/kupu-casestudy.mp4',
+          poster:
+            '/portfoliomedia/Partner%20Innovation/kupu-casestudy-poster.jpg',
+          alt: 'Kupu case study film — pointing a phone camera at the world to learn its Te Reo Māori word',
+        },
+        caption: 'Kupu: the case study film',
       },
       {
         type: 'media',
@@ -384,7 +407,7 @@ export const projects: Project[] = [
           src: '/portfoliomedia/Partner%20Innovation/kupu.png',
           alt: 'Kupu — an illustrated portrait with camera focus brackets framing a moko kauae',
         },
-        caption: 'Kupu — point your camera, learn the Te Reo Māori word',
+        caption: 'Kupu: point your camera, learn the Te Reo Māori word',
       },
       {
         type: 'media',
@@ -394,7 +417,7 @@ export const projects: Project[] = [
           src: '/portfoliomedia/Partner%20Innovation/kupu%20ui.png',
           alt: 'Kupu app flow across five iPhones — splash screen, camera viewfinder, loading, and translations of a sky into the Te Reo Māori words tahatū and kapua',
         },
-        caption: 'The app — splash, camera, and live translation',
+        caption: 'The app: splash, camera, and live translation',
       },
       {
         type: 'media',
@@ -404,11 +427,11 @@ export const projects: Project[] = [
           src: '/portfoliomedia/Partner%20Innovation/kupu%20ui2.png',
           alt: 'Kupu translating a lake-and-forest landscape — the Te Reo Māori word “wai” labelled over water',
         },
-        caption: 'Point the camera at the world — “wai”, water',
+        caption: 'Point the camera at the world: “wai”, water',
       },
       {
         type: 'commentary',
-        body: 'The technology we built here went on to scale through the Google Arts & Culture program, and now helps preserve hundreds of purely oral languages around the world.',
+        body: 'The technology we built scaled through Google Arts & Culture, and now helps preserve hundreds of oral languages around the world.',
       },
     ],
   },
