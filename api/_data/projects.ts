@@ -133,7 +133,7 @@ export const projects: Project[] = [
     year: '2022',
     summary:
       'Google Play runs one of the largest product editorial programs in the world. I built and led Creative Shop, the global team of designers, art directors, creative directors, and animators who made 40,000 original creative assets a year.',
-    thumbnail: '/portfoliomedia/Creative%20%26%20Content/creativeshop-feed.mp4',
+    thumbnail: '/portfoliomedia/Creative%20%26%20Content/creativeshop.mp4',
     hero: {
       kind: 'video',
       src: '/portfoliomedia/Creative%20%26%20Content/creativeshop.mp4',
