@@ -102,16 +102,6 @@ export const projects: Project[] = [
       },
       {
         type: 'media',
-        size: 'wide',
-        media: {
-          kind: 'image',
-          src: '/portfoliomedia/Wearables%20Ecosystem/device-access-kit.jpg',
-          alt: 'Wearables Developer Center — the Device Access Kit landing page: quick start, setup, integration guides, and troubleshooting',
-        },
-        caption: 'The Wearables Developer Center — the Device Access Kit and SDK',
-      },
-      {
-        type: 'media',
         size: 'bleed',
         media: {
           kind: 'video',
