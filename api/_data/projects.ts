@@ -15,11 +15,12 @@ export const projects: Project[] = [
     year: '2024–present',
     summary:
       'Leading ecosystem design at Meta Reality Labs — building the tools and systems that let people create AI experiences for wearables.',
-    thumbnail: '/portfoliomedia/Wearables%20Ecosystem/glasses-hero.jpg',
+    thumbnail: '/portfoliomedia/Wearables%20Ecosystem/hero.mp4',
     hero: {
-      kind: 'image',
-      src: '/portfoliomedia/Wearables%20Ecosystem/glasses-hero.jpg',
-      alt: 'Meta Ray-Ban smart glasses in tortoiseshell, viewed head-on against a warm gradient',
+      kind: 'video',
+      src: '/portfoliomedia/Wearables%20Ecosystem/hero.mp4',
+      poster: '/portfoliomedia/Wearables%20Ecosystem/hero-poster.jpg',
+      alt: 'Meta Ray-Ban smart glasses in close-up, the camera lens and frame detail catching the light',
     },
     overview: [
       'I lead ecosystem design at Meta Reality Labs. My team defines how developers and creators build for our wearables. We design the tooling and the systems that underpin third-party experiences. We also build experiences directly with high-profile partners. These collaborations are designed to demonstrate the capabilities of the platform and build momentum for the whole ecosystem.',
@@ -103,6 +104,17 @@ export const projects: Project[] = [
         },
         leftCaption: 'Voice-first interaction patterns',
         rightCaption: 'Accessibility as a baseline, not a checklist',
+      },
+      {
+        type: 'media',
+        size: 'bleed',
+        media: {
+          kind: 'video',
+          src: '/portfoliomedia/Wearables%20Ecosystem/colorways.mp4',
+          poster: '/portfoliomedia/Wearables%20Ecosystem/colorways-poster.jpg',
+          alt: 'Meta Ray-Ban smart glasses shown across colorways — a glossy black pair beside a translucent rose pair',
+          ambient: true,
+        },
       },
     ],
   },
