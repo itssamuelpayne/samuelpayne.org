@@ -14,7 +14,7 @@ export const projects: Project[] = [
     client: 'Meta Reality Labs',
     year: '2024–present',
     summary:
-      'Leading ecosystem design at Meta Reality Labs — building the tools and systems that let people create AI experiences for wearables.',
+      'I lead ecosystem design at Meta Reality Labs — building the tools and systems that let people create AI experiences for wearables.',
     thumbnail: '/portfoliomedia/Wearables%20Ecosystem/hero.mp4',
     hero: {
       kind: 'video',
