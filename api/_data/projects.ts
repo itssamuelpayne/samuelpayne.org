@@ -15,11 +15,11 @@ export const projects: Project[] = [
     year: '2024–present',
     summary:
       'Leading ecosystem design at Meta Reality Labs — building the tools and systems that let people create AI experiences for wearables.',
-    thumbnail: 'https://picsum.photos/seed/wearables-thumb/1600/1000',
+    thumbnail: '/portfoliomedia/Wearables%20Ecosystem/glasses-hero.jpg',
     hero: {
       kind: 'image',
-      src: 'https://picsum.photos/seed/wearables-hero/2400/1400',
-      alt: 'FPO — Wearables Ecosystem hero',
+      src: '/portfoliomedia/Wearables%20Ecosystem/glasses-hero.jpg',
+      alt: 'Meta Ray-Ban smart glasses in tortoiseshell, viewed head-on against a warm gradient',
     },
     overview: [
       'I lead ecosystem design at Meta Reality Labs. My team defines how developers and creators build for our wearables. We design the tooling and the systems that underpin third-party experiences. We also build experiences directly with high-profile partners. These collaborations are designed to demonstrate the capabilities of the platform and build momentum for the whole ecosystem.',
@@ -28,7 +28,83 @@ export const projects: Project[] = [
       'I also oversee the AI Developer Center and the Wearables Developer Center. These are where partners build agents, add third-party skills to the AI ecosystem, and ship wearables integrations through our SDK and Web Apps.',
       'Our efforts are 0→1 insofar as there has never been a notable wearables ecosystem and Meta has historically shipped products over platforms. It makes for exciting design work. We’re often asked to support broader company efforts with practical and pragmatic design solutions, but also define long-term vision for a new and emergent hardware and software ecosystem.',
     ],
-    sections: [],
+    sections: [
+      {
+        type: 'media',
+        size: 'bleed',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Wearables%20Ecosystem/display-system.jpg',
+          alt: 'Wearables display design system — content cards, list components, and action buttons for the transparent display surface',
+        },
+        caption: 'The display system — the components and patterns third parties build on',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Wearables%20Ecosystem/brand-color.jpg',
+          alt: 'A grid of third-party skill cards — Lyft, Expedia, Tripadvisor, Spotify, Amazon, and DoorDash — rendered through shared wearables system components',
+        },
+        caption: 'Third-party skills, expressed through shared system components',
+      },
+      {
+        type: 'trio',
+        aspect: '8/5',
+        items: [
+          {
+            media: {
+              kind: 'image',
+              src: '/portfoliomedia/Wearables%20Ecosystem/aidc-build.jpg',
+              alt: 'AI Developer Center — a node-based canvas for building a restaurant-booking agent, previewed on AI glasses with a display',
+            },
+            caption: 'Building an agent',
+          },
+          {
+            media: {
+              kind: 'image',
+              src: '/portfoliomedia/Wearables%20Ecosystem/aidc-tools.jpg',
+              alt: 'AI Developer Center — a tools table mapping each capability to its supported surfaces and output type',
+            },
+            caption: 'Defining tools and supported surfaces',
+          },
+          {
+            media: {
+              kind: 'image',
+              src: '/portfoliomedia/Wearables%20Ecosystem/aidc-agent.jpg',
+              alt: 'AI Developer Center — an agent tool configured with a model, prompts, and variables, previewed live on glasses',
+            },
+            caption: 'Tuning against a live glasses preview',
+          },
+        ],
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Wearables%20Ecosystem/device-access-kit.jpg',
+          alt: 'Wearables Developer Center — the Device Access Kit landing page: quick start, setup, integration guides, and troubleshooting',
+        },
+        caption: 'The Wearables Developer Center — the Device Access Kit and SDK',
+      },
+      {
+        type: 'pair',
+        left: {
+          kind: 'image',
+          src: '/portfoliomedia/Wearables%20Ecosystem/voice-first.jpg',
+          alt: 'Wearables Developer Center documentation — a Voice-First Design page with a table of wake-word, contextual, and follow-up interaction patterns',
+        },
+        right: {
+          kind: 'image',
+          src: '/portfoliomedia/Wearables%20Ecosystem/accessibility.jpg',
+          alt: 'Wearables Developer Center documentation — an Accessibility principles page describing the navigation rail and screen-reader behavior',
+        },
+        leftCaption: 'Voice-first interaction patterns',
+        rightCaption: 'Accessibility as a baseline, not a checklist',
+      },
+    ],
   },
   {
     slug: 'google-play-console',
