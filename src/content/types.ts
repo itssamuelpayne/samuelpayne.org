@@ -18,6 +18,9 @@ export type Section =
       /** CSS max-width override for the asset (e.g. '627px'). Takes
        *  precedence over `size` to render a single asset smaller. */
       maxWidth?: string;
+      /** Clip the asset to a rounded-corner radius. Use to normalize
+       *  square-cornered exports against pre-rounded ones. */
+      rounded?: boolean;
       caption?: string;
       commentary?: string;
     }

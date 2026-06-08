@@ -35,12 +35,24 @@ export const projects: Project[] = [
       {
         type: 'media',
         size: 'wide',
+        rounded: true,
         media: {
           kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/brand-color.jpg',
           alt: 'A grid of third-party skill cards — Lyft, Expedia, Tripadvisor, Spotify, Amazon, and DoorDash — rendered through shared wearables system components',
         },
         caption: 'Third-party skills, built on shared components',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        rounded: true,
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Wearables%20Ecosystem/display-system.jpg',
+          alt: 'Wearables display design system — content cards, list components, and action buttons for the transparent display surface',
+        },
+        caption: 'The display component system',
       },
       {
         type: 'commentary',

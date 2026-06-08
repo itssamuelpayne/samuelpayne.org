@@ -143,7 +143,13 @@ export function SectionBlock({ section }: { section: Section }) {
             className={sizeWrapper[size]}
             style={section.maxWidth ? { maxWidth: section.maxWidth } : undefined}
           >
-            <Media asset={section.media} />
+            {section.rounded ? (
+              <div className="overflow-hidden rounded-2xl">
+                <Media asset={section.media} />
+              </div>
+            ) : (
+              <Media asset={section.media} />
+            )}
           </div>
           {section.caption && <Caption>{section.caption}</Caption>}
           {section.commentary && <Commentary>{section.commentary}</Commentary>}
