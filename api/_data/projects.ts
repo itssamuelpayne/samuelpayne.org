@@ -22,18 +22,15 @@ export const projects: Project[] = [
       poster: '/portfoliomedia/Wearables%20Ecosystem/hero-poster.jpg',
       alt: 'Meta Ray-Ban smart glasses in close-up, the camera lens and frame detail catching the light',
     },
-    overview: [
-      'I lead ecosystem design at Meta Reality Labs. My team defines how developers and creators build for our wearables. We design the tooling and the systems that underpin third-party experiences. We also build experiences directly with high-profile partners. These collaborations are designed to demonstrate the capabilities of the platform and build momentum for the whole ecosystem.',
-      'We design across surfaces. Meta Ray-Ban Display glasses bring visual UI to a transparent surface — my team is responsible for defining the patterns for third parties that can scale as the ecosystem grows.',
-      'A core part of our work is to create a design system that can scale across modalities. Switching from visual UI for transparent surfaces, to voice-only interactions and soon more ambient interaction patterns.',
-      'I also oversee the AI Developer Center and the Wearables Developer Center. These are where partners build agents, add third-party skills to the AI ecosystem, and ship wearables integrations through our SDK and Web Apps.',
-      'Our efforts are 0→1 insofar as there has never been a notable wearables ecosystem and Meta has historically shipped products over platforms. It makes for exciting design work. We’re often asked to support broader company efforts with practical and pragmatic design solutions, but also define long-term vision for a new and emergent hardware and software ecosystem.',
-    ],
+    overview: [],
     sections: [
       {
         type: 'commentary',
-        heading: 'Defining the patterns',
-        body: 'A kit of components and interaction patterns for the transparent display — and the third-party skills expressed through it.',
+        body: 'I lead ecosystem design at Meta Reality Labs. My team defines how developers and creators build for our wearables. We design the tooling and the systems that underpin third-party experiences. We also build experiences directly with high-profile partners. These collaborations are designed to demonstrate the capabilities of the platform and build momentum for the whole ecosystem.',
+      },
+      {
+        type: 'commentary',
+        body: 'We design across surfaces. Meta Ray-Ban Display glasses bring visual UI to a transparent surface — my team is responsible for defining the patterns for third parties that can scale as the ecosystem grows.',
       },
       {
         type: 'pair',
@@ -49,6 +46,10 @@ export const projects: Project[] = [
         },
         leftCaption: 'The display component system',
         rightCaption: 'Third-party skills, built on shared components',
+      },
+      {
+        type: 'commentary',
+        body: 'A core part of our work is to create a design system that can scale across modalities. Switching from visual UI for transparent surfaces, to voice-only interactions and soon more ambient interaction patterns.',
       },
       {
         type: 'media',
@@ -69,6 +70,10 @@ export const projects: Project[] = [
           alt: 'Wearables Developer Center documentation — an Accessibility principles page describing the navigation rail and screen-reader behavior',
         },
         caption: 'Accessibility as a baseline, not a checklist',
+      },
+      {
+        type: 'commentary',
+        body: 'I also oversee the AI Developer Center and the Wearables Developer Center. These are where partners build agents, add third-party skills to the AI ecosystem, and ship wearables integrations through our SDK and Web Apps.',
       },
       {
         type: 'media',
@@ -99,6 +104,10 @@ export const projects: Project[] = [
           alt: 'AI Developer Center — an agent tool configured with a model, prompts, and variables, previewed live on glasses',
         },
         caption: 'Tuning against a live glasses preview',
+      },
+      {
+        type: 'commentary',
+        body: 'Our efforts are 0→1 insofar as there has never been a notable wearables ecosystem and Meta has historically shipped products over platforms. It makes for exciting design work. We’re often asked to support broader company efforts with practical and pragmatic design solutions, but also define long-term vision for a new and emergent hardware and software ecosystem.',
       },
       {
         type: 'media',
