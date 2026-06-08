@@ -158,7 +158,9 @@ export function SectionBlock({ section }: { section: Section }) {
         <section className="my-12 max-w-5xl mx-auto px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-start">
             <figure>
-              <Media asset={section.left} />
+              <div className="overflow-hidden rounded-2xl">
+                <Media asset={section.left} />
+              </div>
               {section.leftCaption && (
                 <figcaption className="mt-4 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.15em] uppercase text-center">
                   {section.leftCaption}
@@ -166,7 +168,9 @@ export function SectionBlock({ section }: { section: Section }) {
               )}
             </figure>
             <figure>
-              <Media asset={section.right} />
+              <div className="overflow-hidden rounded-2xl">
+                <Media asset={section.right} />
+              </div>
               {section.rightCaption && (
                 <figcaption className="mt-4 text-[10px] font-['Space_Mono',_monospace] text-gray-400 tracking-[0.15em] uppercase text-center">
                   {section.rightCaption}
