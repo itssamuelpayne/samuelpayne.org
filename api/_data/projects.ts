@@ -61,6 +61,7 @@ export const projects: Project[] = [
       {
         type: 'media',
         size: 'wide',
+        rounded: true,
         media: {
           kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/voice-first.jpg',
@@ -75,6 +76,7 @@ export const projects: Project[] = [
       {
         type: 'media',
         size: 'wide',
+        rounded: true,
         media: {
           kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/aidc-build.jpg',
@@ -85,6 +87,7 @@ export const projects: Project[] = [
       {
         type: 'media',
         size: 'wide',
+        rounded: true,
         media: {
           kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/aidc-tools.jpg',
@@ -95,6 +98,7 @@ export const projects: Project[] = [
       {
         type: 'media',
         size: 'wide',
+        rounded: true,
         media: {
           kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/aidc-agent.jpg',
