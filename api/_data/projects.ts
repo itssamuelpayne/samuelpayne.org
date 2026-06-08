@@ -31,24 +31,24 @@ export const projects: Project[] = [
     ],
     sections: [
       {
-        type: 'media',
-        size: 'bleed',
-        media: {
+        type: 'commentary',
+        heading: 'Defining the patterns',
+        body: 'A kit of components and interaction patterns for the transparent display — and the third-party skills expressed through it.',
+      },
+      {
+        type: 'pair',
+        left: {
           kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/display-system.jpg',
           alt: 'Wearables display design system — content cards, list components, and action buttons for the transparent display surface',
         },
-        caption: 'The display system — the components and patterns third parties build on',
-      },
-      {
-        type: 'media',
-        size: 'wide',
-        media: {
+        right: {
           kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/brand-color.jpg',
           alt: 'A grid of third-party skill cards — Lyft, Expedia, Tripadvisor, Spotify, Amazon, and DoorDash — rendered through shared wearables system components',
         },
-        caption: 'Third-party skills, expressed through shared system components',
+        leftCaption: 'The display component system',
+        rightCaption: 'Third-party skills, built on shared components',
       },
       {
         type: 'trio',
