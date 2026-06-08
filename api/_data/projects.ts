@@ -33,19 +33,14 @@ export const projects: Project[] = [
         body: 'We design across surfaces. Meta Ray-Ban Display glasses bring visual UI to a transparent surface — my team is responsible for defining the patterns for third parties that can scale as the ecosystem grows.',
       },
       {
-        type: 'pair',
-        left: {
-          kind: 'image',
-          src: '/portfoliomedia/Wearables%20Ecosystem/display-system.jpg',
-          alt: 'Wearables display design system — content cards, list components, and action buttons for the transparent display surface',
-        },
-        right: {
+        type: 'media',
+        size: 'wide',
+        media: {
           kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/brand-color.jpg',
           alt: 'A grid of third-party skill cards — Lyft, Expedia, Tripadvisor, Spotify, Amazon, and DoorDash — rendered through shared wearables system components',
         },
-        leftCaption: 'The display component system',
-        rightCaption: 'Third-party skills, built on shared components',
+        caption: 'Third-party skills, built on shared components',
       },
       {
         type: 'commentary',
@@ -60,16 +55,6 @@ export const projects: Project[] = [
           alt: 'Wearables Developer Center documentation — a Voice-First Design page with a table of wake-word, contextual, and follow-up interaction patterns',
         },
         caption: 'Voice-first interaction patterns',
-      },
-      {
-        type: 'media',
-        size: 'wide',
-        media: {
-          kind: 'image',
-          src: '/portfoliomedia/Wearables%20Ecosystem/accessibility.jpg',
-          alt: 'Wearables Developer Center documentation — an Accessibility principles page describing the navigation rail and screen-reader behavior',
-        },
-        caption: 'Accessibility as a baseline, not a checklist',
       },
       {
         type: 'commentary',
