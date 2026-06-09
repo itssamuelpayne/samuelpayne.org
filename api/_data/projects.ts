@@ -14,7 +14,7 @@ export const projects: Project[] = [
     client: 'Meta Reality Labs',
     year: '2024–present',
     summary:
-      'I lead ecosystem design at Meta Reality Labs — building the tools and systems that let people create AI experiences for wearables.',
+      'My team defines how developers and creators build for our wearables. We design the tooling and the systems that underpin third-party experiences. We also build directly with high-profile partners: flagship work that shows what the platform can do and pulls the whole ecosystem forward.',
     thumbnail: '/portfoliomedia/Wearables%20Ecosystem/hero.mp4',
     hero: {
       kind: 'video',
@@ -24,10 +24,6 @@ export const projects: Project[] = [
     },
     overview: [],
     sections: [
-      {
-        type: 'commentary',
-        body: 'I lead ecosystem design at Meta Reality Labs. My team defines how developers and creators build for our wearables. We design the tooling and the systems that underpin third-party experiences. We also build experiences directly with high-profile partners. These collaborations are designed to demonstrate the capabilities of the platform and build momentum for the whole ecosystem.',
-      },
       {
         type: 'commentary',
         body: 'We design across surfaces. Meta Ray-Ban Display glasses bring visual UI to a transparent surface — my team is responsible for defining the patterns for third parties that can scale as the ecosystem grows.',
