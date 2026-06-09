@@ -26,7 +26,18 @@ export const projects: Project[] = [
     sections: [
       {
         type: 'commentary',
-        body: 'We design across surfaces. Meta Ray-Ban Display glasses bring visual UI to a transparent surface — my team is responsible for defining the patterns for third parties that can scale as the ecosystem grows.',
+        body: 'We design across surfaces. The Meta Ray-Ban Display glasses bring visual UI to a transparent lens. My team defines the patterns third parties use to build there, designed to scale as the ecosystem grows.',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        rounded: true,
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Wearables%20Ecosystem/lyft.jpg',
+          alt: 'A Lyft skill on the Meta Ray-Ban Display across three panels — choosing a LaGuardia Airport destination, picking a terminal, and a driver arriving at 6:10 PM',
+        },
+        caption: 'A third-party skill built on the display patterns',
       },
       {
         type: 'media',
