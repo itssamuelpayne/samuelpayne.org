@@ -94,6 +94,7 @@ function Media({
   if (asset.ambient) {
     return (
       <video
+        key={asset.src}
         autoPlay
         loop
         muted
@@ -108,7 +109,9 @@ function Media({
     );
   }
 
-  return <VideoPlayer src={asset.src} poster={asset.poster} alt={asset.alt} />;
+  return (
+    <VideoPlayer key={asset.src} src={asset.src} poster={asset.poster} alt={asset.alt} />
+  );
 }
 
 const sizeWrapper: Record<NonNullable<Extract<Section, { type: 'media' }>['size']>, string> = {

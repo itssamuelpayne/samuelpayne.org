@@ -64,6 +64,7 @@ export function CaseStudyPage() {
         <section className="w-full">
           {project.hero.kind === 'image' ? (
             <img
+              key={project.hero.src}
               src={project.hero.src}
               alt={project.hero.alt}
               className="w-full max-h-[70vh] object-cover block"
@@ -72,7 +73,10 @@ export function CaseStudyPage() {
             // Heroes autoplay-loop-muted (cinematic). Section videos in the
             // body retain controls / click-to-play. Capped to a band so they
             // don't dominate the fold on wide monitors.
+            // `key` forces a fresh element per project so navigating to the
+            // next study reloads the <video> instead of reusing the prior src.
             <video
+              key={project.hero.src}
               autoPlay
               loop
               muted
