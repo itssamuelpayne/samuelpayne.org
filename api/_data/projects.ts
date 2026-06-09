@@ -45,10 +45,14 @@ export const projects: Project[] = [
         rounded: true,
         media: {
           kind: 'image',
-          src: '/portfoliomedia/Wearables%20Ecosystem/brand-color.jpg',
-          alt: 'A grid of third-party skill cards — Lyft, Expedia, Tripadvisor, Spotify, Amazon, and DoorDash — rendered through shared wearables system components',
+          src: '/portfoliomedia/Wearables%20Ecosystem/artemis-exploration.jpg',
+          alt: 'An exploration of a more immersive surface — a messaging conversation and contact list floating in a room, layered over the view through the lens',
         },
-        caption: 'Third-party skills, built on shared components',
+        caption: 'An exploration of a more immersive surface',
+      },
+      {
+        type: 'commentary',
+        body: 'A core part of our work is to create a design system that can scale across modalities. Switching from visual UI for transparent surfaces, to voice-only interactions and soon more ambient interaction patterns.',
       },
       {
         type: 'media',
@@ -56,14 +60,10 @@ export const projects: Project[] = [
         rounded: true,
         media: {
           kind: 'image',
-          src: '/portfoliomedia/Wearables%20Ecosystem/display-system.jpg',
-          alt: 'Wearables display design system — content cards, list components, and action buttons for the transparent display surface',
+          src: '/portfoliomedia/Wearables%20Ecosystem/brand-color.jpg',
+          alt: 'A grid of third-party skill cards — Lyft, Expedia, Tripadvisor, Spotify, Amazon, and DoorDash — rendered through shared wearables system components',
         },
-        caption: 'The display component system',
-      },
-      {
-        type: 'commentary',
-        body: 'A core part of our work is to create a design system that can scale across modalities. Switching from visual UI for transparent surfaces, to voice-only interactions and soon more ambient interaction patterns.',
+        caption: 'Third-party skills, built on shared components',
       },
       {
         type: 'media',
@@ -78,7 +78,7 @@ export const projects: Project[] = [
       },
       {
         type: 'commentary',
-        body: 'I also oversee the AI Developer Center and the Wearables Developer Center. These are where partners build agents, add third-party skills to the AI ecosystem, and ship wearables integrations through our SDK and Web Apps.',
+        body: 'The AI Developer Center is where partners build agents for the ecosystem. They wire up tools and third-party skills, set which surfaces each one runs on, and tune the whole thing against a live preview of the glasses before it ships. The Wearables Developer Center does the same for deeper integrations, through our SDK and Web Apps.',
       },
       {
         type: 'media',
