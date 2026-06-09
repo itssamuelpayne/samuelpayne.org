@@ -46,35 +46,28 @@ export const projects: Project[] = [
         media: {
           kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/artemis-exploration.jpg',
-          alt: 'An exploration of a more immersive surface — a messaging conversation and contact list floating in a room, layered over the view through the lens',
+          alt: 'An exploration of extending the system to new hardware — a messaging conversation and contact list floating in a room, layered over the view through the lens',
         },
-        caption: 'An exploration of a more immersive surface',
+        caption: 'An exploration of extending the system to new hardware',
       },
       {
         type: 'commentary',
-        body: 'A core part of our work is to create a design system that can scale across modalities. Switching from visual UI for transparent surfaces, to voice-only interactions and soon more ambient interaction patterns.',
+        body: 'A core part of our work is to extend a design system that can scale across modalities. Switching from visual UI for transparent surfaces, to voice-only interactions and soon more ambient interaction patterns.',
       },
       {
-        type: 'media',
-        size: 'wide',
-        rounded: true,
-        media: {
+        type: 'pair',
+        left: {
           kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/brand-color.jpg',
           alt: 'A grid of third-party skill cards — Lyft, Expedia, Tripadvisor, Spotify, Amazon, and DoorDash — rendered through shared wearables system components',
         },
-        caption: 'Third-party skills, built on shared components',
-      },
-      {
-        type: 'media',
-        size: 'wide',
-        rounded: true,
-        media: {
+        right: {
           kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/voice-first.jpg',
-          alt: 'Wearables Developer Center documentation — a Voice-First Design page with a table of wake-word, contextual, and follow-up interaction patterns',
+          alt: 'Wearables Developer Center documentation — a Voice-First Design page with wake-word, contextual, and follow-up interaction patterns',
         },
-        caption: 'Voice-first interaction patterns',
+        leftCaption: 'Third-party skills, built on shared components',
+        rightCaption: 'Voice-first interaction patterns',
       },
       {
         type: 'commentary',
@@ -115,7 +108,7 @@ export const projects: Project[] = [
       },
       {
         type: 'commentary',
-        body: 'Our efforts are 0→1 insofar as there has never been a notable wearables ecosystem and Meta has historically shipped products over platforms. It makes for exciting design work. We’re often asked to support broader company efforts with practical and pragmatic design solutions, but also define long-term vision for a new and emergent hardware and software ecosystem.',
+        body: 'This is genuinely 0→1 work. There’s never been a real wearables ecosystem, and Meta has historically shipped products, not platforms — so we get to decide what this one should be. Day to day, that means moving between pragmatic, near-term design and the longer-term vision for where the hardware and software go.',
       },
       {
         type: 'media',
