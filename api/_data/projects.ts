@@ -55,19 +55,15 @@ export const projects: Project[] = [
         body: 'A core part of our work is to extend a design system that can scale across modalities. Switching from visual UI for transparent surfaces, to voice-only interactions and soon more ambient interaction patterns.',
       },
       {
-        type: 'pair',
-        left: {
+        type: 'media',
+        size: 'wide',
+        rounded: true,
+        media: {
           kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/brand-color.jpg',
           alt: 'A grid of third-party skill cards — Lyft, Expedia, Tripadvisor, Spotify, Amazon, and DoorDash — rendered through shared wearables system components',
         },
-        right: {
-          kind: 'image',
-          src: '/portfoliomedia/Wearables%20Ecosystem/voice-first.jpg',
-          alt: 'Wearables Developer Center documentation — a Voice-First Design page with wake-word, contextual, and follow-up interaction patterns',
-        },
-        leftCaption: 'Third-party skills, built on shared components',
-        rightCaption: 'Voice-first interaction patterns',
+        caption: 'Third-party skills, built on shared components',
       },
       {
         type: 'commentary',
@@ -79,32 +75,21 @@ export const projects: Project[] = [
         rounded: true,
         media: {
           kind: 'image',
-          src: '/portfoliomedia/Wearables%20Ecosystem/aidc-build.jpg',
-          alt: 'AI Developer Center — a node-based canvas for building a restaurant-booking agent, previewed on AI glasses with a display',
-        },
-        caption: 'Building an agent',
-      },
-      {
-        type: 'media',
-        size: 'wide',
-        rounded: true,
-        media: {
-          kind: 'image',
-          src: '/portfoliomedia/Wearables%20Ecosystem/aidc-tools.jpg',
-          alt: 'AI Developer Center — a tools table mapping each capability to its supported surfaces and output type',
-        },
-        caption: 'Defining tools and supported surfaces',
-      },
-      {
-        type: 'media',
-        size: 'wide',
-        rounded: true,
-        media: {
-          kind: 'image',
           src: '/portfoliomedia/Wearables%20Ecosystem/aidc-agent.jpg',
           alt: 'AI Developer Center — an agent tool configured with a model, prompts, and variables, previewed live on glasses',
         },
         caption: 'Tuning against a live glasses preview',
+      },
+      {
+        type: 'media',
+        size: 'wide',
+        rounded: true,
+        media: {
+          kind: 'image',
+          src: '/portfoliomedia/Wearables%20Ecosystem/aidc-build.jpg',
+          alt: 'AI Developer Center — a node-based canvas for building a restaurant-booking agent, previewed on AI glasses with a display',
+        },
+        caption: 'Building an agent',
       },
       {
         type: 'commentary',
